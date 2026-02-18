@@ -2,6 +2,7 @@ import Layout from './components/layout/Layout'
 import Hero from './sections/Home/Hero'
 import ParallaxBanner from './sections/Home/ParallaxBanner'
 import ServicesMarquee from './sections/Home/ServicesMarquee'
+import Testimonials from './sections/Home/Testimonials'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <ParallaxBanner imageSrc="/home/banner/lee-campbell-DtDlVpy-vvQ-unsplash.webp" alt="Banner" />
       <ServicesMarquee />
+      <Testimonials />
     </Layout>
   )
 }
