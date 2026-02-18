@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils'
+import { THEME } from '@/lib/constants'
 import type { ContainerProps } from '@/lib/types'
 
 export default function Container({
@@ -12,10 +13,10 @@ export default function Container({
       id={id}
       className={cn(
         'mx-auto px-4 sm:px-6 lg:px-8',
-        maxWidth === 'default' && 'max-w-[1390px]',
         maxWidth === 'full' && 'w-full',
         className
       )}
+      style={maxWidth === 'default' ? { maxWidth: THEME.container.maxWidth } : undefined}
     >
       {children}
     </div>

@@ -7,6 +7,7 @@ import {
   FOOTER_LEGAL_LINKS,
   FOOTER_SOCIAL_LINKS,
   FOOTER_COPYRIGHT,
+  THEME,
 } from '@/lib/constants'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
@@ -19,15 +20,15 @@ const socialIconMap = {
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white" role="contentinfo">
-      <div className="max-w-[1390px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <footer className="bg-black text-white" role="contentinfo">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16" style={{ maxWidth: THEME.container.maxWidth }}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           <div>
-            <h3 className="font-libre font-semibold text-lg lg:text-xl text-white mb-5">Areas served</h3>
+            <h3 className="font-semibold text-lg lg:text-xl text-white mb-5">Areas served</h3>
             <ul className="space-y-3">
               {FOOTER_AREAS_SERVED.map((area) => (
                 <li key={area}>
-                  <Link href={`/areas/${area.toLowerCase().replace(/\s+/g, '-')}`} className="text-gray-300 hover:text-secondary transition-colors text-sm lg:text-base">
+                  <Link href={`/areas/${area.toLowerCase().replace(/\s+/g, '-')}`} className="text-gray-300 hover:text-primary transition-colors text-sm lg:text-base">
                     {area}
                   </Link>
                 </li>
@@ -35,11 +36,11 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-libre font-semibold text-lg lg:text-xl text-white mb-5">Shortcuts</h3>
+            <h3 className="font-semibold text-lg lg:text-xl text-white mb-5">Shortcuts</h3>
             <ul className="space-y-3">
               {FOOTER_SHORTCUTS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-300 hover:text-secondary transition-colors text-sm lg:text-base">
+                  <Link href={link.href} className="text-gray-300 hover:text-primary transition-colors text-sm lg:text-base">
                     {link.label}
                   </Link>
                 </li>
@@ -47,7 +48,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-libre font-semibold text-lg lg:text-xl text-white mb-5">Locations</h3>
+            <h3 className="font-semibold text-lg lg:text-xl text-white mb-5">Locations</h3>
             <div className="rounded-lg overflow-hidden border border-white/10 shadow-lg aspect-4/3 max-h-[200px] bg-white/5">
               <iframe
                 title="Office location"
@@ -64,7 +65,7 @@ export default function Footer() {
           </div>
           <div>
             <p className="text-gray-200 text-sm lg:text-base mb-4">Get in touch with us today.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-secondary text-white font-medium px-5 py-3 rounded-full hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary" aria-label="Contact us">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-primary text-white font-medium px-5 py-3 rounded-full hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black" aria-label="Contact us">
               <span>Contact us</span>
               <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white text-primary shrink-0">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M5 12h14M12 5l7 7-7 7" /></svg>
@@ -75,7 +76,7 @@ export default function Footer() {
               {FOOTER_SOCIAL_LINKS.map((social) => {
                 const Icon = socialIconMap[social.icon]
                 return (
-                  <a key={social.icon} href={social.href} target="_blank" rel="noopener noreferrer" className="text-secondary hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-secondary rounded" aria-label={social.label}>
+                  <a key={social.icon} href={social.href} target="_blank" rel="noopener noreferrer" className="text-primary hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary rounded" aria-label={social.label}>
                     <Icon className="w-6 h-6" />
                   </a>
                 )
@@ -86,15 +87,15 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-12 pt-8">
           <nav className="flex flex-wrap items-center justify-center gap-6 sm:gap-8" aria-label="Legal and site links">
             {FOOTER_LEGAL_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="text-gray-300 hover:text-secondary transition-colors text-sm">
+              <Link key={link.href} href={link.href} className="text-gray-300 hover:text-primary transition-colors text-sm">
                 {link.label}
               </Link>
             ))}
           </nav>
         </div>
       </div>
-      <div className="bg-secondary py-4">
-        <div className="max-w-[1390px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-primary py-4">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: THEME.container.maxWidth }}>
           <p className="text-white text-center text-sm">{FOOTER_COPYRIGHT}</p>
         </div>
       </div>

@@ -1,9 +1,21 @@
 @import 'tailwindcss';
+@config '../tailwind.config.ts';
 
 @layer base {
+  /* Arizona Font - Add @font-face here if you have font files */
+  @font-face {
+    font-family: 'Arizona';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    /* src: url('/fonts/Arizona-Regular.woff2') format('woff2'); */
+    /* Uncomment and add font file paths when available */
+  }
+
   :root {
-    --color-primary: #2A3F53;
-    --color-secondary: #C8A24F;
+    --color-primary: #9754D8;
+    --color-accent: #9754D8;
+    --color-secondary: #9754D8;
   }
 
   * {
@@ -17,6 +29,14 @@
     scroll-behavior: smooth;
   }
 
+  body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html,
     body {
@@ -24,44 +44,21 @@
     }
   }
 
-  body {
-    font-family: var(--font-poppins), sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1 {
-    font-family: var(--font-playfair), serif;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  h2, h3, h4, h5, h6 {
-    font-family: var(--font-libre-baskerville), serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
     font-weight: 600;
     line-height: 1.2;
   }
 
   p, div, a, button, input, textarea, label, span {
-    font-family: var(--font-poppins), sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
   }
 
   h1 span { font-family: inherit; }
-  h2 span, h3 span, h4 span, h5 span, h6 span { font-family: inherit !important; }
+  h2 span, h3 span, h4 span, h5 span, h6 span { font-family: inherit; }
 }
 
 @layer utilities {
-  .bg-primary { background-color: #2A3F53 !important; }
-  .bg-secondary { background-color: #C8A24F !important; }
-  .text-primary { color: #2A3F53 !important; }
-  .text-secondary { color: #C8A24F !important; }
-  .border-primary { border-color: #2A3F53 !important; }
-  .border-secondary { border-color: #C8A24F !important; }
-  .hover\:bg-primary:hover { background-color: #2A3F53 !important; }
-  .hover\:bg-secondary:hover { background-color: #C8A24F !important; }
-  .hover\:text-primary:hover { color: #2A3F53 !important; }
-  .hover\:text-secondary:hover { color: #C8A24F !important; }
-
   @keyframes marquee-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }

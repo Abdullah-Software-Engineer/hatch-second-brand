@@ -15,7 +15,7 @@ export default function SideButtons() {
           className="bg-secondary text-white px-1 py-4 sm:px-1.5 sm:py-6 md:px-2 md:py-8 border border-l-0 border-white rounded-r-md hover:translate-x-1 transition-transform focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 shadow-lg min-w-[28px] sm:min-w-[32px]"
           aria-label="Start live chat"
         >
-          <span className="text-[10px] sm:text-xs md:text-sm font-poppins font-medium whitespace-nowrap [writing-mode:vertical-rl] rotate-180 block">
+          <span className="text-[10px] sm:text-xs md:text-sm font-medium whitespace-nowrap [writing-mode:vertical-rl] rotate-180 block">
             Live Chat
           </span>
         </button>
@@ -24,7 +24,7 @@ export default function SideButtons() {
           className="bg-secondary text-white px-1 py-4 sm:px-1.5 sm:py-6 md:px-2 md:py-8 border border-l-0 border-white rounded-r-md hover:translate-x-1 transition-transform focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 shadow-lg min-w-[28px] sm:min-w-[32px]"
           aria-label="Switch language"
         >
-          <span className="text-[10px] sm:text-xs md:text-sm font-poppins font-medium whitespace-nowrap [writing-mode:vertical-rl] rotate-180 block">
+          <span className="text-[10px] sm:text-xs md:text-sm font-medium whitespace-nowrap [writing-mode:vertical-rl] rotate-180 block">
             Español
           </span>
         </button>

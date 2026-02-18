@@ -11,11 +11,10 @@ export const SITE_CONFIG = {
 
 export const NAVIGATION_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
-  { href: '/practice-areas', label: 'Practice Areas' },
-  { href: '/resources', label: 'Resources' },
-  { href: '/results', label: 'Results' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/services', label: 'Services' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
 ] as const
 
 export const RESOURCES_DROPDOWN_LINKS = [
@@ -59,7 +58,7 @@ export const FOOTER_SOCIAL_LINKS = [
 export const FOOTER_COPYRIGHT = 'All rights reserved. Copyright © 2025 Hatch Second Brand'
 
 export const THEME = {
-  colors: { primary: '#2A3F53', secondary: '#C8A24F' },
+  colors: { primary: '#9754D8', accent: '#9754D8' },
   breakpoints: { mobile: '0px', tablet: '768px', desktop: '1024px', wide: '1440px' },
   container: { maxWidth: '1390px' },
 } as const

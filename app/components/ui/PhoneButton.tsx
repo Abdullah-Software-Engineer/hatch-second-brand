@@ -18,16 +18,16 @@ export default function PhoneButton({ className, size = 'md' }: PhoneButtonProps
     <a
       href={getPhoneLink(SITE_CONFIG.phoneRaw)}
       className={cn(
-        'flex items-center justify-between bg-secondary text-white rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all no-underline',
+        'flex items-center justify-between bg-primary text-white rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all no-underline',
         c.padding, c.gap, className
       )}
       aria-label={`Call ${SITE_CONFIG.phone}`}
     >
-      <span className={cn('font-medium font-poppins whitespace-nowrap', c.text)}>
+      <span className={cn('font-medium whitespace-nowrap', c.text)}>
         {SITE_CONFIG.phone}
       </span>
-      <div className={cn('rounded-full bg-primary flex items-center justify-center shrink-0', c.icon)}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={cn('text-white', c.svg)} aria-hidden="true">
+      <div className={cn('rounded-full bg-white flex items-center justify-center shrink-0', c.icon)}>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className={cn('text-primary', c.svg)} aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
         </svg>
       </div>

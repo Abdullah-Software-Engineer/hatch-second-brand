@@ -9,13 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#2A3F53",
-        secondary: "#C8A24F",
+        primary: "#9754D8",
+        accent: "#9754D8",
+        secondary: "#9754D8",
       },
       fontFamily: {
-        playfair: ["var(--font-playfair)", "serif"],
-        poppins: ["var(--font-poppins)", "sans-serif"],
-        libre: ["var(--font-libre-baskerville)", "serif"],
+        sans: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"SF Pro Display"',
+          '"SF Pro Text"',
+          '"Segoe UI"',
+          "system-ui",
+          "sans-serif",
+        ],
+        arizona: ['Arizona', 'serif'],
       },
       keyframes: {
         "marquee-scroll": {
