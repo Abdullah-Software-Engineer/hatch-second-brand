@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    --color-primary: #2A3F53;
+    --color-secondary: #C8A24F;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html,
+    body {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    font-family: var(--font-poppins), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-family: var(--font-playfair), serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: var(--font-libre-baskerville), serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  p, div, a, button, input, textarea, label, span {
+    font-family: var(--font-poppins), sans-serif;
+  }
+
+  h1 span { font-family: inherit; }
+  h2 span, h3 span, h4 span, h5 span, h6 span { font-family: inherit !important; }
+}
+
+@layer utilities {
+  .bg-primary { background-color: #2A3F53 !important; }
+  .bg-secondary { background-color: #C8A24F !important; }
+  .text-primary { color: #2A3F53 !important; }
+  .text-secondary { color: #C8A24F !important; }
+  .border-primary { border-color: #2A3F53 !important; }
+  .border-secondary { border-color: #C8A24F !important; }
+  .hover\:bg-primary:hover { background-color: #2A3F53 !important; }
+  .hover\:bg-secondary:hover { background-color: #C8A24F !important; }
+  .hover\:text-primary:hover { color: #2A3F53 !important; }
+  .hover\:text-secondary:hover { color: #C8A24F !important; }
+
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(16px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  .animate-marquee-scroll { animation: marquee-scroll 60s linear infinite; }
+  .animate-marquee-scroll-reverse { animation: marquee-scroll-reverse 60s linear infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee-scroll,
+    .animate-marquee-scroll-reverse { animation-duration: 120s; }
+  }
+}
