@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Container from '../../components/ui/Container'
 
-export default function ProjectsHero() {
+export default function BlogHero() {
   return (
     <section className="relative h-[500px] sm:h-[550px] md:h-[600px] lg:h-[700px] overflow-hidden bg-white flex flex-col pt-[80px] lg:pt-[90px] rounded-bl-[50px] rounded-br-[50px]">
       <div className="relative z-10 w-full flex-1 flex items-center">
@@ -13,35 +13,36 @@ export default function ProjectsHero() {
             {/* Main Heading */}
             <h1 className="text-[40px] sm:text-[50px] md:text-[64px] lg:text-[80px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5 md:mb-6 lg:mb-8">
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
-                <span className="text-primary">Results</span>
+                <span>Our Blog</span>
                 <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
                   <Image
                     src="/home/hero/after-solutions.png"
-                    alt="Results"
+                    alt="Blog"
                     fill
                     className="object-cover"
                     priority
                   />
                 </div>
-                <span>That speak</span>
+                <span className="text-primary">Insights</span>
               </span>
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
-                <span>For Themselves</span>
+                <span className="text-primary">Behind the</span>
                 <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
                   <Image
                     src="/home/hero/after-move.png"
-                    alt="Themselves"
+                    alt="Builts"
                     fill
                     className="object-cover"
                     priority
                   />
                 </div>
+                <span>Builts</span>
               </span>
             </h1>
 
             {/* Subheading */}
             <p className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-600 max-w-[800px] mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-relaxed">
-              A closer look at how our ideas turn into tangible results. Here are some of our selected works.
+              Our blog are curated for tech geeks as well as tech you are researching on
             </p>
 
             {/* Contact Us Button */}
