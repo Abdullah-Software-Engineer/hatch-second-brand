@@ -1,5 +1,6 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import Container from '../../components/ui/Container'
@@ -33,20 +34,25 @@ const FOOTER_LINKS = {
 }
 
 export default function FooterContact() {
-  return (
-    <section className="bg-white pb-4 pt-20 relative">
-        {/* Top Image - Centered and overlapping */}
-        <div className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[100px] md:h-[160px] z-0 pointer-events-none">
-             <Image
-                src="/home/connect/Let’s Connect.png"
-                alt="Let's Connect"
-                fill
-                className="object-contain"
-             />
-        </div>
+  const pathname = usePathname()
+  const isContactPage = pathname === '/contact'
 
-        {/* Contact Form Container */}
-        <div className="mx-[15px] bg-black rounded-[40px] relative pt-24 md:pt-32 pb-0 overflow-hidden mb-[15px]">
+  return (
+    <section className={`bg-white pb-4 ${isContactPage ? 'pt-12' : 'pt-20'} relative`}>
+        {!isContactPage && (
+          <>
+            {/* Top Image - Centered and overlapping */}
+            <div className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[100px] md:h-[160px] z-0 pointer-events-none">
+                 <Image
+                    src="/home/connect/Let's Connect.png"
+                    alt="Let's Connect"
+                    fill
+                    className="object-contain"
+                 />
+            </div>
+
+            {/* Contact Form Container */}
+            <div className="mx-[15px] bg-black rounded-[40px] relative pt-24 md:pt-32 pb-0 overflow-hidden mb-[15px]">
             <Container className="w-full">
                 <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-20 mb-20 md:mb-32 w-full">
                     {/* Left Content */}
@@ -106,10 +112,12 @@ export default function FooterContact() {
                   ))}
                 </div>
              </div>
-        </div>
+            </div>
+          </>
+        )}
 
         {/* Footer Links Container */}
-        <div className="mx-[15px] rounded-[40px] relative overflow-hidden min-h-[600px]">
+        <div className={`mx-[15px] rounded-[40px] relative overflow-hidden min-h-[600px] ${isContactPage ? 'mt-0' : ''}`}>
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
