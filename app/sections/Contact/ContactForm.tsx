@@ -87,19 +87,24 @@ export default function ContactForm() {
               {/* Send Button */}
               <button
                 type="submit"
-                className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-primary via-[#B794F6] to-[#C4A5F0] text-white rounded-lg font-medium text-base md:text-lg shadow-md hover:shadow-lg transition-all duration-300"
+                className="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-lg font-medium text-base md:text-lg shadow-md hover:shadow-lg hover:bg-primary/90 transition-all duration-300"
               >
-                Send next
+                Send now!
               </button>
             </form>
           </div>
 
           {/* Right Section - Find Us Here Panel */}
           <div className="w-full lg:flex">
-            <div className="bg-[#2A2A2A] rounded-2xl p-8 md:p-10 lg:p-12 w-full h-full flex flex-col justify-end">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-10">
-                Find Us Here
-              </h3>
+            <div className="bg-[#2A2A2A] rounded-2xl overflow-hidden w-full flex flex-col">
+              {/* Placeholder for map / image */}
+              <div className="w-full aspect-4/3 min-h-[180px] bg-[#1a1a1a] flex items-center justify-center">
+                <span className="text-gray-500 text-sm">Map or image</span>
+              </div>
+              <div className="p-8 md:p-10 lg:p-12 flex flex-col">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-10">
+                  Find Us Here
+                </h3>
 
               {/* Social Media Icons */}
               <div className="flex items-center gap-6 md:gap-8 mb-6 md:mb-8">
@@ -143,11 +148,12 @@ export default function ContactForm() {
               {/* Contact Information */}
               <div className="space-y-3 text-left">
                 <p className="text-white text-base md:text-lg">
-                  sales@digitallyhatch.com
+                  <span className="text-gray-400 mr-2">Email:</span> sales@digitallyhatch.com
                 </p>
                 <p className="text-white text-base md:text-lg">
-                  +92 3003536883
+                  <span className="text-gray-400 mr-2">Phone:</span> +92 3003535893
                 </p>
+              </div>
               </div>
             </div>
           </div>

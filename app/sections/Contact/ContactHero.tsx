@@ -13,11 +13,11 @@ export default function ContactHero() {
             {/* Main Heading */}
             <h1 className="text-[40px] sm:text-[50px] md:text-[64px] lg:text-[80px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5 md:mb-6 lg:mb-8">
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
-                <span>Let's Build</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
+                <span>Let&apos;s Build</span>
+                <div className="relative w-[70px] h-[70px] sm:w-[85px] sm:h-[85px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full overflow-hidden inline-flex items-center justify-center flex-shrink-0">
                   <Image
                     src="/home/hero/after-solutions.png"
-                    alt="Build"
+                    alt="Collaboration"
                     fill
                     className="object-cover"
                     priority
@@ -27,10 +27,10 @@ export default function ContactHero() {
               </span>
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
                 <span className="text-primary">Together</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
+                <div className="relative w-[70px] h-[70px] sm:w-[85px] sm:h-[85px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full overflow-hidden inline-flex items-center justify-center flex-shrink-0">
                   <Image
                     src="/home/hero/after-move.png"
-                    alt="Together"
+                    alt="Digital"
                     fill
                     className="object-cover"
                     priority
@@ -41,7 +41,7 @@ export default function ContactHero() {
 
             {/* Subheading */}
             <p className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-600 max-w-[800px] mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-relaxed">
-              Let's discuss how we can help bring your digital vision to life.
+              Let&apos;s discuss how we can help bring your digital vision to life.
             </p>
 
             {/* View Projects Button */}
