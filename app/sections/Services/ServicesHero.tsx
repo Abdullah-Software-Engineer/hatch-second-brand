@@ -6,7 +6,7 @@ import Container from '../../components/ui/Container'
 
 export default function ServicesHero() {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen overflow-hidden bg-white flex flex-col pt-[80px] lg:pt-[90px] rounded-bl-[50px] rounded-br-[50px]">
+    <section className="relative h-[700px] overflow-hidden bg-white flex flex-col pt-[80px] lg:pt-[90px] rounded-bl-[50px] rounded-br-[50px]">
       <div className="relative z-10 w-full flex-1 flex items-center">
         <Container>
           <div className="flex flex-col items-center justify-center text-center max-w-[1200px] mx-auto px-4 py-12 md:py-20">
