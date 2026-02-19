@@ -44,13 +44,23 @@ const SERVICES = [
   }
 ]
 
+const MARQUEE_ITEMS = [
+  "Web Development",
+  "App Development",
+  "Content & Creatives",
+  "UI/UX Design",
+  "Marketing",
+  "AI Integration",
+  "Lead Generation"
+]
+
 export default function Services() {
   const [activeTab, setActiveTab] = useState(SERVICES[1].id) // Default to App Development as in image
 
   const activeService = SERVICES.find(s => s.id === activeTab) || SERVICES[0]
 
   return (
-    <section className="bg-white py-20 md:py-32">
+    <section className="bg-white pt-20 md:pt-32 pb-0">
       <Container>
         {/* Header */}
         <div className="flex flex-col items-center mb-12 md:mb-16 text-center">
@@ -59,8 +69,8 @@ export default function Services() {
         </div>
 
         {/* Tabs Navigation */}
-        <div className="flex justify-center mb-16 md:mb-24">
-          <div className="inline-flex flex-wrap justify-center gap-2 p-2 rounded-full border border-gray-200 bg-white shadow-sm overflow-x-auto max-w-full">
+        <div className="flex justify-center mb-16 md:mb-24 w-full">
+          <div className="flex flex-wrap justify-center gap-2 p-2 rounded-full border border-gray-200 bg-white shadow-sm overflow-x-auto w-full">
             {SERVICES.map((service) => (
               <button
                 key={service.id}
@@ -120,6 +130,18 @@ export default function Services() {
           </AnimatePresence>
         </div>
       </Container>
+
+      {/* Bottom Marquee */}
+      <div className="w-full overflow-hidden bg-white mt-20 md:mt-32 border-t border-gray-100 py-6 md:py-8">
+        <div className="flex w-max animate-marquee-scroll">
+          {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, index) => (
+            <div key={index} className="flex items-center mx-4">
+              <span className="text-[#9754D8] text-2xl md:text-3xl font-bold whitespace-nowrap">{item}</span>
+              <span className="text-[#9754D8] text-xl md:text-2xl mx-6 md:mx-8">❋</span> 
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

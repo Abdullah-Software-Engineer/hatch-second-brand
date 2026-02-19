@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import Footer from './Footer'
+import FooterContact from './FooterContact'
 
 export default function Layout({
   children,
@@ -11,7 +11,7 @@ export default function Layout({
     <>
       <Header />
       {children}
-      <Footer />
+      <FooterContact />
     </>
   )
 }
