@@ -31,6 +31,7 @@ export default function MarqueeLogos() {
                 alt="Partner logo"
                 fill
                 className="object-contain"
+                unoptimized
               />
             </div>
           </div>

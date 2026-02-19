@@ -44,8 +44,8 @@ export default function Testimonials() {
     <section className="bg-white py-20 md:py-32 overflow-hidden">
       <Container>
         <div className="flex flex-col items-center mb-0 relative z-0">
-          <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">(Why clients love Hatch)</span>
-          <div className="relative w-[280px] h-[60px] md:w-[400px] md:h-[90px] mb-8">
+          <span className="text-gray-500 text-sm md:text-base mb-[10px] tracking-wide">(Why clients love Hatch)</span>
+          <div className="relative w-[400px] h-[85px] md:w-[650px] md:h-[140px] mb-8">
             <Image
               src="/home/testimonials/testimonials-word.png"
               alt="Testimonials"
@@ -74,8 +74,8 @@ export default function Testimonials() {
           </div>
 
           {/* Right Carousel */}
-          <div className="lg:col-span-7 relative flex items-center min-h-[450px] md:min-h-[550px] pt-12 md:pt-16">
-            <div className="relative w-full h-[400px] md:h-[450px]">
+          <div className="lg:col-span-7 relative h-full min-h-[400px] flex items-end">
+            <div className="relative w-full h-full">
               {TESTIMONIALS.map((testimonial, index) => {
                 // Calculate position relative to current index
                 const offset = (index - currentIndex + TESTIMONIALS.length) % TESTIMONIALS.length;
@@ -90,22 +90,26 @@ export default function Testimonials() {
                 let scale = 1;
                 let translateY = 0;
                 let opacity = 1;
+                let backgroundColor = '#000000'; // Default black
                 
                 if (offset === 0) {
                   zIndex = 30;
                   scale = 1;
                   translateY = 0;
                   opacity = 1;
+                  backgroundColor = '#000000'; // Black for front card
                 } else if (offset === 1) {
                   zIndex = 20;
                   scale = 0.95; // Less scaling
                   translateY = -35; // More visible peek
                   opacity = 1; // Full opacity
+                  backgroundColor = '#333333'; // Dark gray for second card
                 } else if (offset === 2) {
                   zIndex = 10;
                   scale = 0.9;
                   translateY = -70; // Even more visible peek
                   opacity = 1;
+                  backgroundColor = '#666666'; // Lighter gray for third card
                 } else {
                     // Hide others
                     zIndex = 0;
@@ -115,12 +119,12 @@ export default function Testimonials() {
                 return (
                   <div
                     key={index}
-                    className="absolute top-0 left-0 w-full h-full bg-black rounded-[24px] p-8 md:p-12 flex flex-col justify-between text-white transition-all duration-500 ease-in-out origin-bottom shadow-2xl border border-white/5"
+                    className="absolute bottom-0 left-0 w-full h-full rounded-[24px] p-8 md:p-12 flex flex-col justify-between text-white transition-all duration-500 ease-in-out origin-bottom shadow-2xl border border-white/5"
                     style={{
                       zIndex,
                       transform: `translateY(${translateY}px) scale(${scale})`,
                       opacity,
-                      filter: offset === 0 ? 'none' : 'brightness(0.4)', // Darker background cards
+                      backgroundColor,
                     }}
                   >
                     {/* Header: Counter & Pagination Dots (optional) */}
