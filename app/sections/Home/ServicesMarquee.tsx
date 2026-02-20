@@ -1,25 +1,15 @@
 'use client'
 
 import Container from '../../components/ui/Container'
-import { cn } from '@/lib/utils'
 
-const PURPLE_MARQUEE_ITEMS = [
-  'Global Reach',
-  '1100+ Projects',
-  'Data Driven',
-  'Trusted by',
+const DEFAULT_PURPLE_ITEMS = [
   'Global Reach',
   '1100+ Projects',
   'Data Driven',
   'Trusted by',
 ]
 
-const BLACK_MARQUEE_ITEMS = [
-  'Digital First',
-  'Scalable Systems',
-  'Built to Scale',
-  'Think Digital',
-  'User Centric',
+const DEFAULT_BLACK_ITEMS = [
   'Digital First',
   'Scalable Systems',
   'Built to Scale',
@@ -27,27 +17,54 @@ const BLACK_MARQUEE_ITEMS = [
   'User Centric',
 ]
 
-const TAGS = [
-  { label: 'Web development', icon: 'globe' },
-  { label: 'Mobile apps', icon: 'mobile' },
-  { label: 'AI integration', icon: 'ai' },
-  { label: 'UI/UX design', icon: 'design' },
-  { label: 'Marketing', icon: 'chart' },
-  { label: 'Content & creatives', icon: 'content' },
-  { label: 'Lead generation', icon: 'users' },
+const DEFAULT_TAGS = [
+  { label: 'Web development' },
+  { label: 'Mobile apps' },
+  { label: 'AI integration' },
+  { label: 'UI/UX design' },
+  { label: 'Marketing' },
+  { label: 'Content & creatives' },
+  { label: 'Lead generation' },
 ]
 
-export default function ServicesMarquee() {
+export interface ServicesMarqueeProps {
+  /** Items for the purple (primary) scrolling band */
+  purpleItems?: string[]
+  /** Items for the black scrolling band */
+  blackItems?: string[]
+  /** 'full' = marquee + script/description/tags (home). 'marquee-only' = just the bands (e.g. service detail) */
+  variant?: 'full' | 'marquee-only'
+  /** Script/cursive headline (only when variant="full") */
+  scriptText?: string
+  /** Main description paragraph (only when variant="full") */
+  description?: React.ReactNode
+  /** Tag pills (only when variant="full") */
+  tags?: { label: string }[]
+}
+
+export default function ServicesMarquee({
+  purpleItems = DEFAULT_PURPLE_ITEMS,
+  blackItems = DEFAULT_BLACK_ITEMS,
+  variant = 'full',
+  scriptText = 'hello',
+  description,
+  tags = DEFAULT_TAGS,
+}: ServicesMarqueeProps) {
+  const purple = purpleItems.length > 0 ? purpleItems : DEFAULT_PURPLE_ITEMS
+  const black = blackItems.length > 0 ? blackItems : DEFAULT_BLACK_ITEMS
+  const isMarqueeOnly = variant === 'marquee-only'
+
   return (
-    <section className="relative w-full bg-[#F3F4F6] overflow-hidden pt-48 pb-24 md:pt-60 md:pb-32">
+    <section
+      className={`relative w-full bg-[#F3F4F6] overflow-hidden ${isMarqueeOnly ? 'pt-32 pb-16 md:pt-40 md:pb-20' : 'pt-48 pb-24 md:pt-60 md:pb-32'}`}
+    >
       {/* Tilted Marquees Container */}
-      <div className="absolute top-0 left-0 w-full h-[400px] overflow-hidden z-0 pointer-events-none">
-        
+      <div className={`absolute top-0 left-0 w-full overflow-hidden z-0 pointer-events-none ${isMarqueeOnly ? 'h-[280px] md:h-[320px]' : 'h-[400px]'}`}>
         {/* Purple Marquee - Tilted and moving right */}
-        <div className="absolute top-[60px] sm:top-[80px] md:top-[100px] left-[-10%] w-[120%] -rotate-3 sm:-rotate-6 z-10 origin-center">
+        <div className={`absolute left-[-10%] w-[120%] -rotate-3 sm:-rotate-6 z-10 origin-center ${isMarqueeOnly ? 'top-[40px] sm:top-[50px] md:top-[60px]' : 'top-[60px] sm:top-[80px] md:top-[100px]'}`}>
           <div className="bg-primary py-3 md:py-5 shadow-xl">
             <div className="flex w-max animate-marquee-scroll-reverse">
-              {[...PURPLE_MARQUEE_ITEMS, ...PURPLE_MARQUEE_ITEMS].map((item, index) => (
+              {[...purple, ...purple].map((item, index) => (
                 <div key={index} className="flex items-center mx-4 md:mx-8">
                   <span className="text-white text-[24px] sm:text-[32px] md:text-[38px] font-medium whitespace-nowrap">{item}</span>
                   <span className="text-white/70 ml-8 md:ml-12 text-sm">✕</span>
@@ -58,10 +75,10 @@ export default function ServicesMarquee() {
         </div>
 
         {/* Black Marquee - Tilted and moving left */}
-        <div className="absolute top-[100px] sm:top-[140px] md:top-[180px] left-[-10%] w-[120%] rotate-3 sm:rotate-6 z-20 origin-center">
+        <div className={`absolute left-[-10%] w-[120%] rotate-3 sm:rotate-6 z-20 origin-center ${isMarqueeOnly ? 'top-[80px] sm:top-[110px] md:top-[140px]' : 'top-[100px] sm:top-[140px] md:top-[180px]'}`}>
           <div className="bg-black py-3 md:py-5 shadow-xl">
             <div className="flex w-max animate-marquee-scroll">
-              {[...BLACK_MARQUEE_ITEMS, ...BLACK_MARQUEE_ITEMS].map((item, index) => (
+              {[...black, ...black].map((item, index) => (
                 <div key={index} className="flex items-center mx-4 md:mx-8">
                   <span className="text-white text-[24px] sm:text-[32px] md:text-[38px] font-medium whitespace-nowrap">{item}</span>
                   <span className="text-white/70 ml-8 md:ml-12 text-sm">✕</span>
@@ -72,38 +89,35 @@ export default function ServicesMarquee() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-30 mt-20">
-        <Container>
-          <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
-            
-            {/* Script Text */}
-            <h3 className="font-arizona italic text-4xl md:text-5xl text-primary mb-6 relative transform -rotate-6">
-              hello
-            </h3>
-
-            {/* Main Description */}
-            <div className="p-4 md:p-0 mb-12 bg-transparent relative">
-              <p className="text-2xl md:text-3xl lg:text-4xl leading-tight font-medium text-black">
-                We are a service design studio delivering tailored solutions through a team of <span className="text-primary font-bold">90+ skilled experts</span>. We simplify complex challenges and turn ideas into scalable, lasting impact.
-              </p>
+      {/* Main Content (only when variant="full") */}
+      {!isMarqueeOnly && (
+        <div className="relative z-30 mt-20">
+          <Container>
+            <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
+              <h3 className="font-arizona italic text-4xl md:text-5xl text-primary mb-6 relative transform -rotate-6">
+                {scriptText}
+              </h3>
+              <div className="p-4 md:p-0 mb-12 bg-transparent relative">
+                {description ?? (
+                  <p className="text-2xl md:text-3xl lg:text-4xl leading-tight font-medium text-black">
+                    We are a service design studio delivering tailored solutions through a team of <span className="text-primary font-bold">90+ skilled experts</span>. We simplify complex challenges and turn ideas into scalable, lasting impact.
+                  </p>
+                )}
+              </div>
+              <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[800px]">
+                {tags.slice(0, 4).map((tag, index) => (
+                  <TagPill key={index} label={tag.label} />
+                ))}
+              </div>
+              <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-3 md:mt-4 max-w-[800px]">
+                {tags.slice(4).map((tag, index) => (
+                  <TagPill key={index + 4} label={tag.label} />
+                ))}
+              </div>
             </div>
-
-            {/* Tags Grid */}
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[800px]">
-              {TAGS.slice(0, 4).map((tag, index) => (
-                <TagPill key={index} label={tag.label} />
-              ))}
-            </div>
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-3 md:mt-4 max-w-[800px]">
-              {TAGS.slice(4).map((tag, index) => (
-                <TagPill key={index + 4} label={tag.label} />
-              ))}
-            </div>
-
-          </div>
-        </Container>
-      </div>
+          </Container>
+        </div>
+      )}
     </section>
   )
 }

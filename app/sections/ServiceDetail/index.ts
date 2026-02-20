@@ -1,0 +1,6 @@
+export { default as ServiceDetailHero } from './ServiceDetailHero'
+export { default as ServiceDetailIntro } from './ServiceDetailIntro'
+export { default as ServiceOurWork } from './ServiceOurWork'
+export { default as ServiceProcess } from './ServiceProcess'
+export { default as ServiceTestimonialsSection } from './ServiceTestimonialsSection'
+export { default as ServiceFAQSection } from './ServiceFAQSection'
