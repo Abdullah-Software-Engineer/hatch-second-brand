@@ -1,33 +1,37 @@
 'use client'
 
 import { useRef } from 'react'
+import Link from 'next/link'
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import { cn } from '@/lib/utils'
 
 const PROJECTS = [
   {
+    slug: "sexner-web-redesign",
+    title: "Sexner Web Redesign",
+    category: "Project Name",
+    description: "We help startups launch, grow, and scale through clean, conversion-focused design.",
+    tags: ["Web design", "UI/UX", "Branding"],
+    image: "/home/projects/project-1.png",
+    color: "#000000"
+  },
+  {
+    slug: "bookworm",
     title: "Bookworm",
     category: "Project Name",
     description: "Bookworm is a dynamic platform designed for book enthusiasts, offering the ability to borrow, rent, or buy books. It is a generative AI-based book recommendation system offering personalized book suggestions, ensuring users find the most relevant titles.",
     tags: ["Ecommerce", "Design", "Development"],
-    image: "/home/projects/project-1.png", // Placeholder path
+    image: "/home/projects/project-1.png",
     color: "#000000"
   },
   {
+    slug: "healthsync",
     title: "HealthSync",
     category: "Project Name",
     description: "HealthSync revolutionizes patient care with a comprehensive telemedicine platform. Connecting patients with specialists worldwide, it features real-time health monitoring, secure data sharing, and AI-driven diagnostic assistance.",
     tags: ["Healthcare", "Mobile App", "AI"],
-    image: "/home/projects/project-2.png", // Placeholder path
-    color: "#000000"
-  },
-  {
-    title: "EcoTrack",
-    category: "Project Name",
-    description: "EcoTrack empowers businesses to monitor and reduce their carbon footprint. Through detailed analytics and actionable insights, companies can optimize their operations for sustainability and environmental impact.",
-    tags: ["SaaS", "Analytics", "Green Tech"],
-    image: "/home/projects/project-3.png", // Placeholder path
+    image: "/home/projects/project-2.png",
     color: "#000000"
   }
 ]
@@ -135,7 +139,10 @@ function Card({
             </div>
 
             <div>
-              <button className="bg-[#9754D8] hover:bg-[#8644C2] text-white px-6 py-3 rounded-full font-medium transition-all flex items-center gap-2 group text-sm md:text-base">
+              <Link
+                href={`/projects/${project.slug}`}
+                className="inline-flex items-center gap-2 bg-[#9754D8] hover:bg-[#8644C2] text-white px-6 py-3 rounded-full font-medium transition-all group text-sm md:text-base"
+              >
                 View Full Case Study
                 <svg 
                   width="16" 
@@ -151,7 +158,7 @@ function Card({
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
-              </button>
+              </Link>
             </div>
           </div>
 

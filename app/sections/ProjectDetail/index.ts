@@ -1,0 +1,5 @@
+export { default as ProjectDetailHero } from './ProjectDetailHero'
+export { default as ProjectDetailMediaBlock } from './ProjectDetailMediaBlock'
+export { default as ProjectDetailSection } from './ProjectDetailSection'
+export { default as ProjectDetailNextProject } from './ProjectDetailNextProject'
+export { default as ProjectDetailTestimonials } from './ProjectDetailTestimonials'
