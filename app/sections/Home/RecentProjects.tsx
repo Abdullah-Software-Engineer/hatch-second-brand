@@ -8,29 +8,29 @@ import { cn } from '@/lib/utils'
 
 const PROJECTS = [
   {
-    slug: "sexner-web-redesign",
-    title: "Sexner Web Redesign",
-    category: "Project Name",
+    slug: "green",
+    title: "Green",
+    category: "Web Design",
     description: "We help startups launch, grow, and scale through clean, conversion-focused design.",
-    tags: ["Web design", "UI/UX", "Branding"],
+    tags: ["Web design", "UI/UX design", "Web development"],
     image: "/home/projects/project-1.png",
     color: "#000000"
   },
   {
     slug: "bookworm",
     title: "Bookworm",
-    category: "Project Name",
+    category: "App Design",
     description: "Bookworm is a dynamic platform designed for book enthusiasts, offering the ability to borrow, rent, or buy books. It is a generative AI-based book recommendation system offering personalized book suggestions, ensuring users find the most relevant titles.",
-    tags: ["Ecommerce", "Design", "Development"],
+    tags: ["App design", "UI/UX design", "App development"],
     image: "/home/projects/project-1.png",
     color: "#000000"
   },
   {
-    slug: "healthsync",
-    title: "HealthSync",
-    category: "Project Name",
-    description: "HealthSync revolutionizes patient care with a comprehensive telemedicine platform. Connecting patients with specialists worldwide, it features real-time health monitoring, secure data sharing, and AI-driven diagnostic assistance.",
-    tags: ["Healthcare", "Mobile App", "AI"],
+    slug: "aintanet",
+    title: "Aintanet",
+    category: "Pitch Deck & Development",
+    description: "Aintanet is a next-generation blockchain protocol built to power the digital economy through privacy-complete architecture and dense-load scalability.",
+    tags: ["Pitch Deck", "Development"],
     image: "/home/projects/project-2.png",
     color: "#000000"
   }
