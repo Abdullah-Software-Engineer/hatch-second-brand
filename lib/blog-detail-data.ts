@@ -161,3 +161,18 @@ export function getRelatedPosts(currentSlug: string, limit = 3): BlogDetailData[
   if (!current) return []
   return BLOG_DETAIL_LIST.filter((p) => p.slug !== currentSlug).slice(0, limit)
 }
+
+/** Unique categories for filter pills, in display order */
+const CATEGORY_ORDER = ['AI Trends', 'Design', 'Branding & Strategy', 'Leadership', 'Marketing'] as const
+
+export function getBlogCategories(): string[] {
+  const seen = new Set<string>()
+  const result: string[] = []
+  for (const cat of CATEGORY_ORDER) {
+    if (BLOG_DETAIL_LIST.some((p) => p.category === cat) && !seen.has(cat)) {
+      seen.add(cat)
+      result.push(cat)
+    }
+  }
+  return result
+}
