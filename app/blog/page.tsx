@@ -1,12 +1,11 @@
 import Layout from '../components/layout/Layout'
-import BlogHero from '../sections/Blog/BlogHero'
-import BlogInsights from '../sections/Blog/BlogInsights'
 
 export default function BlogPage() {
   return (
     <Layout>
-      <BlogHero />
-      <BlogInsights />
+      <main className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold">Blog</h1>
+      </main>
     </Layout>
   )
 }

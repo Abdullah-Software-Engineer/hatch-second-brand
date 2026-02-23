@@ -59,9 +59,6 @@ export const SERVICES_DETAIL: ServiceDetailData[] = [
     testimonials: SHARED_TESTIMONIALS,
     faqs: DEFAULT_FAQS,
   },
-    testimonials: SHARED_TESTIMONIALS,
-    faqs: DEFAULT_FAQS,
-  },
   {
     slug: 'app-software-development',
     titlePart1: 'App &',
