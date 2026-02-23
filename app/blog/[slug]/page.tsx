@@ -1,7 +1,15 @@
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import Layout from '../../components/layout/Layout'
-import { getBlogBySlug, getAllBlogSlugs } from '@/lib/blog-detail-data'
+import {
+  getBlogBySlug,
+  getAllBlogSlugs,
+  getTocFromBody,
+  getRelatedPosts,
+} from '@/lib/blog-detail-data'
+import { getBlogPageComponent } from '@/app/sections/BlogDetail/pages'
+import { getBlogDetailContent } from '@/app/sections/BlogDetail/contents'
+import BlogDetailHero from '@/app/sections/BlogDetail/BlogDetailHero'
+import BlogInnerLayout from '@/app/sections/BlogDetail/BlogInnerLayout'
 
 export async function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }))
@@ -17,38 +25,28 @@ export default async function BlogPostPage({
 
   if (!post) notFound()
 
+  const CustomPage = getBlogPageComponent(slug)
+
+  if (CustomPage) {
+    return (
+      <Layout>
+        <CustomPage post={post} />
+      </Layout>
+    )
+  }
+
+  const toc = getTocFromBody(post.body)
+  const relatedPosts = getRelatedPosts(slug)
+  const ContentComponent = getBlogDetailContent(slug)
+
   return (
     <Layout>
-      <article className="container mx-auto px-4 py-12 max-w-3xl">
-        <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
-        <p className="text-muted-foreground text-sm mb-4">
-          {post.date} · {post.readTime} · {post.category}
-        </p>
-        {post.image && (
-          <div className="relative aspect-video mb-8 rounded-lg overflow-hidden">
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              className="object-cover"
-            />
-          </div>
-        )}
-        <p className="text-lg text-muted-foreground mb-8">{post.description}</p>
-        <div className="prose prose-neutral dark:prose-invert max-w-none">
-          {post.body.map((block, i) =>
-            block.type === 'heading' ? (
-              <h2 key={i} className="text-xl font-semibold mt-8 mb-4">
-                {block.text}
-              </h2>
-            ) : (
-              <p key={i} className="mb-4">
-                {block.text}
-              </p>
-            )
-          )}
-        </div>
-      </article>
+      <BlogInnerLayout toc={toc} relatedPosts={relatedPosts}>
+        <>
+          <BlogDetailHero post={post} />
+          <ContentComponent post={post} />
+        </>
+      </BlogInnerLayout>
     </Layout>
   )
 }

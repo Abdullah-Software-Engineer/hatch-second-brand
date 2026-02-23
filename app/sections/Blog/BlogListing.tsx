@@ -2,92 +2,20 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Container from '../../components/ui/Container'
 import { cn } from '@/lib/utils'
+import { BLOG_DETAIL_LIST, getBlogCategories } from '@/lib/blog-detail-data'
 
-const CATEGORIES = [
-  'All',
-  'AI Trends',
-  'Design',
-  'Branding & Strategy',
-  'Leadership',
-  'Marketing'
-]
-
-const BLOG_POSTS = [
-  {
-    id: 1,
-    title: "Beyond Automation: How Al Integration is Redefining Business Workflows",
-    description: "Discover how Al integration and Al workflow automation drive business Al trends for smarter growth.",
-    readTime: "2 min read",
-    image: "/home/blog/post-1.png",
-    category: "AI Trends"
-  },
-  {
-    id: 2,
-    title: "The Future of Custom Al: Why Off-the-Shelf Tools Aren't Enough for Enterprise",
-    description: "Discover why Custom Al Solutions beat off-the-shelf tools for Enterprise Al Integration.",
-    readTime: "2 min read",
-    image: "/home/blog/post-2.png",
-    category: "AI Trends"
-  },
-  {
-    id: 3,
-    title: "Design Thinking in Digital Transformation",
-    description: "Explore how design thinking principles can transform your digital strategy and user experience.",
-    readTime: "3 min read",
-    image: "/home/blog/post-3.png",
-    category: "Design"
-  },
-  {
-    id: 4,
-    title: "UI/UX Best Practices for Modern Web Applications",
-    description: "Learn the essential UI/UX principles that create engaging and intuitive user experiences.",
-    readTime: "4 min read",
-    image: "/home/blog/post-4.png",
-    category: "Design"
-  },
-  {
-    id: 5,
-    title: "Building a Strong Brand Identity in 2025",
-    description: "Learn the key strategies for creating a cohesive brand identity that resonates with modern audiences.",
-    readTime: "4 min read",
-    image: "/home/blog/post-5.png",
-    category: "Branding & Strategy"
-  },
-  {
-    id: 6,
-    title: "Strategic Brand Positioning in Competitive Markets",
-    description: "Discover how to position your brand effectively in crowded marketplaces and stand out from competitors.",
-    readTime: "5 min read",
-    image: "/home/blog/post-6.png",
-    category: "Branding & Strategy"
-  },
-  {
-    id: 7,
-    title: "Leading Remote Teams: Best Practices for 2025",
-    description: "Explore effective leadership strategies for managing and motivating remote teams in the modern workplace.",
-    readTime: "3 min read",
-    image: "/home/blog/post-7.png",
-    category: "Leadership"
-  },
-  {
-    id: 8,
-    title: "Digital Marketing Strategies That Drive Results",
-    description: "Learn proven digital marketing tactics that generate leads, increase engagement, and boost conversions.",
-    readTime: "4 min read",
-    image: "/home/blog/post-8.png",
-    category: "Marketing"
-  }
-]
+const CATEGORIES = ['All', ...getBlogCategories()]
 
 export default function BlogInsights() {
   const [activeCategory, setActiveCategory] = useState('All')
 
   // Filter blog posts based on active category
-  const filteredPosts = activeCategory === 'All' 
-    ? BLOG_POSTS 
-    : BLOG_POSTS.filter(post => post.category === activeCategory)
+  const filteredPosts = activeCategory === 'All'
+    ? BLOG_DETAIL_LIST
+    : BLOG_DETAIL_LIST.filter((post) => post.category === activeCategory)
 
   return (
     <section className="w-full bg-[#EDEDED] py-12 md:py-16 lg:py-20 rounded-tl-[50px] rounded-tr-[50px] mb-[90px]">
@@ -135,7 +63,7 @@ export default function BlogInsights() {
             {filteredPosts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 {filteredPosts.map((post) => (
-                  <BlogPostCard key={post.id} post={post} />
+                  <BlogPostCard key={post.slug} post={post} />
                 ))}
               </div>
             ) : (
@@ -150,33 +78,39 @@ export default function BlogInsights() {
   )
 }
 
-function BlogPostCard({ post }: { post: typeof BLOG_POSTS[0] }) {
+function BlogPostCard({ post }: { post: (typeof BLOG_DETAIL_LIST)[0] }) {
   return (
-    <div className="flex flex-col h-full">
-      {/* Image Placeholder with Float Effect */}
+    <Link
+      href={`/blog/${post.slug}`}
+      className="group flex flex-col h-full rounded-lg overflow-hidden transition-shadow hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+    >
+      {/* Image */}
       <div className="relative w-full h-[400px] bg-gray-300 rounded-lg overflow-hidden shadow-md mb-6">
-        <div className="w-full h-full bg-gray-300"></div>
+        <Image
+          src={post.image || '/home/blog/post-1.png'}
+          alt=""
+          fill
+          className="object-cover transition-transform group-hover:scale-[1.02]"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </div>
 
       {/* Content Section */}
       <div className="flex-1 flex flex-col">
-        {/* Title */}
-        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors">
           {post.title}
         </h3>
 
-        {/* Description */}
         <p className="text-base md:text-lg text-gray-700 mb-4 flex-1">
           {post.description}
         </p>
 
-        {/* Read Time Button - Bottom Right */}
         <div className="flex justify-end mt-auto">
           <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm font-medium">
             {post.readTime}
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
