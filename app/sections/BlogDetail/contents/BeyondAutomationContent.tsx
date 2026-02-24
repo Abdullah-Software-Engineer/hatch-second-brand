@@ -1,9 +1,9 @@
 'use client'
 
 import type { BlogContentProps } from './types'
+import Image from 'next/image'
 import {
   SectionHeading,
-  BarChart,
   ComparisonTable,
   BulletList,
 } from '../blocks'
@@ -17,13 +17,6 @@ const SECTIONS = [
   { id: 'challenges-in-ai-workflow-automation', title: 'Challenges in AI Workflow Automation' },
   { id: 'steps-for-ai-integration-in-workflows', title: 'Steps for AI Integration in Workflows' },
 ] as const
-
-const CHART_DATA = [
-  { label: 'Using/Planning AI', value: 77 },
-  { label: 'Improves Productivity', value: 64 },
-  { label: 'Revenue Increase (avg)', value: 12.5 },
-  { label: 'Adoption Rate', value: 72 },
-]
 
 const COMPARISON_ROWS = [
   { label: 'Logic', left: 'Fixed, rule-based', right: 'Adaptive, learning-based' },
@@ -59,7 +52,7 @@ const STEPS_ITEMS = [
 
 /**
  * Custom content for "Beyond Automation: How AI Integration is Redefining Business Workflows".
- * Uses shared blocks (SectionHeading, BarChart, ComparisonTable, BulletList) so layout stays consistent
+ * Uses shared blocks (SectionHeading, ComparisonTable, BulletList) so layout stays consistent
  * and other blogs can reuse the same blocks with different data.
  */
 export default function BeyondAutomationContent({ post }: BlogContentProps) {
@@ -90,11 +83,15 @@ export default function BeyondAutomationContent({ post }: BlogContentProps) {
         fast, hitting billions in value soon, thanks to demand for real-time fixes across
         industries.
       </p>
-      <BarChart
-        title="Key Business AI Trends 2026"
-        subtitle="Strong adoption with varied impact across metrics."
-        bars={CHART_DATA}
-      />
+      <figure className="my-8">
+        <Image
+          src="/blogs/barchart.webp"
+          alt="Key Business AI Trends 2026 - Strong adoption with varied impact across metrics"
+          width={800}
+          height={450}
+          className="w-full h-auto rounded-2xl border border-gray-200 shadow-sm"
+        />
+      </figure>
 
       <SectionHeading id={SECTIONS[2].id}>{SECTIONS[2].title}</SectionHeading>
       <p className="text-gray-700 leading-relaxed mb-4">

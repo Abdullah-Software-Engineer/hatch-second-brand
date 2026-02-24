@@ -19,6 +19,8 @@ export interface BlogDetailData {
   category: string
   date: string
   author?: string
+  /** When true, hero shows only the title (no image, no description, no meta). */
+  heroMinimal?: boolean
   /** Body content: array of paragraphs or { type: 'heading', text } blocks */
   body: Array<{ type: 'paragraph'; text: string } | { type: 'heading'; text: string }>
 }
@@ -74,6 +76,7 @@ export const BLOG_DETAIL_LIST: BlogDetailData[] = [
     category: 'AI Trends',
     date: 'Feb 12, 2025',
     author: 'Hatch Team',
+    heroMinimal: true,
     body: [
       { type: 'paragraph', text: 'Businesses today chase quick wins with AI. They grab ready-made tools like chatbots or analytics apps from big vendors. It seems simple: plug in, pay up, done. But for enterprises handling massive data, complex ops, and unique goals, these off-the-shelf options often flop. Enter Custom AI Solutions. These tailored systems fit your exact needs, driving real Enterprise AI Integration.' },
       { type: 'paragraph', text: 'Think about it. A logistics firm tracks shipments across continents. A generic AI might spit out basic reports. A Custom AI Solution? It predicts delays from weather data, supplier quirks, and truck routes, all in real time. That\'s the gap we\'re talking about.' },
@@ -84,6 +87,7 @@ export const BLOG_DETAIL_LIST: BlogDetailData[] = [
       { type: 'paragraph', text: 'This table shows the trade-offs. Off-the-shelf saves upfront cash but costs more long-term in lost time.' },
       { type: 'heading', text: 'Unlocking Automated Data Insights at Scale' },
       { type: 'paragraph', text: 'Data is enterprise gold. But it\'s messy—spreadsheets, CRMs, IoT sensors. Off-the-shelf tools give surface-level views. Custom AI Solutions deliver automated data insights that matter. Imagine an HR consultancy juggling 50 clients\' employee data. A custom system cleans it, spots turnover risks, and suggests fixes. Scalable AI makes this grow. Start with one department, expand company-wide. No performance dips.' },
+      { type: 'heading', text: 'Key Stats on Automated Data Insights' },
       { type: 'heading', text: 'Measuring AI ROI: Why Custom Wins Long-Term' },
       { type: 'paragraph', text: 'Everyone asks about AI ROI. Off-the-shelf promises fast returns. Reality? Hidden costs kill it: training staff, fixing errors, migrating data. Custom AI Solutions front-load investment but deliver steady gains. Calculate AI ROI like this: (Gains - Costs) / Costs × 100. Gains include time saved, revenue up, errors down. Off-the-shelf would\'ve hit maybe 120%; custom often delivers 3–4x better.' },
       { type: 'heading', text: 'Challenges and How to Tackle Custom AI Builds' },
@@ -188,6 +192,26 @@ export const BLOG_DETAIL_LIST: BlogDetailData[] = [
       { type: 'paragraph', text: 'Speed keeps users. Aim for fast first contentful paint and minimal layout shift. Optimize assets, use CDNs, and code-split where it makes sense. Performance budgets and monitoring prevent regressions as features grow.' },
       { type: 'heading', text: 'Conclusion' },
       { type: 'paragraph', text: 'UI/UX in 2026 is about connected, immersive experiences that work across devices and put people first. From cross-platform consistency and thoughtful motion to voice, AR, and accessibility, the trends point toward interfaces that feel intuitive, inclusive, and performant.' },
+    ],
+  },
+  {
+    slug: 'conversion-focused-web-design-frontend-performance',
+    title: 'Conversion-Focused Web Design: Blend Aesthetics with Frontend Performance',
+    description: 'Why conversion-focused design and frontend performance matter in 2026, with practical tips to balance visuals and speed.',
+    readTime: '9 min read',
+    image: '/home/blog/',
+    category: 'Design',
+    date: 'Feb 24, 2026',
+    author: 'Hatch Team',
+    heroMinimal: true,
+    body: [
+      { type: 'paragraph', text: 'Great web design in 2026 isn\'t just about looking good—it\'s about converting visitors into customers while staying fast and accessible. This post covers why conversion-focused design matters, how to balance chic visuals with real performance, and a practical checklist for high-performance design.' },
+      { type: 'heading', text: 'Why Conversion-Focused Web Design Matters in 2026' },
+      { type: 'heading', text: 'Balancing Chic Web Design with Real Performance' },
+      { type: 'heading', text: 'Balancing Visuals with Frontend Optimization' },
+      { type: 'heading', text: 'Technical Checklist for High-Performance Design' },
+      { type: 'heading', text: 'The Role of Personalization' },
+      { type: 'heading', text: 'Final Practical Tips' },
     ],
   },
   {

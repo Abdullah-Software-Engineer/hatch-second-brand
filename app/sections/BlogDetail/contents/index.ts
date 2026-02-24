@@ -3,6 +3,8 @@ import type { ComponentType } from 'react'
 import DefaultBlogContent from './DefaultBlogContent'
 import BeyondAutomationContent from './BeyondAutomationContent'
 import UIUXDesignTrends2026Content from './UIUXDesignTrends2026Content'
+import FutureCustomAIContent from './FutureCustomAIContent'
+import ConversionFocusedWebDesignContent from './ConversionFocusedWebDesignContent'
 import type { BlogContentProps } from './types'
 
 export type { BlogContentProps }
@@ -21,6 +23,8 @@ export type { BlogContentProps }
 const CONTENT_MAP: Partial<Record<string, ComponentType<BlogContentProps>>> = {
   'beyond-automation-ai-integration-business-workflows': BeyondAutomationContent,
   'ui-ux-design-trends-2026': UIUXDesignTrends2026Content,
+  'future-of-custom-ai-enterprise': FutureCustomAIContent,
+  'conversion-focused-web-design-frontend-performance': ConversionFocusedWebDesignContent,
 }
 
 /**
