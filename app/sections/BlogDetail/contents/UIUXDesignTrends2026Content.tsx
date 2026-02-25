@@ -48,7 +48,7 @@ const ACCESSIBILITY_ITEMS = [
 ]
 
 const PERFORMANCE_ITEMS = [
-  'Compress assets with TinyPNG.',
+  'Compress assets with Tinywebp.',
   'Use CDNs for global reach.',
   'Code-split bundles in React apps.',
 ]

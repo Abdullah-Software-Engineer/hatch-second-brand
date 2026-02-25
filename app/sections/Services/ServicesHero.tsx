@@ -16,7 +16,7 @@ export default function ServicesHero() {
                 <span>Services</span>
                 <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
                   <Image
-                    src="/home/hero/after-solutions.png"
+                    src="/home/hero/after-solutions.webp"
                     alt="Services"
                     fill
                     className="object-cover"
@@ -27,7 +27,7 @@ export default function ServicesHero() {
                 <span className="text-primary">Real Growth</span>
                 <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
                   <Image
-                    src="/home/hero/after-move.png"
+                    src="/home/hero/after-move.webp"
                     alt="Growth"
                     fill
                     className="object-cover"

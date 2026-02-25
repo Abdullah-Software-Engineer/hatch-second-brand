@@ -103,7 +103,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     titleRest: 'Web Design',
     tagline: TAGLINE,
     categories: 'Web design, UI/UX design, Web development, Responsive Layout',
-    heroMediaSrc: '/home/projects/project-1.png',
+    heroMediaSrc: '/home/projects/project-1.webp',
     sections: [
       {
         id: 'overview',
@@ -162,7 +162,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
           'Partner logos, verified payment options and feedback cues build user trust.',
           'Consistent brand identity with typography, color palette, and custom icons across all screens.',
         ],
-        mediaSrcs: ['/home/projects/project-1.png', '/home/projects/project-2.png'],
+        mediaSrcs: ['/home/projects/project-1.webp', '/home/projects/project-2.webp'],
       },
       {
         id: 'deliverables',
@@ -194,7 +194,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
       title: 'US Ecom Automation',
       description: 'A comprehensive automation platform designed to transform manual e-commerce operations into streamlined, scalable systems.',
       tags: ['Web Design', 'Automation'],
-      image: '/home/projects/project-1.png',
+      image: '/home/projects/project-1.webp',
     },
   },
   // ——— US Ecom Automation ———
@@ -204,7 +204,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     titleRest: 'Web Design',
     tagline: TAGLINE,
     categories: 'Web design, UI/UX design, Web development',
-    heroMediaSrc: '/home/projects/project-1.png',
+    heroMediaSrc: '/home/projects/project-1.webp',
     sections: [
       {
         id: 'overview',
@@ -258,7 +258,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
           'Strategic content structure to guide users from awareness to action.',
           'Trust-building elements like success stories and measurable impact.',
         ],
-        mediaSrcs: ['/home/projects/project-1.png', '/home/projects/project-2.png'],
+        mediaSrcs: ['/home/projects/project-1.webp', '/home/projects/project-2.webp'],
       },
       {
         id: 'deliverables',
@@ -288,7 +288,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
       title: 'Bookworm',
       description: 'Bookworm is a dynamic platform designed for book enthusiasts, offering the ability to borrow, rent, or buy books. It is a generative AI-based book recommendation system offering personalized book suggestions, ensuring users find the most relevant titles.',
       tags: ['App design', 'UI/UX design', 'App development'],
-      image: '/home/projects/project-1.png',
+      image: '/home/projects/project-1.webp',
     },
   },
   // ——— Bookworm ———
@@ -298,7 +298,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     titleRest: 'App Design',
     tagline: TAGLINE,
     categories: 'App design, UI/UX design, App development',
-    heroMediaSrc: '/home/projects/project-1.png',
+    heroMediaSrc: '/home/projects/project-1.webp',
     sections: [
       {
         id: 'overview',
@@ -351,7 +351,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
           'Built a scalable backend to support growing users and transactions.',
           'Optimized the UI/UX for simplicity, speed, and mobile responsiveness.',
         ],
-        mediaSrcs: ['/home/projects/project-1.png', '/home/projects/project-2.png'],
+        mediaSrcs: ['/home/projects/project-1.webp', '/home/projects/project-2.webp'],
       },
       {
         id: 'deliverables',
@@ -384,7 +384,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
       title: 'Zoundz',
       description: 'A cohesive brand identity and digital asset package that unifies visual presence across platforms.',
       tags: ['Branding', 'Digital package'],
-      image: '/home/projects/project-1.png',
+      image: '/home/projects/project-1.webp',
     },
   },
   // ——— Zoundz ———
@@ -394,7 +394,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     titleRest: 'Branding',
     tagline: TAGLINE,
     categories: 'Branding, Digital package, Guideline',
-    heroMediaSrc: '/home/projects/project-1.png',
+    heroMediaSrc: '/home/projects/project-1.webp',
     sections: [
       {
         id: 'overview',
@@ -448,7 +448,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
           'A brand guideline document detailing usage, typography, colors, and tone.',
         ],
         closing: 'All assets were designed to maintain visual consistency, reinforce brand identity, and simplify content creation for marketing and internal teams.',
-        mediaSrcs: ['/home/projects/project-1.png', '/home/projects/project-2.png'],
+        mediaSrcs: ['/home/projects/project-1.webp', '/home/projects/project-2.webp'],
       },
       {
         id: 'deliverables',
@@ -476,7 +476,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
       title: 'Pidgin Toes',
       description: 'A sustainable children\'s footwear brand focused on comfort, customization and eco-conscious design.',
       tags: ['Brand deck', 'Web design', 'UI/UX design'],
-      image: '/home/projects/project-1.png',
+      image: '/home/projects/project-1.webp',
     },
   },
   // ——— Pidgin Toes ———
@@ -486,7 +486,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     titleRest: 'Brand Deck',
     tagline: TAGLINE,
     categories: 'Web design, UI/UX design, Web development',
-    heroMediaSrc: '/home/projects/project-1.png',
+    heroMediaSrc: '/home/projects/project-1.webp',
     sections: [
       {
         id: 'overview',
@@ -540,7 +540,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
           'Reinforces sustainability as part of brand DNA.',
         ],
         closing: 'The deck now functions as: A sales presentation; A retail pitch deck; A brand identity document; A marketing reference guide.',
-        mediaSrcs: ['/home/projects/project-1.png', '/home/projects/project-2.png'],
+        mediaSrcs: ['/home/projects/project-1.webp', '/home/projects/project-2.webp'],
       },
       {
         id: 'deliverables',
@@ -571,7 +571,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
       title: 'Stock Sharks',
       description: 'A 14-day digital media campaign focused on building brand visibility and top-of-funnel awareness within the finance and investment space.',
       tags: ['Pitch Deck', 'Marketing'],
-      image: '/home/projects/project-1.png',
+      image: '/home/projects/project-1.webp',
     },
   },
   // ——— Stock Sharks ———
@@ -581,7 +581,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     titleRest: 'Pitch Deck',
     tagline: TAGLINE,
     categories: 'Pitch Deck, Digital campaign',
-    heroMediaSrc: '/home/projects/project-1.png',
+    heroMediaSrc: '/home/projects/project-1.webp',
     sections: [
       {
         id: 'overview',
@@ -638,7 +638,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
           'Threads supported ecosystem-level visibility.',
         ],
         closing: 'The campaign maintained consistent messaging while adapting creative formats to each platform environment.',
-        mediaSrcs: ['/home/projects/project-1.png', '/home/projects/project-2.png'],
+        mediaSrcs: ['/home/projects/project-1.webp', '/home/projects/project-2.webp'],
       },
       {
         id: 'deliverables',
@@ -667,7 +667,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
       title: 'Aintanet',
       description: 'A next-generation blockchain protocol built to power the digital economy through privacy-complete architecture and dense-load scalability.',
       tags: ['Pitch Deck', 'Development'],
-      image: '/home/projects/project-1.png',
+      image: '/home/projects/project-1.webp',
     },
   },
   // ——— Aintanet ———
@@ -677,7 +677,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     titleRest: 'Pitch Deck & Development',
     tagline: TAGLINE,
     categories: 'Pitch Deck, Development',
-    heroMediaSrc: '/home/projects/project-1.png',
+    heroMediaSrc: '/home/projects/project-1.webp',
     sections: [
       {
         id: 'overview',
@@ -730,7 +730,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
           'The final presentation balances deep technical credibility with investor-friendly storytelling, highlighting Aintanet\'s unfair advantage in privacy-complete design and scalable consensus.',
           'The deck now confidently communicates both vision and execution readiness.',
         ],
-        mediaSrcs: ['/home/projects/project-1.png', '/home/projects/project-2.png'],
+        mediaSrcs: ['/home/projects/project-1.webp', '/home/projects/project-2.webp'],
       },
       {
         id: 'deliverables',
@@ -761,7 +761,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
       title: 'Green',
       description: 'A next-generation Electric Vehicle (EV) infrastructure platform designed to simplify the charging experience for modern drivers.',
       tags: ['Web design', 'UI/UX design', 'Web development'],
-      image: '/home/projects/project-1.png',
+      image: '/home/projects/project-1.webp',
     },
   },
 ]

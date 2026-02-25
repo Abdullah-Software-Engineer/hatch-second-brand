@@ -10,37 +10,37 @@ const SERVICES = [
     id: 'web-dev',
     label: 'Web Development',
     description: "We build high-performance, scalable websites tailored to your business needs. From simple landing pages to complex web applications, our solutions are designed to drive growth and engagement.",
-    images: ["/home/services/web-1.png", "/home/services/web-2.png", "/home/services/web-3.png"]
+    images: ["/home/services/web-1.webp", "/home/services/web-2.webp", "/home/services/web-3.webp"]
   },
   {
     id: 'app-dev',
     label: 'App Development',
     description: "We design and develop custom software solutions that perform across every platform. Whether it's cross-platform mobile apps, e-commerce systems, or on-demand solutions, our team builds scalable, secure, and seamless experiences that turn users into loyal customers.",
-    images: ["/home/services/app-1.png", "/home/services/app-2.png", "/home/services/app-3.png"]
+    images: ["/home/services/app-1.webp", "/home/services/app-2.webp", "/home/services/app-3.webp"]
   },
   {
     id: 'content',
     label: 'Content & Creatives',
     description: "Our creative team crafts compelling content that tells your brand's story. From copywriting to visual assets, we ensure your message resonates with your audience and strengthens your brand identity.",
-    images: ["/home/services/content-1.png", "/home/services/content-2.png", "/home/services/content-3.png"]
+    images: ["/home/services/content-1.webp", "/home/services/content-2.webp", "/home/services/content-3.webp"]
   },
   {
     id: 'ui-ux',
     label: 'UI/UX Design',
     description: "User-centric design is at the heart of everything we do. We create intuitive, aesthetically pleasing interfaces that enhance user satisfaction and ensure a seamless interaction with your digital products.",
-    images: ["/home/services/ui-1.png", "/home/services/ui-2.png", "/home/services/ui-3.png"]
+    images: ["/home/services/ui-1.webp", "/home/services/ui-2.webp", "/home/services/ui-3.webp"]
   },
   {
     id: 'marketing',
     label: 'Marketing',
     description: "Data-driven marketing strategies to boost your online presence. We specialize in SEO, social media marketing, and paid advertising to help you reach your target audience and achieve your business goals.",
-    images: ["/home/services/marketing-1.png", "/home/services/marketing-2.png", "/home/services/marketing-3.png"]
+    images: ["/home/services/marketing-1.webp", "/home/services/marketing-2.webp", "/home/services/marketing-3.webp"]
   },
   {
     id: 'ai',
     label: 'AI Integration',
     description: "Leverage the power of Artificial Intelligence to optimize your operations. We integrate AI solutions that automate processes, provide predictive analytics, and enhance decision-making capabilities.",
-    images: ["/home/services/ai-1.png", "/home/services/ai-2.png", "/home/services/ai-3.png"]
+    images: ["/home/services/ai-1.webp", "/home/services/ai-2.webp", "/home/services/ai-3.webp"]
   }
 ]
 

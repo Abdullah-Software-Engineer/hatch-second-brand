@@ -44,7 +44,7 @@ export default function FooterContact() {
             {/* Top Image - Centered and overlapping */}
             <div className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[100px] md:h-[160px] z-0 pointer-events-none">
                  <Image
-                    src="/home/connect/Lets-Connect.png"
+                    src="/home/connect/Lets-Connect.webp"
                     alt="Let's Connect"
                     fill
                     className="object-contain"

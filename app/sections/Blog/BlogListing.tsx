@@ -87,7 +87,7 @@ function BlogPostCard({ post }: { post: (typeof BLOG_DETAIL_LIST)[0] }) {
       {/* Image */}
       <div className="relative w-full h-[400px] bg-gray-300 rounded-lg overflow-hidden shadow-md mb-6">
         <Image
-          src={post.image || '/home/blog/post-1.png'}
+          src={post.image || '/home/blog/post-1.webp'}
           alt=""
           fill
           className="object-cover transition-transform group-hover:scale-[1.02]"

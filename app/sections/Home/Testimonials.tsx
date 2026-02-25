@@ -47,7 +47,7 @@ export default function Testimonials() {
           <span className="text-gray-500 text-sm md:text-base mb-[10px] tracking-wide">(Why clients love Hatch)</span>
           <div className="relative w-[400px] h-[85px] md:w-[650px] md:h-[140px] mb-8">
             <Image
-              src="/home/testimonials/testimonials-word.png"
+              src="/home/testimonials/testimonials-word.webp"
               alt="Testimonials"
               fill
               className="object-contain"

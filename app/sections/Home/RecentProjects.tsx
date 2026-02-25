@@ -13,7 +13,7 @@ const PROJECTS = [
     category: "Web Design",
     description: "We help startups launch, grow, and scale through clean, conversion-focused design.",
     tags: ["Web design", "UI/UX design", "Web development"],
-    image: "/home/projects/project-1.png",
+    image: "/home/projects/project-1.webp",
     color: "#000000"
   },
   {
@@ -22,7 +22,7 @@ const PROJECTS = [
     category: "App Design",
     description: "Bookworm is a dynamic platform designed for book enthusiasts, offering the ability to borrow, rent, or buy books. It is a generative AI-based book recommendation system offering personalized book suggestions, ensuring users find the most relevant titles.",
     tags: ["App design", "UI/UX design", "App development"],
-    image: "/home/projects/project-1.png",
+    image: "/home/projects/project-1.webp",
     color: "#000000"
   },
   {
@@ -31,7 +31,7 @@ const PROJECTS = [
     category: "Pitch Deck & Development",
     description: "Aintanet is a next-generation blockchain protocol built to power the digital economy through privacy-complete architecture and dense-load scalability.",
     tags: ["Pitch Deck", "Development"],
-    image: "/home/projects/project-2.png",
+    image: "/home/projects/project-2.webp",
     color: "#000000"
   }
 ]

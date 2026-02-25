@@ -16,7 +16,7 @@ export default function ProjectsHero() {
                 <span className="text-primary">Results</span>
                 <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
                   <Image
-                    src="/home/hero/after-solutions.png"
+                    src="/home/hero/after-solutions.webp"
                     alt="Results"
                     fill
                     className="object-cover"
@@ -29,7 +29,7 @@ export default function ProjectsHero() {
                 <span>For Themselves</span>
                 <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
                   <Image
-                    src="/home/hero/after-move.png"
+                    src="/home/hero/after-move.webp"
                     alt="Themselves"
                     fill
                     className="object-cover"

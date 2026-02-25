@@ -4,16 +4,16 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 const LOGOS = [
-  '/home/hero/marquee-logos/2.png',
-  '/home/hero/marquee-logos/3.png',
-  '/home/hero/marquee-logos/4.png',
-  '/home/hero/marquee-logos/5.png',
-  '/home/hero/marquee-logos/6.png',
-  '/home/hero/marquee-logos/challenge.png',
-  '/home/hero/marquee-logos/gasior laww 1.png',
-  '/home/hero/marquee-logos/grep.png',
-  '/home/hero/marquee-logos/sexner logo 1.png',
-  '/home/hero/marquee-logos/zoundz.png',
+  '/home/hero/marquee-logos/2.webp',
+  '/home/hero/marquee-logos/3.webp',
+  '/home/hero/marquee-logos/4.webp',
+  '/home/hero/marquee-logos/5.webp',
+  '/home/hero/marquee-logos/6.webp',
+  '/home/hero/marquee-logos/challenge.webp',
+  '/home/hero/marquee-logos/gasior laww 1.webp',
+  '/home/hero/marquee-logos/grep.webp',
+  '/home/hero/marquee-logos/sexner logo 1.webp',
+  '/home/hero/marquee-logos/zoundz.webp',
 ]
 
 export default function MarqueeLogos() {

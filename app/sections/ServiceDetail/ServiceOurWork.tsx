@@ -17,9 +17,9 @@ export interface ServiceOurWorkProps {
 }
 
 const defaultItems: WorkItem[] = [
-  { image: '/home/projects/project-1.png', title: 'Project 1', href: '/projects' },
-  { image: '/home/projects/project-2.png', title: 'Project 2', href: '/projects' },
-  { image: '/home/projects/project-3.png', title: 'Project 3', href: '/projects' },
+  { image: '/home/projects/project-1.webp', title: 'Project 1', href: '/projects' },
+  { image: '/home/projects/project-2.webp', title: 'Project 2', href: '/projects' },
+  { image: '/home/projects/project-3.webp', title: 'Project 3', href: '/projects' },
 ]
 
 export default function ServiceOurWork({

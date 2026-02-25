@@ -50,7 +50,7 @@ export default function Header() {
               <div className="flex-shrink-0">
                 <Link href="/" aria-label={`${SITE_CONFIG.name} Home`} onClick={() => setIsMenuOpen(false)}>
                   <Image
-                    src="/header/logo-dark.png"
+                    src="/header/logo-dark.webp"
                     alt={SITE_CONFIG.name}
                     width={180}
                     height={48}

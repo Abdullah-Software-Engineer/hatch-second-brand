@@ -10,7 +10,7 @@ export default function LifeAthatch() {
   const isInView = useInView(ref, { once: true })
 
   // ONE frame image
-  const frameImage = '/About/About-us-loop.png'
+  const frameImage = '/About/About-us-loop.webp'
 
   // duplicate same image for infinite scroll
   const marqueeItems = Array(3).fill(frameImage)
