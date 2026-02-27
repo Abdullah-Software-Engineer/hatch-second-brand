@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
   },
   reactStrictMode: true,
   compress: true,
+  allowedDevOrigins: [
+    '*.replit.dev',
+    '*.pike.replit.dev',
+    '*.repl.co',
+  ],
 }
 
 export default nextConfig
