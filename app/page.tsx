@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      <ParallaxBanner imageSrc="/home/banner/lee-campbell-DtDlVpy-vvQ-unsplash.webp" alt="Banner" />
+      <ParallaxBanner imageSrc="/home/banner-img.webp" alt="Banner" />
       <ServicesMarquee />
      
       <Testimonials />
