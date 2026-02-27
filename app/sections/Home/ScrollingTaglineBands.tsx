@@ -26,9 +26,10 @@ export default function ScrollingTaglineBands() {
           className="absolute z-10"
           style={{
             width: '140%',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -100%) rotate(-4deg)',
+            left: '-20%',
+            top: '35%',
+            transformOrigin: 'center center',
+            transform: 'rotate(-4deg)',
           }}
         >
           <div className="bg-primary py-3 md:py-5 shadow-xl">
@@ -48,9 +49,10 @@ export default function ScrollingTaglineBands() {
           className="absolute z-20"
           style={{
             width: '140%',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, 0%) rotate(4deg)',
+            left: '-20%',
+            top: '35%',
+            transformOrigin: 'center center',
+            transform: 'rotate(4deg)',
           }}
         >
           <div className="bg-black py-3 md:py-5 shadow-xl">
