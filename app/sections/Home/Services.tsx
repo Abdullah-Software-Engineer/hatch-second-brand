@@ -70,13 +70,13 @@ export default function Services() {
 
         {/* Tabs Navigation */}
         <div className="flex justify-center mb-16 md:mb-24 w-full">
-          <div className="flex flex-wrap justify-center gap-2 p-2 rounded-full border border-gray-200 bg-white shadow-sm overflow-x-auto w-full">
+          <div className="flex flex-wrap gap-2 p-2 rounded-full border border-gray-200 bg-white shadow-sm w-full">
             {SERVICES.map((service) => (
               <button
                 key={service.id}
                 onClick={() => setActiveTab(service.id)}
                 className={cn(
-                  "px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 flex items-center gap-2 whitespace-nowrap shadow-[0_10px_24px_rgba(0,0,0,0.08)]",
+                  "flex-1 px-4 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap shadow-[0_10px_24px_rgba(0,0,0,0.08)]",
                   activeTab === service.id
                     ? "bg-primary text-white shadow-[0_14px_30px_rgba(0,0,0,0.16)]"
                     : "bg-transparent text-gray-600 hover:bg-gray-50"
