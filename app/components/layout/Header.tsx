@@ -3,19 +3,32 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { NAVIGATION_LINKS, RESOURCES_DROPDOWN_LINKS, PRACTICE_AREAS_FULL, SITE_CONFIG, THEME } from '@/lib/constants'
 import { cn, throttle } from '@/lib/utils'
 import PhoneButton from '../ui/PhoneButton'
+
+const SERVICE_DROPDOWN_LINKS = [
+  { href: '/services/web-development', label: 'Web Development' },
+  { href: '/services/app-software-development', label: 'App & Software Development' },
+  { href: '/services/branding-positioning', label: 'Branding & Positioning' },
+  { href: '/services/ai-integration', label: 'AI Integration' },
+  { href: '/services/marketing', label: 'Marketing' },
+  { href: '/services/content-creatives', label: 'Content & Creatives' },
+  { href: '/services/lead-generation', label: 'Lead Generation' },
+]
 
 export default function Header() {
   const pathname = usePathname()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isServicesMobileOpen, setIsServicesMobileOpen] = useState(false)
   const [isResourcesOpen, setIsResourcesOpen] = useState(false)
   const [isResourcesMobileOpen, setIsResourcesMobileOpen] = useState(false)
   const [isPracticeAreasOpen, setIsPracticeAreasOpen] = useState(false)
   const [isPracticeAreasMobileOpen, setIsPracticeAreasMobileOpen] = useState(false)
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     const handleScroll = throttle(() => setIsScrolled(window.scrollY > 50), 100)
@@ -69,6 +82,54 @@ export default function Header() {
                 {NAVIGATION_LINKS.map((link) => {
                   const isActive = link.href === '/' ? pathname === '/' : pathname === link.href || pathname.startsWith(link.href + '/')
                   
+                  if (link.href === '/services') {
+                    return (
+                      <div
+                        key={link.href}
+                        className="relative"
+                        onMouseEnter={() => {
+                          if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current)
+                          setIsServicesOpen(true)
+                        }}
+                        onMouseLeave={() => {
+                          servicesTimeoutRef.current = setTimeout(() => setIsServicesOpen(false), 150)
+                        }}
+                      >
+                        <Link
+                          href={link.href}
+                          className={cn(
+                            'text-[18px] font-normal transition-colors relative py-1',
+                            isActive ? 'text-primary border-b-2 border-primary' : 'text-[#444444] hover:text-primary'
+                          )}
+                        >
+                          {link.label}
+                        </Link>
+                        <div
+                          className={cn(
+                            'absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-200',
+                            isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                          )}
+                        >
+                          <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-gray-100 py-3 min-w-[260px]">
+                            {SERVICE_DROPDOWN_LINKS.map((dropLink) => (
+                              <Link
+                                key={dropLink.href}
+                                href={dropLink.href}
+                                onClick={() => setIsServicesOpen(false)}
+                                className={cn(
+                                  'block px-5 py-2.5 text-[15px] font-normal transition-colors whitespace-nowrap',
+                                  pathname === dropLink.href ? 'text-primary bg-primary/5' : 'text-[#444444] hover:text-primary hover:bg-gray-50'
+                                )}
+                              >
+                                {dropLink.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  }
+
                   return (
                     <Link 
                       key={link.href} 
@@ -112,6 +173,51 @@ export default function Header() {
           {NAVIGATION_LINKS.map((link) => {
             const isActive = link.href === '/' ? pathname === '/' : pathname === link.href || pathname.startsWith(link.href + '/')
             
+            if (link.href === '/services') {
+              return (
+                <div key={link.href} className="border-b border-gray-100">
+                  <button
+                    type="button"
+                    onClick={() => setIsServicesMobileOpen((o) => !o)}
+                    className={cn(
+                      'flex items-center justify-between w-full text-[18px] font-normal py-4',
+                      isActive ? 'text-primary' : 'text-[#444444]'
+                    )}
+                  >
+                    {link.label}
+                    <svg className={cn('w-4 h-4 transition-transform duration-200', isServicesMobileOpen && 'rotate-180')} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div className={cn('overflow-hidden transition-all duration-300', isServicesMobileOpen ? 'max-h-[500px] pb-2' : 'max-h-0')}>
+                    <Link
+                      href="/services"
+                      onClick={() => setIsMenuOpen(false)}
+                      className={cn(
+                        'block pl-4 py-2.5 text-[16px] transition-colors',
+                        pathname === '/services' ? 'text-primary' : 'text-gray-500 hover:text-primary'
+                      )}
+                    >
+                      All Services
+                    </Link>
+                    {SERVICE_DROPDOWN_LINKS.map((dropLink) => (
+                      <Link
+                        key={dropLink.href}
+                        href={dropLink.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className={cn(
+                          'block pl-4 py-2.5 text-[16px] transition-colors',
+                          pathname === dropLink.href ? 'text-primary' : 'text-gray-500 hover:text-primary'
+                        )}
+                      >
+                        {dropLink.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
+
             return (
               <Link 
                 key={link.href} 
