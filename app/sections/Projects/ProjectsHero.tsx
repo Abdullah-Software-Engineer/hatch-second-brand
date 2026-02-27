@@ -14,7 +14,7 @@ export default function ProjectsHero() {
             <h1 className="text-[40px] sm:text-[50px] md:text-[64px] lg:text-[80px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5 md:mb-6 lg:mb-8">
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
                 <span className="text-primary">Results</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center">
+                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center animate-hero-float-1 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                   <Image
                     src="/home/hero/after-solutions.webp"
                     alt="Results"
@@ -27,7 +27,7 @@ export default function ProjectsHero() {
               </span>
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
                 <span>For Themselves</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center">
+                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center animate-hero-float-2 shadow-[0_8px_24px_rgba(0,0,0,0.15)]">
                   <Image
                     src="/home/hero/after-move.webp"
                     alt="Themselves"
