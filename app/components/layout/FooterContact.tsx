@@ -60,7 +60,7 @@ export default function FooterContact() {
                 <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-20 mb-20 md:mb-32 w-full">
                     {/* Left Content */}
                     <div className="flex-1 max-w-2xl">
-                        <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-8">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
                             Let's bring<br />
                             your idea to<br />
                             life.
