@@ -65,7 +65,7 @@ export default function ServicesHero() {
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
                 <span>Services</span>
                 <motion.div
-                  className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center animate-hero-float-1 shadow-[0_8px_24px_rgba(0,0,0,0.15)]"
+                  className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center "
                   variants={imageVariants}
                 >
                   <Image
@@ -79,7 +79,7 @@ export default function ServicesHero() {
                 <span>Built to Drive</span>
                 <span className="text-primary">Real Growth</span>
                 <motion.div
-                  className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center animate-hero-float-2 shadow-[0_8px_24px_rgba(0,0,0,0.15)]"
+                  className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center "
                   variants={imageVariants}
                 >
                   <Image
