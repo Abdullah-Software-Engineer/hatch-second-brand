@@ -46,7 +46,7 @@ export default function FAQ() {
         </div>
 
         {/* FAQ Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full items-start">
           {FAQS.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
