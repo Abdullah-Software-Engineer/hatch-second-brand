@@ -39,14 +39,19 @@ export default function Header() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-[100] bg-white transition-all duration-300 w-full',
-          isScrolled && 'shadow-sm'
+          'fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 bg-white/90 backdrop-blur-sm border-b border-transparent',
+          isScrolled && 'bg-white/95 shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-gray-200'
         )}
         role="banner"
       >
         <div className="w-full">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 relative" style={{ maxWidth: THEME.container.maxWidth }}>
-            <div className="flex items-center justify-between h-[80px] lg:h-[90px]">
+            <div
+              className={cn(
+                'flex items-center justify-between transition-all duration-300',
+                isScrolled ? 'h-[68px] lg:h-[78px]' : 'h-[80px] lg:h-[90px]'
+              )}
+            >
               <div className="flex-shrink-0">
                 <Link href="/" aria-label={`${SITE_CONFIG.name} Home`} onClick={() => setIsMenuOpen(false)}>
                   <Image
