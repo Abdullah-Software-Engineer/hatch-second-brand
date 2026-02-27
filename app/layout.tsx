@@ -19,6 +19,12 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://sf.abarba.me" />
         <link rel="dns-prefetch" href="https://sf.abarba.me" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         {children}

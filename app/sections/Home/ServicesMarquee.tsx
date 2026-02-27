@@ -94,7 +94,7 @@ export default function ServicesMarquee({
         <div className="relative z-30 mt-20">
           <Container>
             <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
-              <h3 className="font-arizona italic text-4xl md:text-5xl text-primary mb-6 relative transform -rotate-6">
+              <h3 className="font-arizona font-normal italic text-[38px] md:text-[50px] text-primary mb-3 relative">
                 {scriptText}
               </h3>
               <div className="p-4 md:p-0 mb-12 bg-transparent relative">

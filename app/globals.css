@@ -237,13 +237,22 @@
     font-family: "SF Pro Display", "SF Pro Text", sans-serif !important;
   }
   
-  /* Exceptions for specific fonts */
-  .font-arizona {
-    font-family: 'Arizona', serif !important;
-  }
-
   h1 span { font-family: inherit; }
   h2 span, h3 span, h4 span, h5 span, h6 span { font-family: inherit; }
+}
+
+@layer base {
+  /* Exceptions for specific fonts - placed after global * font rule so they win */
+  .font-arizona,
+  .font-arizona * {
+    font-family: 'Arizonia', cursive !important;
+  }
+
+  .font-signature,
+  .font-signature * {
+    font-family: 'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', cursive !important;
+    letter-spacing: 0.04em;
+  }
 }
 
 @layer utilities {

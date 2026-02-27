@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Container from '../../components/ui/Container'
 import { cn } from '@/lib/utils'
@@ -28,6 +28,32 @@ const STATS = [
   { label: 'Years of collective experience', value: '30+' },
   { label: 'Projects', value: '1100+' },
 ]
+
+function AnimatedStatValue({ value }: { value: string }) {
+  const target = parseInt(value.replace(/\D/g, ''), 10) || 0
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    let frameId: number
+    let startTime: number | null = null
+    const duration = 1200 // ms
+
+    const step = (timestamp: number) => {
+      if (startTime === null) startTime = timestamp
+      const progress = Math.min((timestamp - startTime) / duration, 1)
+      const next = Math.floor(progress * target)
+      setCurrent(next)
+      if (progress < 1) {
+        frameId = requestAnimationFrame(step)
+      }
+    }
+
+    frameId = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(frameId)
+  }, [target])
+
+  return <>{current.toLocaleString()}+</>
+}
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -66,7 +92,9 @@ export default function Testimonials() {
             >
               {STATS.map((stat, index) => (
                 <div key={index} className="flex flex-col gap-2">
-                  <span className="text-5xl md:text-6xl font-bold tracking-tight">{stat.value}</span>
+                  <span className="text-5xl md:text-6xl font-bold tracking-tight">
+                    <AnimatedStatValue value={stat.value} />
+                  </span>
                   <span className="text-white/80 text-lg md:text-xl font-light">{stat.label}</span>
                 </div>
               ))}
