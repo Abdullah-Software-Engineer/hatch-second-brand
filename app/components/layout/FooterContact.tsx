@@ -11,6 +11,9 @@ const EMAILS = [
   "sales@digitallyhatch.com",
   "sales@digitallyhatch.com",
   "sales@digitallyhatch.com",
+  "sales@digitallyhatch.com",
+  "sales@digitallyhatch.com",
+  "sales@digitallyhatch.com",
 ]
 
 const FOOTER_LINKS = {
@@ -102,12 +105,16 @@ export default function FooterContact() {
             </Container>
 
              {/* Bottom Marquee */}
-             <div className="w-full overflow-hidden py-8 border-t border-white/10 bg-black">
-                <div className="flex w-max animate-marquee-scroll">
-                  {[...EMAILS, ...EMAILS, ...EMAILS, ...EMAILS].map((email, index) => (
-                    <div key={index} className="flex items-center mx-8">
-                      <span className="text-gray-500 text-lg md:text-xl">{email}</span>
-                      <span className="text-[#9754D8] text-2xl mx-8">•</span> 
+             <div className="w-full overflow-hidden py-5 border-t border-white/10 bg-black">
+                <div className="flex w-max animate-marquee-scroll whitespace-nowrap">
+                  {[...Array(2)].map((_, setIndex) => (
+                    <div key={setIndex} className="flex items-center">
+                      {EMAILS.map((email, index) => (
+                        <div key={`${setIndex}-${index}`} className="flex items-center">
+                          <span className="text-gray-500 text-sm md:text-base tracking-wide">{email}</span>
+                          <span className="text-primary text-lg mx-6">•</span>
+                        </div>
+                      ))}
                     </div>
                   ))}
                 </div>
