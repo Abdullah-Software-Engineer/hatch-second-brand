@@ -33,6 +33,8 @@ const FAQS = [
 ]
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
   return (
     <section className="bg-white py-20 md:py-32">
       <Container>
@@ -48,7 +50,13 @@ export default function FAQ() {
         {/* FAQ Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full items-start">
           {FAQS.map((faq, index) => (
-            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openIndex === index}
+              onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+            />
           ))}
         </div>
       </Container>
@@ -56,13 +64,11 @@ export default function FAQ() {
   )
 }
 
-function FAQItem({ question, answer }: { question: string, answer: string }) {
-  const [isOpen, setIsOpen] = useState(false)
-
+function FAQItem({ question, answer, isOpen, onToggle }: { question: string, answer: string, isOpen: boolean, onToggle: () => void }) {
   return (
     <div className="bg-[#F3F4F6] rounded-2xl overflow-hidden">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
         className="w-full px-6 py-5 md:px-8 md:py-6 flex items-center justify-between text-left transition-colors hover:bg-gray-200/50"
       >
         <span className="text-lg md:text-xl font-medium text-black pr-4">{question}</span>
