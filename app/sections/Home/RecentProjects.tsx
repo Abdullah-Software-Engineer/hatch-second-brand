@@ -141,7 +141,7 @@ function Card({
             <div>
               <Link
                 href={`/projects/${project.slug}`}
-                className="inline-flex items-center gap-2 bg-[#9754D8] hover:bg-[#9754D8]/90 text-white px-6 py-3 rounded-full font-medium transition-all group text-sm md:text-base"
+                className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 group text-sm md:text-base"
               >
                 View Full Case Study
                 <svg 

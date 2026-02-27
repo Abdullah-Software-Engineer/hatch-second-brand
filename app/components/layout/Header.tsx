@@ -130,7 +130,7 @@ export default function Header() {
             <Link 
               href="/contact" 
               onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-center gap-2 bg-primary text-white rounded-full w-full py-3 text-[18px] font-medium"
+              className="flex items-center justify-center gap-2 bg-primary text-white rounded-full w-full py-3 text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300"
             >
               Contact
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

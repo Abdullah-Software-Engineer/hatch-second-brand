@@ -65,7 +65,7 @@ export default function Footer() {
           </div>
           <div>
             <p className="text-gray-200 text-sm lg:text-base mb-4">Get in touch with us today.</p>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-primary text-white font-medium px-5 py-3 rounded-full hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black" aria-label="Contact us">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-primary text-white font-medium px-5 py-3 rounded-full shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black" aria-label="Contact us">
               <span>Contact us</span>
               <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white text-primary shrink-0">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M5 12h14M12 5l7 7-7 7" /></svg>

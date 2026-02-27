@@ -18,7 +18,7 @@ export default function PhoneButton({ className, size = 'md' }: PhoneButtonProps
     <a
       href={getPhoneLink(SITE_CONFIG.phoneRaw)}
       className={cn(
-        'flex items-center justify-between bg-primary text-white rounded-full hover:-translate-y-0.5 hover:shadow-lg transition-all no-underline',
+        'flex items-center justify-between bg-primary text-white rounded-full shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 no-underline',
         c.padding, c.gap, className
       )}
       aria-label={`Call ${SITE_CONFIG.phone}`}
