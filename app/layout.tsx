@@ -16,6 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://sf.abarba.me" />
+        <link rel="dns-prefetch" href="https://sf.abarba.me" />
+      </head>
       <body>
         {children}
       </body>

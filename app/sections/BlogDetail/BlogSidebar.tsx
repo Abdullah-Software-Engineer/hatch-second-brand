@@ -145,7 +145,7 @@ export default function BlogSidebar({ toc, relatedPosts = [] }: BlogSidebarProps
           <h3 className="text-base font-bold text-gray-900">Explore All Articles</h3>
           <Link
             href="/blog"
-            className="inline-flex justify-center w-full sm:w-auto bg-primary text-white text-sm font-medium px-4 py-2.5 rounded-full hover:bg-primary/90 transition-colors"
+            className="inline-flex justify-center w-full sm:w-auto bg-primary text-white text-sm font-medium px-4 py-2.5 rounded-full shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow"
           >
             View All
           </Link>

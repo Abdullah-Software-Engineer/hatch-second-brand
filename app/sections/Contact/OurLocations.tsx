@@ -38,7 +38,7 @@ export default function OurLocations() {
             {LOCATIONS.map((location, index) => (
               <div
                 key={index}
-                className="relative rounded-2xl overflow-hidden bg-linear-to-b from-[#b794f6] to-[#9754D8] p-8 md:p-10 shadow-lg"
+                className="relative rounded-2xl overflow-hidden bg-linear-to-b from-[#9754D8] to-[#9754D8] p-8 md:p-10 shadow-lg"
               >
                 {/* Office Name with Icon */}
                 <div className="flex items-center gap-3 mb-6">

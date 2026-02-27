@@ -60,7 +60,7 @@ export default function ServiceOurWork({
             <Link
               key={index}
               href={item.href ?? '/projects'}
-              className="group shrink-0 w-[280px] sm:w-[320px] md:w-[360px] rounded-2xl overflow-hidden bg-[#E5E7EB] aspect-4/3 shadow-sm hover:shadow-md transition-all duration-300"
+              className="group shrink-0 w-[280px] sm:w-[320px] md:w-[360px] rounded-2xl overflow-hidden bg-[#E5E7EB] aspect-4/3 shadow-[0_10px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_34px_rgba(0,0,0,0.18)] transition-all duration-300"
             >
               <div className="relative w-full h-full">
                 {item.image ? (

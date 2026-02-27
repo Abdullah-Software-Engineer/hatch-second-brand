@@ -65,7 +65,7 @@ export default function WhatWeDo() {
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[0]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_4px_14px_rgba(151,84,216,0.3)] hover:bg-primary/90 hover:shadow-[0_6px_20px_rgba(151,84,216,0.4)] transition-all duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[0]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -116,7 +116,7 @@ export default function WhatWeDo() {
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[1]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_4px_14px_rgba(151,84,216,0.3)] hover:bg-primary/90 hover:shadow-[0_6px_20px_rgba(151,84,216,0.4)] transition-all duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[1]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -161,7 +161,7 @@ export default function WhatWeDo() {
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[2]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_4px_14px_rgba(151,84,216,0.3)] hover:bg-primary/90 hover:shadow-[0_6px_20px_rgba(151,84,216,0.4)] transition-all duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[2]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -209,7 +209,7 @@ export default function WhatWeDo() {
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[3]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_4px_14px_rgba(151,84,216,0.3)] hover:bg-primary/90 hover:shadow-[0_6px_20px_rgba(151,84,216,0.4)] transition-all duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[3]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -257,7 +257,7 @@ export default function WhatWeDo() {
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[4]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_4px_14px_rgba(151,84,216,0.3)] hover:bg-primary/90 hover:shadow-[0_6px_20px_rgba(151,84,216,0.4)] transition-all duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[4]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -305,7 +305,7 @@ export default function WhatWeDo() {
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[5]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_4px_14px_rgba(151,84,216,0.3)] hover:bg-primary/90 hover:shadow-[0_6px_20px_rgba(151,84,216,0.4)] transition-all duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[5]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -353,7 +353,7 @@ export default function WhatWeDo() {
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[6]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_4px_14px_rgba(151,84,216,0.3)] hover:bg-primary/90 hover:shadow-[0_6px_20px_rgba(151,84,216,0.4)] transition-all duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[6]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

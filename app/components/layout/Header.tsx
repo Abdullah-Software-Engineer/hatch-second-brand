@@ -60,7 +60,7 @@ export default function Header() {
                 </Link>
               </div>
 
-              <nav className="hidden lg:flex items-center justify-center gap-8 xl:gap-12 absolute left-1/2 -translate-x-1/2" aria-label="Main navigation">
+              <nav className="hidden lg:flex items-center justify-center gap-7 xl:gap-10 absolute left-1/2 -translate-x-1/2" aria-label="Main navigation">
                 {NAVIGATION_LINKS.map((link) => {
                   const isActive = link.href === '/' ? pathname === '/' : pathname === link.href || pathname.startsWith(link.href + '/')
                   
@@ -70,7 +70,7 @@ export default function Header() {
                       href={link.href} 
                       className={cn(
                         'text-[18px] font-normal transition-colors relative py-1',
-                        isActive ? 'text-primary border-b-2 border-primary' : 'text-black hover:text-primary'
+                        isActive ? 'text-primary border-b-2 border-primary' : 'text-[#444444] hover:text-primary'
                       )}
                     >
                       {link.label}
@@ -83,7 +83,7 @@ export default function Header() {
                 <div className="hidden lg:block">
                   <Link 
                     href="/contact" 
-                    className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[16px] font-medium hover:bg-primary/90 transition-colors"
+                    className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow"
                   >
                     Contact
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +91,7 @@ export default function Header() {
                     </svg>
                   </Link>
                 </div>
-                <button type="button" onClick={() => setIsMenuOpen((o) => !o)} className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full text-black hover:bg-gray-100 focus:outline-none transition-colors" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-controls="mobile-nav" aria-expanded={isMenuOpen}>
+                <button type="button" onClick={() => setIsMenuOpen((o) => !o)} className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full text-[#444444] hover:bg-gray-100 focus:outline-none transition-colors" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-controls="mobile-nav" aria-expanded={isMenuOpen}>
                   {isMenuOpen ? <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> : <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>}
                 </button>
               </div>
@@ -114,7 +114,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)} 
                 className={cn(
                   'text-[18px] font-normal py-4 border-b border-gray-100',
-                  isActive ? 'text-primary' : 'text-black'
+                  isActive ? 'text-primary' : 'text-[#444444]'
                 )}
               >
                 {link.label}

@@ -2,6 +2,182 @@
 @config '../tailwind.config.ts';
 
 @layer base {
+  /* SF Pro Display - Web Font Loading with multiple sources */
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('SF Pro Display'), 
+         local('SFProDisplay-Regular'),
+         local('SF Pro'),
+         local('.SFNSDisplay-Regular'),
+         url('https://sf.abarba.me/SF-Pro-Display-Regular.woff2') format('woff2'),
+         url('https://sf.abarba.me/SF-Pro-Display-Regular.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('SF Pro Display Medium'), 
+         local('SFProDisplay-Medium'),
+         url('https://sf.abarba.me/SF-Pro-Display-Medium.woff2') format('woff2'),
+         url('https://sf.abarba.me/SF-Pro-Display-Medium.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('SF Pro Display Semibold'), 
+         local('SFProDisplay-Semibold'),
+         local('SF Pro Semibold'),
+         local('.SFNSDisplay-Semibold'),
+         url('https://sf.abarba.me/SF-Pro-Display-Semibold.woff2') format('woff2'),
+         url('https://sf.abarba.me/SF-Pro-Display-Semibold.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('SF Pro Display Bold'), 
+         local('SFProDisplay-Bold'),
+         local('SF Pro Bold'),
+         local('.SFNSDisplay-Bold'),
+         url('https://sf.abarba.me/SF-Pro-Display-Bold.woff2') format('woff2'),
+         url('https://sf.abarba.me/SF-Pro-Display-Bold.woff') format('woff');
+  }
+
+  /* SF Pro Text - Local Font Loading */
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('SF Pro Text Light'), 
+         local('SFProText-Light'),
+         url('/sf-pro-font/SF-Pro-Text-Light.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: local('SF Pro Text Light Italic'), 
+         local('SFProText-LightItalic'),
+         url('/sf-pro-font/SF-Pro-Text-LightItalic.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('SF Pro Text'), 
+         local('SFProText-Regular'),
+         local('SF Pro'),
+         local('.SFNSText-Regular'),
+         url('/sf-pro-font/SF-Pro-Text-Regular.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local('SF Pro Text Italic'), 
+         local('SFProText-RegularItalic'),
+         url('/sf-pro-font/SF-Pro-Text-RegularItalic.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('SF Pro Text Medium'), 
+         local('SFProText-Medium'),
+         url('/sf-pro-font/SF-Pro-Text-Medium.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: local('SF Pro Text Medium Italic'), 
+         local('SFProText-MediumItalic'),
+         url('/sf-pro-font/SF-Pro-Text-MediumItalic.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('SF Pro Text Semibold'), 
+         local('SFProText-Semibold'),
+         local('SF Pro Semibold'),
+         local('.SFNSText-Semibold'),
+         url('/sf-pro-font/SF-Pro-Text-Semibold.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: local('SF Pro Text Semibold Italic'), 
+         local('SFProText-SemiboldItalic'),
+         url('/sf-pro-font/SF-Pro-Text-SemiboldItalic.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('SF Pro Text Bold'), 
+         local('SFProText-Bold'),
+         url('/sf-pro-font/SF-Pro-Text-Bold.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: local('SF Pro Text Bold Italic'), 
+         local('SFProText-BoldItalic'),
+         url('/sf-pro-font/SF-Pro-Text-BoldItalic.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: local('SF Pro Text Heavy'), 
+         local('SFProText-Heavy'),
+         url('/sf-pro-font/SF-Pro-Text-Heavy.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: local('SF Pro Text Heavy Italic'), 
+         local('SFProText-HeavyItalic'),
+         url('/sf-pro-font/SF-Pro-Text-HeavyItalic.otf') format('opentype');
+  }
+
   /* Arizona Font - Add @font-face here if you have font files */
   @font-face {
     font-family: 'Arizona';
@@ -31,10 +207,12 @@
 
   body {
     background-color: #ffffff;
-    color: #000000;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    color: #444444;
+    font-family: "SF Pro Display", "SF Pro Text", sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern" 1;
+    text-rendering: optimizeLegibility;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -45,13 +223,23 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    font-family: "SF Pro Display", "SF Pro Text", sans-serif !important;
     font-weight: 600;
     line-height: 1.2;
   }
 
   p, div, a, button, input, textarea, label, span {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    font-family: "SF Pro Display", "SF Pro Text", sans-serif !important;
+  }
+  
+  /* Ensure all elements use SF Pro */
+  * {
+    font-family: "SF Pro Display", "SF Pro Text", sans-serif !important;
+  }
+  
+  /* Exceptions for specific fonts */
+  .font-arizona {
+    font-family: 'Arizona', serif !important;
   }
 
   h1 span { font-family: inherit; }

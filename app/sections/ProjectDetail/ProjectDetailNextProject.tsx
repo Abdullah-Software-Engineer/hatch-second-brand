@@ -86,7 +86,7 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
             <motion.div variants={contentMotion}>
               <Link
                 href={href}
-                className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-6 py-3.5 font-medium text-sm md:text-base hover:bg-primary/90 transition-all duration-300 group"
+                className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-6 py-3.5 font-medium text-sm md:text-base shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 group"
               >
                 View Full Case Study
                 <svg

@@ -76,9 +76,9 @@ export default function Services() {
                 key={service.id}
                 onClick={() => setActiveTab(service.id)}
                 className={cn(
-                  "px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 flex items-center gap-2 whitespace-nowrap",
+                  "px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 flex items-center gap-2 whitespace-nowrap shadow-[0_10px_24px_rgba(0,0,0,0.08)]",
                   activeTab === service.id
-                    ? "bg-[#9754D8] text-white shadow-md"
+                    ? "bg-[#9754D8] text-white shadow-[0_14px_30px_rgba(0,0,0,0.16)]"
                     : "bg-transparent text-gray-600 hover:bg-gray-50"
                 )}
               >

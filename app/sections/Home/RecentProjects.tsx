@@ -141,7 +141,7 @@ function Card({
             <div>
               <Link
                 href={`/projects/${project.slug}`}
-                className="inline-flex items-center gap-2 bg-[#9754D8] hover:bg-[#8644C2] text-white px-6 py-3 rounded-full font-medium transition-all group text-sm md:text-base"
+                className="inline-flex items-center gap-2 bg-[#9754D8] hover:bg-[#9754D8]/90 text-white px-6 py-3 rounded-full font-medium transition-all group text-sm md:text-base"
               >
                 View Full Case Study
                 <svg 

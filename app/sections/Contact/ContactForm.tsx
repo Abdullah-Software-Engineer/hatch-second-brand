@@ -87,7 +87,7 @@ export default function ContactForm() {
               {/* Send Button */}
               <button
                 type="submit"
-                className="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-lg font-medium text-base md:text-lg shadow-md hover:shadow-lg hover:bg-primary/90 transition-all duration-300"
+                className="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-lg font-medium text-base md:text-lg shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300"
               >
                 Send now!
               </button>

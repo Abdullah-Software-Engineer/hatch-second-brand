@@ -20,25 +20,26 @@ const container = {
   hidden: { opacity: 0 },
   visible: (i = 1) => ({
     opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.05 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 },
   }),
 }
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: 'easeOut' as const },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
   },
 }
 
 const imageMotion = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: 'easeOut' as const, delay: 0.1 },
+    scale: 1,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 },
   },
 }
 
@@ -56,14 +57,19 @@ export default function BlogDetailHero(props: BlogDetailHeroProps) {
 
   return (
     <motion.article
-      className="flex flex-col"
+      className="flex flex-col relative"
       variants={container}
       initial="hidden"
       animate="visible"
     >
+      {/* Background Creative Elements */}
+      {!minimal && (
+        <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      )}
+      
       {!minimal && (
         <motion.div
-          className="relative w-full aspect-[2.2/1] min-h-[220px] sm:min-h-[280px] rounded-2xl overflow-hidden bg-gray-200"
+          className="relative w-full aspect-[2.2/1] min-h-[220px] sm:min-h-[280px] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 shadow-2xl"
           variants={imageMotion}
         >
           <Image
@@ -74,6 +80,7 @@ export default function BlogDetailHero(props: BlogDetailHeroProps) {
             priority
             sizes="(max-width: 1024px) 100vw, 66vw"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
         </motion.div>
       )}
       <div className={minimal ? 'pt-0 pb-10' : 'pt-6 sm:pt-8 md:pt-10'}>

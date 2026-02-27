@@ -14,7 +14,7 @@ export default function AboutHero() {
             <h1 className="text-[40px] sm:text-[50px] md:text-[64px] lg:text-[80px] leading-[1.1] font-medium text-black tracking-tight mb-6 md:mb-8">
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
                 <span>Crafted for</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
+                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center">
                   <Image
                     src="/home/hero/after-solutions.webp"
                     alt="Digital Solutions"
@@ -27,7 +27,7 @@ export default function AboutHero() {
               </span>
               <span className=" block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
                 <span className="text-primary">Built For</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-lg overflow-hidden inline-flex items-center justify-center">
+                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center">
                   <Image
                     src="/home/hero/after-move.webp"
                     alt="Move Brands"
@@ -51,7 +51,7 @@ export default function AboutHero() {
               
               <Link 
                 href="/contact" 
-                className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_4px_14px_rgba(151,84,216,0.3)] hover:bg-primary/90 hover:shadow-[0_6px_20px_rgba(151,84,216,0.4)] transition-all duration-300 min-w-[180px]"
+                className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 min-w-[180px]"
               >
                 Contact Us
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
