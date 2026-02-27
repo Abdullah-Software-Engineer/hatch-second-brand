@@ -45,7 +45,7 @@ export default function FooterContact() {
         {!isContactPage && (
           <>
             {/* Top Image - Centered and overlapping */}
-            <div className="absolute top-[10px] md:top-[4px] left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[100px] md:h-[160px] z-0 pointer-events-none">
+            <div className="absolute top-0 md:-top-[6px] left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[100px] md:h-[160px] z-0 pointer-events-none">
                  <Image
                     src="/home/connect/Lets-Connect.webp"
                     alt="Let's Connect"
