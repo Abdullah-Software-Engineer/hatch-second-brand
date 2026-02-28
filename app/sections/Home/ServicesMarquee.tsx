@@ -68,7 +68,7 @@ export default function ServicesMarquee({
             left: '-20%',
             top: isMarqueeOnly ? '45%' : '38%',
             transformOrigin: 'center center',
-            transform: 'rotate(-4deg)',
+            transform: 'rotate(-7deg)',
           }}
         >
           <div className="bg-primary py-3 md:py-5 shadow-xl">
@@ -91,7 +91,7 @@ export default function ServicesMarquee({
             left: '-20%',
             top: isMarqueeOnly ? '45%' : '38%',
             transformOrigin: 'center center',
-            transform: 'rotate(4deg)',
+            transform: 'rotate(7deg)',
           }}
         >
           <div className="bg-black py-3 md:py-5 shadow-xl">

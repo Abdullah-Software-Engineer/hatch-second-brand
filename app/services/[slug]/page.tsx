@@ -9,7 +9,7 @@ import {
   ServiceTestimonialsSection,
   ServiceFAQSection,
 } from '../../sections/ServiceDetail'
-import ServicesMarquee from '../../sections/Home/ServicesMarquee'
+import ServiceDetailMarquee from '../../sections/ServiceDetail/ServiceDetailMarquee'
 
 export async function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }))
@@ -35,10 +35,9 @@ export default async function ServiceDetailPage({
         heroImage={service.heroImage}
       />
       <ServiceDetailIntro description={service.description} />
-      <ServicesMarquee
+      <ServiceDetailMarquee
         purpleItems={service.purpleTags}
         blackItems={service.blackTags}
-        variant="marquee-only"
       />
 
       <ServiceOurWork

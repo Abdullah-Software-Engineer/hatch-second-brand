@@ -46,8 +46,8 @@ export default function ServiceDetailHero({
   heroImage,
 }: ServiceDetailHeroProps) {
   return (
-    <section className="relative overflow-hidden flex flex-col pt-[80px] lg:pt-[90px] rounded-bl-[50px] rounded-br-[50px]">
-      <div className="relative z-10 w-full flex flex-col items-center px-4 py-12 md:py-16">
+    <section className="relative overflow-hidden flex flex-col pt-[80px] lg:pt-[90px] bg-gradient-to-b from-white via-[#FAFAFA] to-white rounded-bl-[50px] rounded-br-[50px]">
+      <div className="relative z-10 w-full flex flex-col items-center px-4 pt-20 md:pt-28 pb-0">
         <motion.div
           className="flex flex-col items-center text-center max-w-[1000px] mx-auto w-full"
           variants={container}

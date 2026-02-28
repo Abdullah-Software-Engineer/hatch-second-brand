@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export interface TestimonialItem {
   quote: string
@@ -46,35 +46,13 @@ export default function ServiceTestimonialsSection({
   const marqueeItems = [...testimonials, ...testimonials]
 
   return (
-    <section className="bg-white py-16 md:py-24 overflow-hidden">
-      <div className="text-center mb-12 md:mb-16 px-4">
-        <motion.span
-          className="text-gray-500 text-sm md:text-base mb-2 block tracking-wide"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
-        >
-          ({sectionLabel})
-        </motion.span>
-        <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-        >
-          {title}
-        </motion.h2>
-        <motion.p
-          className="text-gray-600 text-base md:text-lg max-w-xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
+    <section className="bg-white py-20 md:py-32 overflow-hidden">
+      <div className="flex flex-col items-center mb-16 md:mb-20 text-center">
+        <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">({sectionLabel})</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">{title}</h2>
+        <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
           {subtitle}
-        </motion.p>
+        </p>
       </div>
 
       {/* Horizontal scrolling marquee of testimonial cards */}
@@ -83,22 +61,32 @@ export default function ServiceTestimonialsSection({
           {marqueeItems.map((t, index) => (
             <div
               key={index}
-              className="shrink-0 w-[320px] sm:w-[360px] md:w-[400px] rounded-3xl p-6 md:p-8 text-white min-h-[280px] flex flex-col justify-between"
-              style={{
-                background: 'linear-gradient(180deg, #1a0a2e 0%, #2a1a3a 50%, #3d2a4d 100%)',
-                boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
-              }}
+              className="shrink-0 w-[320px] sm:w-[360px] md:w-[400px] rounded-3xl p-6 md:p-8 text-white min-h-[280px] flex flex-col justify-between relative overflow-hidden"
             >
-              <div>
-                <StarRating count={t.rating ?? 5} />
-                <p className="text-base md:text-lg leading-relaxed text-white/95 line-clamp-4">
-                  &quot;{t.quote}&quot;
+              {/* Background Image */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/testi-bg.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 320px, (max-width: 768px) 360px, 400px"
+                />
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div>
+                  <StarRating count={t.rating ?? 5} />
+                  <p className="text-base md:text-lg leading-relaxed text-white/95 line-clamp-4">
+                    &quot;{t.quote}&quot;
+                  </p>
+                </div>
+                <p className="mt-5 text-white/70 text-sm md:text-base">
+                  {t.author}
+                  {t.location && `, ${t.location}`}
                 </p>
               </div>
-              <p className="mt-5 text-white/70 text-sm md:text-base">
-                {t.author}
-                {t.location && `, ${t.location}`}
-              </p>
             </div>
           ))}
         </div>

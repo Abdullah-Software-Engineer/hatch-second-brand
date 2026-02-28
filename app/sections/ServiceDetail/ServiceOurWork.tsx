@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 export interface WorkItem {
   title?: string
@@ -34,26 +33,12 @@ export default function ServiceOurWork({
   const marqueeItems = [...list, ...list]
 
   return (
-    <section className="bg-white py-16 md:py-24 overflow-hidden">
-      <div className="text-center mb-12 md:mb-16 px-4">
-        <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
-        >
-          {title}
-        </motion.h2>
-        <motion.p
-          className="text-gray-600 text-base md:text-lg max-w-xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.05 }}
-        >
+    <section className="bg-white py-20 md:py-32 overflow-hidden">
+      <div className="flex flex-col items-center mb-16 md:mb-20 text-center">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">{title}</h2>
+        <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
           {subtitle}
-        </motion.p>
+        </p>
       </div>
 
       {/* Horizontal scrolling marquee of cards */}
@@ -63,7 +48,7 @@ export default function ServiceOurWork({
             <Link
               key={index}
               href={item.href ?? '/projects'}
-              className="group shrink-0 w-[280px] sm:w-[320px] md:w-[360px] rounded-2xl overflow-hidden bg-[#E5E7EB] shadow-[0_10px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_34px_rgba(0,0,0,0.18)] transition-all duration-300 flex items-center justify-center min-h-[210px] sm:min-h-[240px] md:min-h-[270px] aspect-[4/3]"
+              className="group shrink-0 w-[280px] sm:w-[320px] md:w-[360px] rounded-2xl overflow-hidden bg-[#E5E7EB] transition-all duration-300 flex items-center justify-center min-h-[210px] sm:min-h-[240px] md:min-h-[270px] aspect-[4/3]"
             >
               <span className="text-gray-700 font-medium text-center px-4 group-hover:text-black transition-colors">
                 {item.title ?? `Project ${(index % list.length) + 1}`}

@@ -16,21 +16,10 @@ export interface ServiceFAQSectionProps {
   faqs: FAQItem[]
 }
 
-function FAQAccordionItem({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}: {
-  question: string
-  answer: string
-  isOpen: boolean
-  onToggle: () => void
-}) {
+function FAQItem({ question, answer, isOpen, onToggle }: { question: string, answer: string, isOpen: boolean, onToggle: () => void }) {
   return (
     <div className="bg-[#F3F4F6] rounded-2xl overflow-hidden">
       <button
-        type="button"
         onClick={onToggle}
         className="w-full px-6 py-5 md:px-8 md:py-6 flex items-center justify-between text-left transition-colors hover:bg-gray-200/50"
       >
@@ -41,17 +30,18 @@ function FAQAccordionItem({
           className="flex-shrink-0 text-black"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="6 9 12 15 18 9" />
+            <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </motion.span>
       </button>
+
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
             <div className="px-6 pb-6 md:px-8 md:pb-8 text-gray-600 leading-relaxed">
@@ -75,29 +65,21 @@ export default function ServiceFAQSection({
   if (!faqs?.length) return null
 
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="bg-white py-20 md:py-32">
       <Container>
-        <motion.div
-          className="text-center mb-12 md:mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
-        >
-          <span className="text-gray-500 text-sm md:text-base mb-2 block tracking-wide">
-            ({sectionLabel})
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3">
-            {title}
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-xl mx-auto">
+        {/* Header */}
+        <div className="flex flex-col items-center mb-16 md:mb-20 text-center">
+          <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">({sectionLabel})</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">{title}</h2>
+          <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
             {subtitle}
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto">
+        {/* FAQ Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full items-start">
           {faqs.map((faq, index) => (
-            <FAQAccordionItem
+            <FAQItem
               key={index}
               question={faq.question}
               answer={faq.answer}

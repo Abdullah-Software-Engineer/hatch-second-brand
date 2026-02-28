@@ -47,31 +47,23 @@ export default function ServiceProcess({
   }, [sectionInView, steps.length])
 
   return (
-    <section ref={sectionRef} className="bg-white py-16 md:py-24">
+    <section ref={sectionRef} className="bg-white py-20 md:py-32">
       <Container>
-        <motion.div
-          className="text-center mb-12 md:mb-16 flex flex-col items-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
-        >
-           <span className="text-gray-500 text-sm md:text-base  block tracking-wide">
-            ({sectionLabel})
-          </span>
+        <div className="flex flex-col items-center mb-16 md:mb-20 text-center">
+          <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">({sectionLabel})</span>
           
-          <div className="relative w-full max-w-md mx-auto aspect-[3/1]">
+          <div className="relative w-[400px] h-[85px] md:w-[650px] md:h-[140px] mx-auto">
             <Image
               src="/services/Our.webp"
               alt="Our Process"
               fill
-              className="object-contain object-center"
-              sizes="(max-width: 768px) 100vw, 448px"
+              className="object-contain"
+              sizes="(max-width: 768px) 400px, 650px"
             />
           </div>
-        </motion.div>
+        </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="w-full">
           {steps.map((step, index) => {
             const isActive = activeIndex === index
             return (
