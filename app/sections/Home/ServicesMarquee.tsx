@@ -66,7 +66,7 @@ export default function ServicesMarquee({
           style={{
             width: '140%',
             left: '-20%',
-            top: isMarqueeOnly ? '30%' : '22%',
+            top: isMarqueeOnly ? '38%' : '30%',
             transformOrigin: 'center center',
             transform: 'rotate(-4deg)',
           }}
@@ -89,7 +89,7 @@ export default function ServicesMarquee({
           style={{
             width: '140%',
             left: '-20%',
-            top: isMarqueeOnly ? '30%' : '22%',
+            top: isMarqueeOnly ? '38%' : '30%',
             transformOrigin: 'center center',
             transform: 'rotate(4deg)',
           }}
