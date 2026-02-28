@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Layout from '../../components/layout/Layout'
 import { getProjectBySlug, getAllProjectSlugs } from '@/lib/project-detail-data'
-import AboutHero from '../../sections/About/Hero'
+import ProjectDetailHero from '../../sections/ProjectDetail/ProjectDetailHero'
 import {
   ProjectDetailSection,
   ProjectDetailNextProject,
@@ -25,7 +25,14 @@ export default async function ProjectDetailPage({
 
   return (
     <Layout>
-      <AboutHero />
+      <ProjectDetailHero
+        titleAccent={project.titleAccent}
+        titleRest={project.titleRest}
+        tagline={project.tagline}
+        iconSrc={project.iconSrc}
+        iconSrc2={project.iconSrc2}
+        categories={project.categories}
+      />
 
       {project.featuredImage && (
         <ProjectFeaturedImage 

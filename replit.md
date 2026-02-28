@@ -38,6 +38,12 @@ public/                 # Static assets (images, fonts)
 - `postcss.config.mjs` uses `tailwindcss` + `autoprefixer` (v3 style)
 - `allowedDevOrigins` set to `*.replit.dev` and `*.pike.replit.dev` for Replit proxy compatibility
 
+## Key Features
+
+- **Project detail hero**: Uses `ProjectDetailHero` component with per-project title styling (purple accent text + inline circular icons between title words). Supports `iconSrc` and `iconSrc2` for dual inline icons. Contact Us button removed from project detail pages.
+- **Blog sidebar sticky**: Fixed by removing `overflow-x: clip` from `html` element (kept on `body` only) in `globals.css`.
+- **Services dropdown**: Desktop hover + mobile accordion in Header.tsx linking 7 service detail pages.
+
 ## Deployment
 
 - Target: Autoscale

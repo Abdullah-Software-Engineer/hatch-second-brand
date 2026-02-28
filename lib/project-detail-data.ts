@@ -71,6 +71,7 @@ export interface ProjectDetailData {
   titleRest: string
   tagline: string
   iconSrc?: string
+  iconSrc2?: string
   /** Categories shown under tagline (e.g. "Branding, Web Development, UI/UX Design") */
   categories?: string
   /** Hero image/video placeholder or src */
@@ -104,6 +105,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     titleAccent: 'Green',
     titleRest: 'Web Design',
     tagline: TAGLINE,
+    iconSrc: '/home/projects/project-1.webp',
     categories: 'Web design, UI/UX design, Web development, Responsive Layout',
     heroMediaSrc: '/home/projects/project-1.webp',
     featuredImage: '/blogs/conversion-focused web design.webp',
@@ -299,8 +301,10 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
   {
     slug: 'bookworm',
     titleAccent: 'Bookworm',
-    titleRest: 'App Design',
+    titleRest: 'App Design & Development',
     tagline: TAGLINE,
+    iconSrc: '/home/projects/project-1.webp',
+    iconSrc2: '/home/projects/project-2.webp',
     categories: 'App design, UI/UX design, App development',
     heroMediaSrc: '/home/projects/project-1.webp',
     featuredImage: '/blogs/thefuture of custom ai.webp',
@@ -682,8 +686,9 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
   {
     slug: 'aintanet',
     titleAccent: 'Aintanet',
-    titleRest: 'Pitch Deck & Development',
+    titleRest: 'Pitch Deck',
     tagline: TAGLINE,
+    iconSrc: '/home/projects/project-1.webp',
     categories: 'Pitch Deck, Development',
     heroMediaSrc: '/home/projects/project-1.webp',
     featuredImage: '/blogs/uiux design trends.webp',
