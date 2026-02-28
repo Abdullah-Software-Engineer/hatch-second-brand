@@ -116,7 +116,7 @@ export default function BlogSidebar({ toc, relatedPosts = [] }: BlogSidebarProps
             <h3 className="text-lg font-bold mb-4">Have a project in mind?</h3>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-gray-900 font-medium px-5 py-2.5 rounded-full hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#444444] text-white font-medium px-5 py-2.5 rounded-full hover:bg-[#555555] transition-colors"
             >
               Contact Us
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
