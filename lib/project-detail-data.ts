@@ -208,6 +208,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     tagline: TAGLINE,
     categories: 'Web design, UI/UX design, Web development',
     heroMediaSrc: '/home/projects/project-1.webp',
+    featuredImage: '/blogs/beyond automation.webp',
     sections: [
       {
         id: 'overview',
@@ -302,6 +303,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     tagline: TAGLINE,
     categories: 'App design, UI/UX design, App development',
     heroMediaSrc: '/home/projects/project-1.webp',
+    featuredImage: '/blogs/thefuture of custom ai.webp',
     sections: [
       {
         id: 'overview',
@@ -398,6 +400,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     tagline: TAGLINE,
     categories: 'Branding, Digital package, Guideline',
     heroMediaSrc: '/home/projects/project-1.webp',
+    featuredImage: '/blogs/cohesive visual identities building.webp',
     sections: [
       {
         id: 'overview',
@@ -490,6 +493,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     tagline: TAGLINE,
     categories: 'Web design, UI/UX design, Web development',
     heroMediaSrc: '/home/projects/project-1.webp',
+    featuredImage: '/blogs/thepower of perception how branding.webp',
     sections: [
       {
         id: 'overview',
@@ -585,6 +589,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     tagline: TAGLINE,
     categories: 'Pitch Deck, Digital campaign',
     heroMediaSrc: '/home/projects/project-1.webp',
+    featuredImage: '/blogs/content marketing strategy for lead.webp',
     sections: [
       {
         id: 'overview',
@@ -681,6 +686,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     tagline: TAGLINE,
     categories: 'Pitch Deck, Development',
     heroMediaSrc: '/home/projects/project-1.webp',
+    featuredImage: '/blogs/uiux design trends.webp',
     sections: [
       {
         id: 'overview',
