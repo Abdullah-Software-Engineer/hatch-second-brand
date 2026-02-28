@@ -58,19 +58,19 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
           {/* Left Content - 800px container to match project detail sections */}
           <div className="w-full max-w-[800px] p-12 md:p-16 lg:p-20 flex flex-col justify-center relative z-10">
             <motion.span
-              className="text-white/60 text-sm font-medium mb-3 block"
+              className="text-white/60 text-sm md:text-base font-medium mb-2"
               variants={contentMotion}
             >
               Project Name
             </motion.span>
             <motion.h3
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
               variants={contentMotion}
             >
               {project.title}
             </motion.h3>
             <motion.p
-              className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-2xl"
+              className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg"
               variants={contentMotion}
             >
               {project.description}
@@ -82,7 +82,7 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
               {project.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-5 py-2.5 rounded-full border border-primary/50 text-white text-sm hover:bg-primary/10 transition-colors"
+                  className="px-5 py-2 rounded-full border border-white/20 text-white text-sm hover:bg-white/10 transition-colors cursor-default"
                 >
                   {tag}
                 </span>
@@ -91,7 +91,7 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
             <motion.div variants={contentMotion}>
               <Link
                 href={href}
-                className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-8 py-4 font-medium text-base shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 group"
+                className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 group text-sm md:text-base"
               >
                 View Full Case Study
                 <svg
@@ -103,7 +103,7 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="group-hover:translate-x-0.5 transition-transform"
+                  className="group-hover:translate-x-1 transition-transform"
                 >
                   <line x1="7" y1="17" x2="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />
@@ -113,9 +113,9 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
           </div>
 
           {/* Right Image - positioned on right side with 20px margins */}
-          <div className="flex-1 flex items-center justify-center p-5 lg:block hidden">
-            {project.image ? (
-              <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden">
+          <div className="flex-1 flex items-center justify-center p-5 lg:flex hidden">
+            <div className="w-full h-full min-h-[400px] bg-[#D9D9D9] relative m-4 lg:m-12 rounded-[32px] overflow-hidden group">
+              {project.image ? (
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -123,12 +123,12 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
                   className="object-cover"
                   sizes="(max-width: 1024px) 0vw, calc((100vw - 800px - 20px) - 40px)"
                 />
-              </div>
-            ) : (
-              <div className="w-full h-full min-h-[400px] rounded-2xl bg-gray-300 flex items-center justify-center text-gray-500 text-sm font-medium">
-                Project preview
-              </div>
-            )}
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center text-black/20">
+                  <span className="text-lg font-medium">Project Preview</span>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile/Tablet Image */}
