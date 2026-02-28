@@ -1,11 +1,9 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 export interface WorkItem {
-  image?: string
   title?: string
   href?: string
 }
@@ -17,9 +15,14 @@ export interface ServiceOurWorkProps {
 }
 
 const defaultItems: WorkItem[] = [
-  { image: '/home/projects/project-1.webp', title: 'Project 1', href: '/projects' },
-  { image: '/home/projects/project-2.webp', title: 'Project 2', href: '/projects' },
-  { image: '/home/projects/project-3.webp', title: 'Project 3', href: '/projects' },
+  { title: 'Web Development', href: '/projects' },
+  { title: 'App & Software', href: '/projects' },
+  { title: 'Branding', href: '/projects' },
+  { title: 'AI Integration', href: '/projects' },
+  { title: 'Marketing', href: '/projects' },
+  { title: 'Content & Creatives', href: '/projects' },
+  { title: 'Lead Generation', href: '/projects' },
+  { title: 'Our Work', href: '/projects' },
 ]
 
 export default function ServiceOurWork({
@@ -54,29 +57,17 @@ export default function ServiceOurWork({
       </div>
 
       {/* Horizontal scrolling marquee of cards */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden min-h-[220px] sm:min-h-[250px] md:min-h-[280px]">
         <div className="flex w-max animate-marquee-scroll gap-5 md:gap-6 pl-4 md:pl-6">
           {marqueeItems.map((item, index) => (
             <Link
               key={index}
               href={item.href ?? '/projects'}
-              className="group shrink-0 w-[280px] sm:w-[320px] md:w-[360px] rounded-2xl overflow-hidden bg-[#E5E7EB] aspect-4/3 shadow-[0_10px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_34px_rgba(0,0,0,0.18)] transition-all duration-300"
+              className="group shrink-0 w-[280px] sm:w-[320px] md:w-[360px] rounded-2xl overflow-hidden bg-[#E5E7EB] shadow-[0_10px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_34px_rgba(0,0,0,0.18)] transition-all duration-300 flex items-center justify-center min-h-[210px] sm:min-h-[240px] md:min-h-[270px] aspect-[4/3]"
             >
-              <div className="relative w-full h-full">
-                {item.image ? (
-                  <Image
-                    src={item.image}
-                    alt={item.title ?? `Project ${index + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="360px"
-                  />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-500 font-medium">
-                    {item.title ?? `Project ${(index % list.length) + 1}`}
-                  </div>
-                )}
-              </div>
+              <span className="text-gray-700 font-medium text-center px-4 group-hover:text-black transition-colors">
+                {item.title ?? `Project ${(index % list.length) + 1}`}
+              </span>
             </Link>
           ))}
         </div>

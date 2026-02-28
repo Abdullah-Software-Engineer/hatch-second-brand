@@ -35,7 +35,7 @@ export default function ClientsSection() {
           {[...LOGOS, ...LOGOS].map((src, index) => (
             <div
               key={index}
-              className="flex items-center justify-center mx-6 sm:mx-8 lg:mx-10 min-w-[120px] sm:min-w-[140px] md:min-w-[160px] grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              className="flex items-center justify-center mx-6 sm:mx-8 lg:mx-10 min-w-[120px] sm:min-w-[140px] md:min-w-[160px]  opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             >
               <div className="relative h-10 md:h-12 w-[120px] md:w-[140px]">
                 <Image

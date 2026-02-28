@@ -56,10 +56,10 @@ export default function ServicesMarquee({
 
   return (
     <section
-      className={`relative w-full bg-[#F3F4F6] overflow-hidden ${isMarqueeOnly ? 'pt-32 pb-16 md:pt-40 md:pb-20' : 'pt-48 pb-24 md:pt-60 md:pb-32'}`}
+      className={`relative w-full bg-[#F3F4F6] overflow-hidden ${isMarqueeOnly ? 'min-h-[320px] md:min-h-[360px] pt-32 pb-16 md:pt-40 md:pb-20' : 'pt-48 pb-24 md:pt-60 md:pb-32'}`}
     >
       {/* Tilted Marquees Container */}
-      <div className={`absolute top-0 left-0 w-full overflow-hidden z-0 pointer-events-none ${isMarqueeOnly ? 'h-[280px] md:h-[320px]' : 'h-[400px]'}`}>
+      <div className={`absolute top-0 left-0 w-full overflow-visible z-0 pointer-events-none ${isMarqueeOnly ? 'h-[280px] md:h-[320px]' : 'h-[400px]'}`}>
         {/* Purple Marquee - Tilted and moving right */}
         <div
           className="absolute z-10"
