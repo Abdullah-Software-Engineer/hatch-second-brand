@@ -55,7 +55,7 @@ export default function BlogInsights() {
         >
           {/* Subtitle Text */}
           <motion.p
-            className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 text-center"
+            className="text-base md:text-lg text-[#919191] mb-6 md:mb-8 text-center"
             variants={itemVariants}
           >
             Get insights that help you stay ahead in the digital world
@@ -67,7 +67,7 @@ export default function BlogInsights() {
             variants={itemVariants}
           >
             <Image
-              src="/home/blog/blogheading.webp"
+              src="/blogs/blog-insights-new-img.png"
               alt="Blog Insights"
               width={800}
               height={200}
@@ -137,32 +137,31 @@ function BlogPostCard({ post, index }: { post: (typeof BLOG_DETAIL_LIST)[0]; ind
     >
       <Link
         href={`/blog/${post.slug}`}
-        className="group flex flex-col h-full rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 bg-white"
+        className="flex flex-col h-full rounded-xl overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       >
         {/* Image */}
-        <div className="relative w-full h-[400px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-t-xl overflow-hidden shadow-lg mb-6">
+        <div className="relative w-full h-[400px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden mb-6">
           <Image
             src={post.image || '/home/blog/post-1.webp'}
             alt=""
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            className="object-cover rounded-2xl"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
 
         {/* Content Section */}
         <div className="flex-1 flex flex-col px-6 pb-6">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors duration-300">
+          <h3 className="text-[26px] md:text-[30px] font-medium text-[#444444] mb-3">
             {post.title}
           </h3>
 
-          <p className="text-base md:text-lg text-gray-700 mb-4 flex-1 leading-relaxed">
+          <p className="text-base md:text-lg text-[#444444] mb-4 flex-1 leading-relaxed">
             {post.description}
           </p>
 
           <div className="flex justify-end mt-auto">
-            <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-[0_10px_24px_rgba(0,0,0,0.16)] group-hover:shadow-[0_14px_32px_rgba(0,0,0,0.2)] group-hover:-translate-y-0.5 group-hover:scale-[1.02] transition-transform transition-shadow duration-300">
+            <span className="bg-[#444444] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-[0_10px_24px_rgba(0,0,0,0.16)]">
               {post.readTime}
             </span>
           </div>
