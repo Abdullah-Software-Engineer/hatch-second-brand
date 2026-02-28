@@ -41,9 +41,9 @@ const iconMotion = {
 
 function InlineIcon({ src }: { src: string }) {
   return (
-    <motion.span
+    <motion.div
       variants={iconMotion}
-      className="relative w-[36px] h-[36px] sm:w-[44px] sm:h-[44px] md:w-[52px] md:h-[52px] lg:w-[60px] lg:h-[60px] rounded-full overflow-hidden inline-flex items-center justify-center shrink-0 border-2 border-black/10"
+      className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center"
     >
       <Image
         src={src}
@@ -51,9 +51,8 @@ function InlineIcon({ src }: { src: string }) {
         fill
         className="object-cover"
         priority
-        sizes="(max-width: 768px) 44px, 60px"
       />
-    </motion.span>
+    </motion.div>
   )
 }
 
