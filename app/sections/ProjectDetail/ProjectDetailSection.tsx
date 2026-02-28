@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Container from '../../components/ui/Container'
 import ProjectDetailMediaBlock from './ProjectDetailMediaBlock'
 import type {
@@ -36,7 +37,7 @@ const itemMotion = {
 function SectionHeading({ title }: { title: string }) {
   return (
     <motion.h2
-      className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 md:mb-6"
+      className="text-[38px] font-medium text-[#3C3C3C] mb-4 md:mb-6"
       variants={sectionMotion}
     >
       {title}
@@ -48,7 +49,7 @@ function OverviewContent({ section }: { section: OverviewSection }) {
   return (
     <>
       <motion.p
-        className="text-gray-600 text-base md:text-lg leading-relaxed mb-6"
+        className="text-[17px] text-[#3C3C3C] leading-relaxed mb-6"
         variants={itemMotion}
       >
         {section.intro}
@@ -58,7 +59,7 @@ function OverviewContent({ section }: { section: OverviewSection }) {
           <motion.span
             key={i}
             variants={itemMotion}
-            className="inline-block px-4 py-2 rounded-full bg-gray-500 text-white text-sm font-medium hover:bg-gray-600 transition-colors"
+            className="inline-block px-4 py-2 rounded-full bg-[#363636] text-white text-[16px] font-normal hover:bg-[#444444] transition-colors"
           >
             {tag}
           </motion.span>
@@ -75,7 +76,7 @@ function ListContent({ section }: { section: ListSection }) {
   return (
     <>
       {section.intro && (
-        <motion.p className="text-gray-600 text-base md:text-lg mb-4" variants={itemMotion}>
+        <motion.p className="text-[17px] text-[#3C3C3C] mb-4" variants={itemMotion}>
           {section.intro}
         </motion.p>
       )}
@@ -83,7 +84,7 @@ function ListContent({ section }: { section: ListSection }) {
         {section.items.map((bullet, i) => (
           <motion.li
             key={i}
-            className="flex gap-3 text-gray-700 text-base md:text-lg"
+            className="flex gap-3 text-[17px] text-[#3C3C3C]"
             variants={itemMotion}
           >
             <span className="text-primary mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-primary" />
@@ -92,7 +93,7 @@ function ListContent({ section }: { section: ListSection }) {
         ))}
       </motion.ul>
       {section.closing && (
-        <motion.p className="text-gray-600 text-base md:text-lg" variants={itemMotion}>
+        <motion.p className="text-[17px] text-[#3C3C3C]" variants={itemMotion}>
           {section.closing}
         </motion.p>
       )}
@@ -112,7 +113,7 @@ function ParagraphContent({ section }: { section: ParagraphSection }) {
         {section.paragraphs.map((p, i) => (
           <motion.p
             key={i}
-            className="text-gray-600 text-base md:text-lg leading-relaxed"
+            className="text-[17px] text-[#3C3C3C] leading-relaxed"
             variants={itemMotion}
           >
             {p}
@@ -121,6 +122,21 @@ function ParagraphContent({ section }: { section: ParagraphSection }) {
       </div>
       {section.mediaSrc && (
         <ProjectDetailMediaBlock variant="single" src={section.mediaSrc} />
+      )}
+      {section.type === 'strategy' && (
+        <motion.div
+          className="w-full max-w-[1390px] mx-auto mt-8"
+          variants={itemMotion}
+        >
+          <div className="relative w-full h-[650px] rounded-2xl overflow-hidden">
+            <Image
+              src="/blogs/conversion-focused web design.webp"
+              alt="Strategy"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </motion.div>
       )}
     </>
   )

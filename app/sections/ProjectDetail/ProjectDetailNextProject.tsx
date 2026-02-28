@@ -34,50 +34,55 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
   return (
     <section className="py-16 md:py-24 bg-white">
       <Container>
-        <motion.h2
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-black text-center mb-10 md:mb-12"
+        <motion.div
+          className="flex flex-col items-center mb-[10px] text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
         >
-          Next Project
-        </motion.h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-[10px]">
+            Next Project
+          </h2>
+        </motion.div>
+      </Container>
 
+      <div className="w-full px-[10px]">
         <motion.article
-          className="rounded-3xl overflow-hidden bg-black border border-white/10 shadow-2xl flex flex-col lg:flex-row min-h-[420px] lg:min-h-[480px]"
+          className="w-full rounded-2xl bg-black border border-white/10 shadow-2xl flex flex-col lg:flex-row min-h-[500px] lg:min-h-[600px] relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={cardMotion}
         >
-          <div className="flex-1 p-8 md:p-10 lg:p-14 flex flex-col justify-center">
+          {/* Left Content - 800px container to match project detail sections */}
+          <div className="w-full max-w-[800px] p-12 md:p-16 lg:p-20 flex flex-col justify-center relative z-10">
             <motion.span
-              className="text-white/60 text-sm font-medium mb-2 block"
+              className="text-white/60 text-sm font-medium mb-3 block"
               variants={contentMotion}
             >
               Project Name
             </motion.span>
             <motion.h3
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
               variants={contentMotion}
             >
               {project.title}
             </motion.h3>
             <motion.p
-              className="text-white/70 text-base md:text-lg leading-relaxed mb-6 max-w-lg"
+              className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-2xl"
               variants={contentMotion}
             >
               {project.description}
             </motion.p>
             <motion.div
-              className="flex flex-wrap gap-2 mb-8"
+              className="flex flex-wrap gap-3 mb-10"
               variants={contentMotion}
             >
               {project.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 rounded-full border border-white/25 text-white text-sm hover:bg-white/10 transition-colors"
+                  className="px-5 py-2.5 rounded-full border border-primary/50 text-white text-sm hover:bg-primary/10 transition-colors"
                 >
                   {tag}
                 </span>
@@ -86,7 +91,7 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
             <motion.div variants={contentMotion}>
               <Link
                 href={href}
-                className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-6 py-3.5 font-medium text-sm md:text-base shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 group"
+                className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-8 py-4 font-medium text-base shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 group"
               >
                 View Full Case Study
                 <svg
@@ -107,23 +112,43 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
             </motion.div>
           </div>
 
-          <div className="flex-1 min-h-[280px] lg:min-h-full relative bg-[#1a1a1a]">
+          {/* Right Image - positioned on right side with 20px margins */}
+          <div className="flex-1 flex items-center justify-center p-5 lg:block hidden">
+            {project.image ? (
+              <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 0vw, calc((100vw - 800px - 20px) - 40px)"
+                />
+              </div>
+            ) : (
+              <div className="w-full h-full min-h-[400px] rounded-2xl bg-gray-300 flex items-center justify-center text-gray-500 text-sm font-medium">
+                Project preview
+              </div>
+            )}
+          </div>
+
+          {/* Mobile/Tablet Image */}
+          <div className="lg:hidden w-full min-h-[300px] relative bg-gray-300 rounded-b-2xl overflow-hidden mt-8">
             {project.image ? (
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="100vw"
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center text-white/20 text-sm font-medium">
+              <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm font-medium">
                 Project preview
               </div>
             )}
           </div>
         </motion.article>
-      </Container>
+      </div>
     </section>
   )
 }

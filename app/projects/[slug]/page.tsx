@@ -7,6 +7,7 @@ import {
   ProjectDetailNextProject,
   ProjectDetailTestimonials,
 } from '../../sections/ProjectDetail'
+import ProjectFeaturedImage from '../../sections/ProjectDetail/ProjectFeaturedImage'
 
 export async function generateStaticParams() {
   return getAllProjectSlugs().map((slug) => ({ slug }))
@@ -25,6 +26,13 @@ export default async function ProjectDetailPage({
   return (
     <Layout>
       <AboutHero />
+
+      {project.featuredImage && (
+        <ProjectFeaturedImage 
+          imageSrc={project.featuredImage} 
+          alt={`${project.titleAccent} ${project.titleRest} - Featured Image`}
+        />
+      )}
 
       {project.sections.map((section) => (
         <ProjectDetailSection key={section.id} section={section} />

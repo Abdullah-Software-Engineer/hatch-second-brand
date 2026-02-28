@@ -75,6 +75,8 @@ export interface ProjectDetailData {
   categories?: string
   /** Hero image/video placeholder or src */
   heroMediaSrc?: string
+  /** Featured image shown below hero section */
+  featuredImage?: string
   /** Sections in display order - allows multiple layouts */
   sections: ProjectDetailSection[]
   testimonials?: ProjectDetailTestimonial[]
@@ -104,6 +106,7 @@ export const PROJECTS_DETAIL: ProjectDetailData[] = [
     tagline: TAGLINE,
     categories: 'Web design, UI/UX design, Web development, Responsive Layout',
     heroMediaSrc: '/home/projects/project-1.webp',
+    featuredImage: '/blogs/conversion-focused web design.webp',
     sections: [
       {
         id: 'overview',

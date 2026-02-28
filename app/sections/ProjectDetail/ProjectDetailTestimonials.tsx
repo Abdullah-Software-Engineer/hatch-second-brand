@@ -1,9 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Container from '../../components/ui/Container'
-import { cn } from '@/lib/utils'
+import Image from 'next/image'
 import type { ProjectDetailTestimonial } from '@/lib/project-detail-data'
 
 export interface ProjectDetailTestimonialsProps {
@@ -34,105 +31,58 @@ function StarRating({ count = 5 }: { count?: number }) {
 export default function ProjectDetailTestimonials({
   testimonials,
   title = 'What Clients Say',
-  subtitle = "Don't just take our word for it, hear what our clients have to say.",
+  subtitle = 'Helping you understand our process and offerings.',
 }: ProjectDetailTestimonialsProps) {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
   if (testimonials.length === 0) return null
 
-  const handleNext = () => setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  const handlePrev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  const current = testimonials[currentIndex]
+  const marqueeItems = [...testimonials, ...testimonials]
 
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
-      <Container>
-        <motion.div
-          className="text-center mb-12 md:mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-3">
-            {title}
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-xl mx-auto">
-            {subtitle}
-          </p>
-        </motion.div>
+    <section className="bg-white py-20 md:py-32 overflow-hidden">
+      <div className="flex flex-col items-center mb-16 md:mb-20 text-center">
+        <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">(Testimonials)</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">{title}</h2>
+        <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
+          {subtitle}
+        </p>
+      </div>
 
-        <motion.div
-          className="max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <div className="rounded-3xl p-8 md:p-12 min-h-[280px] flex flex-col justify-between bg-black border border-white/10 shadow-xl">
-            <div>
-              <StarRating count={current.rating ?? 5} />
-              <AnimatePresence mode="wait">
-                <motion.blockquote
-                  key={currentIndex}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -12 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-white text-lg md:text-xl leading-relaxed"
-                >
-                  &quot;{current.quote}&quot;
-                </motion.blockquote>
-              </AnimatePresence>
-            </div>
-            <div className="mt-8 flex items-end justify-between flex-wrap gap-4">
-              <div>
-                <p className="text-white font-semibold text-base md:text-lg">{current.author}</p>
-                {current.location && (
-                  <p className="text-white/60 text-sm md:text-base">{current.location}</p>
-                )}
+      {/* Horizontal scrolling marquee of testimonial cards */}
+      <div className="overflow-hidden">
+        <div className="flex w-max animate-marquee-scroll gap-5 md:gap-6 pl-4 md:pl-6">
+          {marqueeItems.map((t, index) => (
+            <div
+              key={index}
+              className="shrink-0 w-[320px] sm:w-[360px] md:w-[400px] rounded-3xl p-6 md:p-8 text-white min-h-[280px] flex flex-col justify-between relative overflow-hidden"
+            >
+              {/* Background Image */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/testi-bg.png"
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 320px, (max-width: 768px) 360px, 400px"
+                />
               </div>
-              <div className="flex gap-3">
-                <button
-                  type="button"
-                  onClick={handlePrev}
-                  className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors text-white"
-                  aria-label="Previous testimonial"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M15 18l-6-6 6-6" />
-                  </svg>
-                </button>
-                <button
-                  type="button"
-                  onClick={handleNext}
-                  className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors text-white"
-                  aria-label="Next testimonial"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </button>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div>
+                  <StarRating count={t.rating ?? 5} />
+                  <p className="text-base md:text-lg leading-relaxed text-white/95 line-clamp-4">
+                    &quot;{t.quote}&quot;
+                  </p>
+                </div>
+                <p className="mt-5 text-white/70 text-sm md:text-base">
+                  {t.author}
+                  {t.location && `, ${t.location}`}
+                </p>
               </div>
             </div>
-          </div>
-
-          <div className="flex justify-center gap-1.5 mt-6">
-            {testimonials.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setCurrentIndex(i)}
-                className={cn(
-                  'w-2 h-2 rounded-full transition-all duration-300',
-                  i === currentIndex ? 'bg-primary w-6' : 'bg-gray-300 hover:bg-gray-400'
-                )}
-                aria-label={`Go to testimonial ${i + 1}`}
-              />
-            ))}
-          </div>
-        </motion.div>
-      </Container>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }
