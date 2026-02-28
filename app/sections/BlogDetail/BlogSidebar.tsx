@@ -54,7 +54,7 @@ function InThisArticleCard({ toc }: { toc: TocItem[] }) {
   if (toc.length === 0) return null
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm overflow-y-auto max-h-[calc(100vh-320px)]">
       <h3 className="text-base font-bold text-[#636363] mb-4">In this article</h3>
       <nav aria-label="Article contents" className="flex flex-col gap-1">
         {toc.map((item) => (
