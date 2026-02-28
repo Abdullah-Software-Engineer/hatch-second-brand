@@ -24,7 +24,7 @@ export default function BlogInnerLayout({
   return (
     <section className="relative bg-white pt-[80px] lg:pt-[90px] pb-16 md:pb-24">
       <Container className="max-w-[1390px] pt-[90px]">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 lg:gap-14">
           <motion.main
             className="min-w-0"
             initial={{ opacity: 0 }}
@@ -33,8 +33,7 @@ export default function BlogInnerLayout({
           >
             {children}
           </motion.main>
-          {/* Sidebar column stretches to match main content so sticky card stays visible until end of scroll. No overflow-hidden. */}
-          <div className="lg:flex lg:flex-col lg:pl-2">
+          <div className="lg:pl-2 relative">
             <BlogSidebar toc={toc} relatedPosts={relatedPosts} />
           </div>
         </div>

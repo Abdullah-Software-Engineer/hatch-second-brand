@@ -199,14 +199,14 @@
     box-sizing: border-box;
   }
 
-  html,
-  body {
+  html {
     max-width: 100%;
-    overflow-x: clip;
     scroll-behavior: smooth;
   }
 
   body {
+    max-width: 100%;
+    overflow-x: clip;
     background-color: #ffffff;
     color: #444444;
     font-family: "SF Pro Display", "SF Pro Text", sans-serif !important;

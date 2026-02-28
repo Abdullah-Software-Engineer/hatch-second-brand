@@ -92,11 +92,10 @@ const cardMotion = {
 export default function BlogSidebar({ toc, relatedPosts = [] }: BlogSidebarProps) {
   return (
     <aside
-      className="flex flex-col gap-6 lg:min-w-[300px]"
+      className="lg:min-w-[300px] lg:h-full"
       aria-label="Blog sidebar"
     >
-      {/* Sticky wrapper: All sidebar content stays visible while scrolling */}
-      <div className="flex flex-col gap-6 lg:sticky lg:top-[100px] lg:z-10 lg:self-start">
+      <div className="flex flex-col gap-6 lg:sticky lg:top-[100px]">
         {/* Have a project in mind? — purple gradient card */}
         <motion.div
           className="relative rounded-2xl p-6 text-white shadow-lg overflow-hidden min-h-[180px] flex items-center"
