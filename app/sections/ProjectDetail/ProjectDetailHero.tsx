@@ -64,8 +64,8 @@ export default function ProjectDetailHero({
           initial="hidden"
           animate="visible"
         >
-          <h1 className="text-[32px] sm:text-[44px] md:text-[54px] lg:text-[64px] leading-[1.12] font-medium text-black tracking-tight mb-3 sm:mb-4">
-            <span className="flex flex-wrap justify-center items-center gap-x-2 sm:gap-x-3 gap-y-2">
+          <h1 className="text-[32px] sm:text-[44px] md:text-[54px] lg:text-[64px] leading-[1.12] font-medium text-black tracking-tight mb-2 sm:mb-3">
+            <span className="flex flex-wrap justify-center items-center gap-x-2 sm:gap-x-3 gap-y-1">
               <motion.span variants={item} className="text-primary font-bold">
                 {titleAccent}
               </motion.span>
@@ -92,7 +92,7 @@ export default function ProjectDetailHero({
           {categories && (
             <motion.p
               variants={item}
-              className="text-[14px] sm:text-[15px] text-gray-500 mb-2"
+              className="text-[14px] sm:text-[15px] text-gray-400 mb-2"
             >
               {categories}
             </motion.p>
@@ -113,7 +113,7 @@ export default function ProjectDetailHero({
           initial="hidden"
           animate="visible"
         >
-          <div className="relative w-full aspect-[2.2/1] rounded-2xl overflow-hidden bg-black border border-white/10 shadow-xl">
+          <div className="relative w-full aspect-[2.2/1] rounded-3xl overflow-hidden bg-black border border-white/10 shadow-xl">
             <Image
               src={heroMediaSrc}
               alt=""

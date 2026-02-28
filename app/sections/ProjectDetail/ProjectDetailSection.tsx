@@ -36,7 +36,7 @@ const itemMotion = {
 function SectionHeading({ title }: { title: string }) {
   return (
     <motion.h2
-      className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-6 md:mb-8"
+      className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 md:mb-6"
       variants={sectionMotion}
     >
       {title}
@@ -58,7 +58,7 @@ function OverviewContent({ section }: { section: OverviewSection }) {
           <motion.span
             key={i}
             variants={itemMotion}
-            className="inline-block px-4 py-2 rounded-lg bg-black text-white text-sm font-medium hover:bg-black/90 transition-colors"
+            className="inline-block px-4 py-2 rounded-full bg-gray-500 text-white text-sm font-medium hover:bg-gray-600 transition-colors"
           >
             {tag}
           </motion.span>
@@ -130,7 +130,7 @@ export default function ProjectDetailSection({ section }: { section: SectionType
   return (
     <section
       className={cn(
-        'py-12 md:py-16 bg-white'
+        'py-6 md:py-8 bg-white'
       )}
     >
       <Container className="max-w-[800px]">
