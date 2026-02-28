@@ -71,7 +71,7 @@ export default function BlogInsights() {
               alt="Blog Insights"
               width={800}
               height={200}
-              className="w-auto h-auto max-w-full drop-shadow-lg"
+              className="w-auto h-auto max-w-full"
               priority
             />
           </motion.div>
