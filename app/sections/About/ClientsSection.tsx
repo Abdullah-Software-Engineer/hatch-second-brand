@@ -19,12 +19,12 @@ export default function ClientsSection() {
   return (
     <section className="bg-white py-16 md:py-24 overflow-hidden">
       <Container>
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-gray-500 text-sm md:text-base mb-3 tracking-wide">(Clients)</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
+        <div className="flex flex-col items-center mb-16 md:mb-20 text-center">
+          <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">(Clients)</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
             Brands we&apos;ve helped grow
           </h2>
-          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
             Driving measurable impact through creative digital solutions.
           </p>
         </div>

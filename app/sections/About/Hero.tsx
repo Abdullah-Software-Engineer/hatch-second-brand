@@ -2,19 +2,72 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+}
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+}
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen overflow-hidden bg-white flex flex-col pt-[80px] lg:pt-[90px]">
+    <section className="relative h-[500px] sm:h-[550px] md:h-[600px] lg:h-[700px] overflow-hidden bg-gradient-to-b from-white via-[#FAFAFA] to-white flex flex-col pt-[80px] lg:pt-[90px] rounded-bl-[50px] rounded-br-[50px]">
+      {/* Background Creative Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/3 rounded-full blur-3xl"></div>
+      </div>
+      
       <div className="relative z-10 w-full flex-1 flex items-center">
         <Container>
-          <div className="flex flex-col items-center justify-center text-center max-w-[1200px] mx-auto px-4 py-12 md:py-20">
+          <motion.div
+            className="flex flex-col items-center justify-center text-center max-w-[1200px] mx-auto px-4 py-6 sm:py-8 md:py-12 lg:py-20"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* Main Heading */}
-            <h1 className="text-[40px] sm:text-[50px] md:text-[64px] lg:text-[80px] leading-[1.1] font-medium text-black tracking-tight mb-6 md:mb-8">
+            <motion.h1
+              className="text-[40px] sm:text-[50px] md:text-[64px] lg:text-[80px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5 md:mb-6 lg:mb-8"
+              variants={itemVariants}
+            >
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
                 <span>Crafted for</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center ">
+                <motion.div
+                  className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center "
+                  variants={imageVariants}
+                >
                   <Image
                     src="/home/hero/after-solutions.webp"
                     alt="Digital Solutions"
@@ -22,12 +75,15 @@ export default function AboutHero() {
                     className="object-cover"
                     priority
                   />
-                </div>
+                </motion.div>
                 <span className="text-primary">Bold Products</span>
               </span>
               <span className=" block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
                 <span className="text-primary">Built For</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center ">
+                <motion.div
+                  className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center "
+                  variants={imageVariants}
+                >
                   <Image
                     src="/home/hero/after-move.webp"
                     alt="Move Brands"
@@ -35,18 +91,24 @@ export default function AboutHero() {
                     className="object-cover"
                     priority
                   />
-                </div>
+                </motion.div>
                 <span>Growing Teams</span>
               </span>
-            </h1>
+            </motion.h1>
 
             {/* Subheading */}
-            <p className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-600 max-w-[800px] mx-auto mb-10 md:mb-12 leading-relaxed">
+            <motion.p
+              className="text-[16px] sm:text-[18px] md:text-[20px] text-gray-600 max-w-[800px] mx-auto mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-relaxed"
+              variants={itemVariants}
+            >
             Get to know us. A creative force behind delivering smart and scalable digital solutions.
-            </p>
+            </motion.p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto">
+            <motion.div
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto"
+              variants={itemVariants}
+            >
              
               
               <Link 
@@ -58,12 +120,10 @@ export default function AboutHero() {
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </Container>
       </div>
-      
-      
     </section>
   )
 }

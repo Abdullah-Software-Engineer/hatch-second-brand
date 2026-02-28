@@ -20,16 +20,16 @@ const BLACK_MARQUEE_ITEMS = [
 export default function ScrollingTaglineBands() {
   return (
     <section className="relative w-full bg-white overflow-hidden py-0">
-      <div className="relative w-full h-[280px] md:h-[320px] overflow-hidden">
+      <div className="relative w-full h-[360px] md:h-[400px] overflow-hidden">
         {/* Purple band - tilted, moving right */}
         <div
           className="absolute z-10"
           style={{
             width: '140%',
             left: '-20%',
-            top: '35%',
+            top: '50%',
             transformOrigin: 'center center',
-            transform: 'rotate(-4deg)',
+            transform: 'translateY(-50%) rotate(-7deg)',
           }}
         >
           <div className="bg-primary py-3 md:py-5 shadow-xl">
@@ -50,9 +50,9 @@ export default function ScrollingTaglineBands() {
           style={{
             width: '140%',
             left: '-20%',
-            top: '35%',
+            top: '50%',
             transformOrigin: 'center center',
-            transform: 'rotate(4deg)',
+            transform: 'translateY(-50%) rotate(7deg)',
           }}
         >
           <div className="bg-black py-3 md:py-5 shadow-xl">

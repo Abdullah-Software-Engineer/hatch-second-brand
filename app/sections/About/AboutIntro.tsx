@@ -102,7 +102,7 @@ export default function AboutIntro() {
   return (
     <section ref={ref}>
       {/* Top: light grey — text + tags only */}
-      <div className="bg-[#f5f5f5] py-20 md:py-24">
+      <div className="w-full bg-[#EDEDED] py-12 md:py-16 lg:py-20 rounded-tl-[60px] rounded-tr-[60px]">
         <Container>
           <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
             <motion.p

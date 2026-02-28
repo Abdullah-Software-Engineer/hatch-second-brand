@@ -11,9 +11,10 @@ export default function AboutPage() {
     <Layout>
       <AboutHero />
       <AboutIntro />
-      <OurFoundation />
+     
       <ClientsSection />
       <ScrollingTaglineBands />
+      <OurFoundation />
       <LifeAthatch />
     </Layout>
   )
