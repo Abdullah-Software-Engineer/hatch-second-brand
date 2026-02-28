@@ -32,6 +32,7 @@ export default async function ServiceDetailPage({
         titlePart2={service.titlePart2}
         tagline={service.tagline}
         iconSrc={service.iconSrc}
+        heroImage={service.heroImage}
       />
       <ServiceDetailIntro description={service.description} />
       <ServicesMarquee

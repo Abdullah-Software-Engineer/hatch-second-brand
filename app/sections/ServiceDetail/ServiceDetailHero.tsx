@@ -8,6 +8,8 @@ export interface ServiceDetailHeroProps {
   titlePart2: string
   tagline: string
   iconSrc?: string
+  /** Path to creative image shown below the heading (e.g. /services/1.webp) */
+  heroImage?: string
 }
 
 const container = {
@@ -41,12 +43,13 @@ export default function ServiceDetailHero({
   titlePart2,
   tagline,
   iconSrc,
+  heroImage,
 }: ServiceDetailHeroProps) {
   return (
-    <section className="relative min-h-[420px] sm:min-h-[480px] md:min-h-[520px] overflow-hidden bg-white flex flex-col pt-[80px] lg:pt-[90px] rounded-bl-[50px] rounded-br-[50px]">
-      <div className="relative z-10 w-full flex-1 flex items-center justify-center px-4 py-12 md:py-16">
+    <section className="relative overflow-hidden flex flex-col pt-[80px] lg:pt-[90px] rounded-bl-[50px] rounded-br-[50px]">
+      <div className="relative z-10 w-full flex flex-col items-center px-4 py-12 md:py-16">
         <motion.div
-          className="flex flex-col items-center text-center max-w-[1000px] mx-auto"
+          className="flex flex-col items-center text-center max-w-[1000px] mx-auto w-full"
           variants={container}
           initial="hidden"
           animate="visible"
@@ -85,6 +88,26 @@ export default function ServiceDetailHero({
             {tagline}
           </motion.p>
         </motion.div>
+
+        {heroImage && (
+          <motion.div
+            className="w-full max-w-[1200px] mx-auto "
+            variants={item}
+            initial="hidden"
+            animate="visible"
+          >
+            <div className="relative w-full aspect-[16/10] sm:aspect-[2/1] rounded-2xl overflow-hidden ">
+              <Image
+                src={heroImage}
+                alt=""
+                fill
+                className="object-contain"
+                priority
+                sizes="(max-width: 768px) 100vw, 1200px"
+              />
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   )
