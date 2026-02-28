@@ -21,7 +21,7 @@ export default function DefaultBlogContent({ post }: BlogContentProps) {
             <h2
               key={i}
               id={id}
-              className="text-xl md:text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24"
+              className="text-[26px] font-semibold text-[#3C3C3C] mt-10 mb-4 scroll-mt-24"
             >
               {block.text}
             </h2>
@@ -29,7 +29,7 @@ export default function DefaultBlogContent({ post }: BlogContentProps) {
         }
         if (block.type === 'paragraph') {
           return (
-            <p key={i} className="text-gray-700 leading-relaxed mb-4">
+            <p key={i} className="text-[17px] text-[#3C3C3C] leading-relaxed mb-4">
               {block.text}
             </p>
           )

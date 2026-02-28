@@ -32,7 +32,7 @@ export default function BarChart({
       <div
         className={`my-8 p-6 rounded-2xl border border-gray-200 bg-white shadow-sm ${className}`.trim()}
       >
-        <h3 className="text-lg font-bold text-gray-900 mb-1">{title}</h3>
+        <h3 className="text-lg font-bold text-[#3C3C3C] mb-1">{title}</h3>
         {subtitle && <p className="text-sm text-gray-600 mb-6">{subtitle}</p>}
         <div className="flex gap-4">
           {/* Y-axis */}
@@ -62,7 +62,7 @@ export default function BarChart({
               <div className="absolute inset-0 flex items-end justify-around gap-2 px-2 pb-0 pt-1">
                 {bars.map((item, i) => (
                   <div key={i} className="flex-1 flex flex-col items-center gap-1 min-w-0">
-                    <span className="text-xs font-medium text-gray-900 whitespace-nowrap">
+                    <span className="text-xs font-medium text-[#3C3C3C] whitespace-nowrap">
                       {item.value}%
                     </span>
                     <div
@@ -98,14 +98,14 @@ export default function BarChart({
     <div
       className={`my-8 p-6 rounded-2xl border border-gray-200 bg-white shadow-sm ${className}`.trim()}
     >
-      <h3 className="text-lg font-bold text-gray-900 mb-1">{title}</h3>
+      <h3 className="text-lg font-bold text-[#3C3C3C] mb-1">{title}</h3>
       {subtitle && <p className="text-sm text-gray-600 mb-6">{subtitle}</p>}
       <div className="flex flex-col gap-4">
         {bars.map((item, i) => (
           <div key={i} className="flex flex-col gap-1">
             <div className="flex justify-between text-sm">
-              <span className="text-gray-700">{item.label}</span>
-              <span className="font-medium text-gray-900">{item.value}%</span>
+              <span className="text-[#3C3C3C]">{item.label}</span>
+              <span className="font-medium text-[#3C3C3C]">{item.value}%</span>
             </div>
             <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
               <div

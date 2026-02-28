@@ -14,7 +14,7 @@ export default function SectionHeading({ id, children, className = '' }: Section
   return (
     <h2
       id={id}
-      className={`text-xl md:text-2xl font-bold text-gray-900 mt-10 mb-4 scroll-mt-24 first:mt-0 ${className}`.trim()}
+      className={`text-[26px] font-semibold text-[#3C3C3C] mt-10 mb-4 scroll-mt-24 first:mt-0 ${className}`.trim()}
     >
       {children}
     </h2>

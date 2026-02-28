@@ -58,26 +58,26 @@ const STEPS_ITEMS = [
 export default function BeyondAutomationContent({ post }: BlogContentProps) {
   return (
     <article className="prose prose-gray max-w-none">
-      <p className="text-gray-700 leading-relaxed mb-6">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-6">
         Businesses today face constant pressure to do more with less. AI integration steps in by
         linking smart tools directly into daily operations, changing how teams handle tasks from
         sales to supply chains.
       </p>
 
       <SectionHeading id={SECTIONS[0].id}>{SECTIONS[0].title}</SectionHeading>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         Business workflows have evolved dramatically with the rise of artificial intelligence. What
         started as simple task automation has become a full ecosystem of intelligent systems that
         learn, adapt, and optimize in real time.
       </p>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         Traditional automation relied on fixed rules and scripts. AI integration introduces systems
         that can interpret context, handle exceptions, and improve over time. This shift is
         redefining how teams collaborate and how decisions get made across departments.
       </p>
 
       <SectionHeading id={SECTIONS[1].id}>{SECTIONS[1].title}</SectionHeading>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         This chart pulls from surveys on how businesses view AI integration. Over 77% of companies use
         or plan to use it, while 64% expect better output. The workflow automation field grows
         fast, hitting billions in value soon, thanks to demand for real-time fixes across
@@ -94,18 +94,18 @@ export default function BeyondAutomationContent({ post }: BlogContentProps) {
       </figure>
 
       <SectionHeading id={SECTIONS[2].id}>{SECTIONS[2].title}</SectionHeading>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         Predictive analytics looks at past data to spot patterns and guess what&apos;s next. It
         helps firms stock right or spot unhappy customers before they leave.
       </p>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         Take retail: Walmart trimmed supply chain costs by 25% with these forecasts. The market for
         this tech jumps from $10 billion to over $35 billion by 2027, with users seeing 20–25%
         better operations and 10% revenue bumps.
       </p>
 
       <SectionHeading id={SECTIONS[3].id}>{SECTIONS[3].title}</SectionHeading>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         To understand the current landscape, we have to look at how these new systems differ from
         the tools we used just two years ago.
       </p>
@@ -116,17 +116,17 @@ export default function BeyondAutomationContent({ post }: BlogContentProps) {
       />
 
       <SectionHeading id={SECTIONS[4].id}>{SECTIONS[4].title}</SectionHeading>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         By 2026, 40% of apps will use task-specific AI agents for multi-step jobs. These agents flag
         issues and fix routine problems without constant human oversight.
       </p>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         Maintenance teams, for instance, get alerts only for unusual cases, freeing time. In
         customer service, chat agents manage queries 24/7, cutting response times sharply.
       </p>
 
       <SectionHeading id={SECTIONS[5].id}>{SECTIONS[5].title}</SectionHeading>
-      <p className="text-gray-700 leading-relaxed mb-4">
+      <p className="text-[#3C3C3C] text-[17px] leading-relaxed mb-4">
         AI integration can be bumpy. It requires clean data shared across systems for good results.
         Staff might worry about job shifts, but reports indicate roles will evolve towards
         higher-value work. Upfront costs can be considerable, but payback often comes quickly—in
