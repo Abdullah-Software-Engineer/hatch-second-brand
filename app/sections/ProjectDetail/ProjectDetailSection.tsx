@@ -146,7 +146,7 @@ export default function ProjectDetailSection({ section }: { section: SectionType
   return (
     <section
       className={cn(
-        'py-6 md:py-8 bg-white'
+        'py-3 md:py-4 bg-white'
       )}
     >
       <Container className="max-w-[800px]">
