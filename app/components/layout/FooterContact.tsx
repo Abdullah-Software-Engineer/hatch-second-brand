@@ -45,7 +45,7 @@ export default function FooterContact() {
         {!isContactPage && (
           <>
             {/* Top Image - Centered and overlapping */}
-            <div className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[100px] md:h-[160px] z-0 pointer-events-none">
+            <div className="absolute -top-12 md:-top-10 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[100px] md:h-[160px] z-0 pointer-events-none">
                  <Image
                     src="/home/connect/Lets-Connect.webp"
                     alt="Let's Connect"
@@ -202,16 +202,6 @@ export default function FooterContact() {
                     </Container>
                 </div>
             </div>
-        </div>
-
-        {/* Bottom Let's Connect Image - Overlapping footer */}
-        <div className="absolute -bottom-12 md:-bottom-16 left-1/2 -translate-x-1/2 w-[400px] md:w-[700px] h-[100px] md:h-[160px] z-10 pointer-events-none mb-2">
-            <Image
-                src="/home/connect/Lets-Connect.webp"
-                alt="Let's Connect"
-                fill
-                className="object-contain"
-            />
         </div>
     </section>
   )
