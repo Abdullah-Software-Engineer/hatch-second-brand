@@ -161,7 +161,7 @@ function BlogPostCard({ post, index }: { post: (typeof BLOG_DETAIL_LIST)[0]; ind
           </p>
 
           <div className="flex justify-end mt-auto">
-            <span className="bg-[#444444] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-[0_10px_24px_rgba(0,0,0,0.16)]">
+            <span className="bg-[#444444] text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-[0_4px_12px_rgba(0,0,0,0.15)]">
               {post.readTime}
             </span>
           </div>
