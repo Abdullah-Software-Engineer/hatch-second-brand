@@ -28,7 +28,7 @@ export default function DataTable({
         <thead>
           <tr className="border-b border-gray-200 bg-gray-50">
             {headers.map((h, i) => (
-              <th key={i} className="px-4 py-3 text-sm font-semibold text-gray-900">
+              <th key={i} className="px-4 py-3 text-sm font-semibold text-[17px] text-[#3C3C3C]">
                 {h}
               </th>
             ))}
@@ -38,7 +38,7 @@ export default function DataTable({
           {rows.map((row, i) => (
             <tr key={i} className="border-b border-gray-100 last:border-0">
               {row.map((cell, j) => (
-                <td key={j} className="px-4 py-3 text-gray-700">
+                <td key={j} className="px-4 py-3 text-[17px] text-[#3C3C3C]">
                   {cell}
                 </td>
               ))}

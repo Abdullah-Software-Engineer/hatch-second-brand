@@ -85,41 +85,15 @@ export default function BlogDetailHero(props: BlogDetailHeroProps) {
       )}
       <div className={minimal ? 'pt-0 pb-10' : 'pt-6 sm:pt-8 md:pt-10'}>
         <motion.h1
-          className={`font-bold text-gray-900 leading-tight max-w-3xl ${
+          className={`font-semibold text-[#3C3C3C] leading-tight w-full ${
             minimal
-              ? 'text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] mb-10'
-              : 'text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mb-4'
+              ? 'text-[34px] sm:text-[40px] md:text-[52px] lg:text-[48px] mb-10'
+              : 'text-[28px] sm:text-[34px] md:text-[40px] lg:text-[46px] mb-4'
           }`}
           variants={item}
         >
           {title}
         </motion.h1>
-        {!minimal && (
-          <>
-            <motion.p
-              className="text-base sm:text-lg text-gray-600 leading-relaxed mb-5"
-              variants={item}
-            >
-              {description}
-            </motion.p>
-            <motion.div
-              className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500"
-              variants={item}
-            >
-              <span>{date}</span>
-              <span aria-hidden>·</span>
-              <span>{author}</span>
-              <span aria-hidden>·</span>
-              <span>{readTime}</span>
-              {category && (
-                <>
-                  <span aria-hidden>·</span>
-                  <span className="text-primary font-medium">{category}</span>
-                </>
-              )}
-            </motion.div>
-          </>
-        )}
       </div>
     </motion.article>
   )

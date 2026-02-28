@@ -12,8 +12,8 @@ export interface BulletListProps {
 export default function BulletList({ intro, items, className = '' }: BulletListProps) {
   return (
     <div className={className}>
-      {intro && <p className="text-gray-700 leading-relaxed mb-4">{intro}</p>}
-      <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
+      {intro && <p className="text-[17px] text-[#3C3C3C] leading-relaxed mb-4">{intro}</p>}
+      <ul className="list-disc pl-6 text-[17px] text-[#3C3C3C] space-y-2 mb-4">
         {items.map((item, i) => {
           if (typeof item === 'string') {
             return <li key={i}>{item}</li>

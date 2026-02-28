@@ -24,8 +24,8 @@ export default function ComparisonTable({
       <table className="w-full min-w-[500px] text-left">
         <thead>
           <tr className="border-b border-gray-200 bg-gray-50">
-            <th className="px-4 py-3 text-sm font-semibold text-gray-900">{leftHeader}</th>
-            <th className="px-4 py-3 text-sm font-semibold text-gray-900">{rightHeader}</th>
+            <th className="px-4 py-3 text-sm font-semibold text-[17px] text-[#3C3C3C]">{leftHeader}</th>
+            <th className="px-4 py-3 text-sm font-semibold text-[17px] text-[#3C3C3C]">{rightHeader}</th>
           </tr>
         </thead>
         <tbody>
@@ -35,10 +35,10 @@ export default function ComparisonTable({
                 <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
                   {row.label}
                 </span>
-                <p className="text-gray-700 mt-0.5">{row.left}</p>
+                <p className="text-[17px] text-[#3C3C3C] mt-0.5">{row.left}</p>
               </td>
               <td className="px-4 py-3">
-                <p className="text-gray-700">{row.right}</p>
+                <p className="text-[17px] text-[#3C3C3C]">{row.right}</p>
               </td>
             </tr>
           ))}

@@ -23,7 +23,7 @@ export default function BlogInnerLayout({
 }: BlogInnerLayoutProps) {
   return (
     <section className="relative bg-white pt-[80px] lg:pt-[90px] pb-16 md:pb-24">
-      <Container className="max-w-[1390px]">
+      <Container className="max-w-[1390px] pt-[90px]">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 lg:gap-14">
           <motion.main
             className="min-w-0"
