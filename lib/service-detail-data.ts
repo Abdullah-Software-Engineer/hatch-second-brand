@@ -1,3 +1,5 @@
+import { SHARED_FAQS } from './faq-data'
+
 export interface ServiceDetailData {
   slug: string
   titlePart1: string
@@ -17,14 +19,7 @@ export interface ServiceDetailData {
   faqs?: { question: string; answer: string }[]
 }
 
-const DEFAULT_FAQS = [
-  { question: "How does the project process work?", answer: "Our process begins with a discovery phase to understand your goals. We then move to planning, design, development, and finally deployment. Throughout each stage, we maintain open communication to ensure the final product aligns with your vision." },
-  { question: "What is your typical timeline for a project?", answer: "Timelines vary depending on the project's complexity and scope. A simple website might take 4-6 weeks, while a complex web application could take 3-6 months. We provide a detailed timeline during the initial consultation." },
-  { question: "Do you offer post-launch support?", answer: "Yes, we offer various maintenance and support packages to ensure your digital product remains secure, up-to-date, and performs optimally after launch." },
-  { question: "What technologies do you specialize in?", answer: "We specialize in modern web technologies including React, Next.js, Node.js, and TypeScript. For mobile apps, we use React Native. We also have expertise in AI integration and cloud solutions." },
-  { question: "Can you help with existing projects?", answer: "Absolutely. We can audit, refactor, or extend your current codebase and integrate new features or redesigns while keeping your business running." },
-  { question: "How do you handle project pricing?", answer: "We offer both fixed-price and time-and-materials engagement models. After assessing your requirements, we provide a transparent proposal outlining the costs and deliverables." },
-]
+const DEFAULT_FAQS = SHARED_FAQS
 
 const SHARED_TESTIMONIALS = [
   { quote: "Hatch has been very professional throughout. Top-quality work delivered, and we would definitely work with them again.", author: "Jobson Roy", location: "United Kingdom", rating: 5 },

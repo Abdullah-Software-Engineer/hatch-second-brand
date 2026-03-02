@@ -8,6 +8,7 @@ import {
   ProjectDetailTestimonials,
 } from '../../sections/ProjectDetail'
 import ProjectFeaturedImage from '../../sections/ProjectDetail/ProjectFeaturedImage'
+import FAQ from '../../sections/Home/FAQ'
 
 export async function generateStaticParams() {
   return getAllProjectSlugs().map((slug) => ({ slug }))
@@ -48,6 +49,8 @@ export default async function ProjectDetailPage({
       {project.testimonials && project.testimonials.length > 0 && (
         <ProjectDetailTestimonials testimonials={project.testimonials} />
       )}
+
+      <FAQ />
 
       {project.nextProject && (
         <ProjectDetailNextProject project={project.nextProject} />

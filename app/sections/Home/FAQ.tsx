@@ -3,34 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Container from '../../components/ui/Container'
-import { cn } from '@/lib/utils'
-
-const FAQS = [
-  {
-    question: "How does the project process work?",
-    answer: "Our process begins with a discovery phase to understand your goals. We then move to planning, design, development, and finally deployment. Throughout each stage, we maintain open communication to ensure the final product aligns with your vision."
-  },
-  {
-    question: "What is your typical timeline for a project?",
-    answer: "Timelines vary depending on the project's complexity and scope. A simple website might take 4-6 weeks, while a complex web application could take 3-6 months. We provide a detailed timeline during the initial consultation."
-  },
-  {
-    question: "Do you offer post-launch support?",
-    answer: "Yes, we offer various maintenance and support packages to ensure your digital product remains secure, up-to-date, and performs optimally after launch."
-  },
-  {
-    question: "What technologies do you specialize in?",
-    answer: "We specialize in modern web technologies including React, Next.js, Node.js, and TypeScript. for mobile apps, we use React Native. We also have expertise in AI integration and cloud solutions."
-  },
-  {
-    question: "Can you help with rebranding?",
-    answer: "Absolutely. Our design team specializes in creating cohesive brand identities, including logo design, typography, color palettes, and brand guidelines that resonate with your target audience."
-  },
-  {
-    question: "How do you handle project pricing?",
-    answer: "We offer both fixed-price and time-and-materials engagement models. After assessing your requirements, we provide a transparent proposal outlining the costs and deliverables."
-  }
-]
+import { SHARED_FAQS } from '@/lib/faq-data'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -49,7 +22,7 @@ export default function FAQ() {
 
         {/* FAQ Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full items-start">
-          {FAQS.map((faq, index) => (
+          {SHARED_FAQS.map((faq, index) => (
             <FAQItem
               key={index}
               question={faq.question}
