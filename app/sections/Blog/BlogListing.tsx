@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
@@ -36,8 +36,20 @@ const itemVariants = {
 
 export default function BlogInsights() {
   const [activeCategory, setActiveCategory] = useState('All')
+  const [hasBeenVisible, setHasBeenVisible] = useState(false)
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0 })
+
+  // Ensure content shows even if useInView doesn't fire (e.g. short viewport or scroll position)
+  useEffect(() => {
+    if (isInView) setHasBeenVisible(true)
+  }, [isInView])
+  useEffect(() => {
+    const t = setTimeout(() => setHasBeenVisible(true), 600)
+    return () => clearTimeout(t)
+  }, [])
+
+  const showContent = isInView || hasBeenVisible
 
   // Filter blog posts based on active category
   const filteredPosts = activeCategory === 'All'
@@ -51,7 +63,7 @@ export default function BlogInsights() {
           className="w-full flex flex-col items-center"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={showContent ? "visible" : "hidden"}
         >
           {/* Subtitle Text */}
           <motion.p
