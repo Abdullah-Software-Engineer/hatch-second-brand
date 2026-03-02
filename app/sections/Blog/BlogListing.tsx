@@ -1,10 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
 import Container from '../../components/ui/Container'
 import { cn } from '@/lib/utils'
 import { BLOG_DETAIL_LIST, getBlogCategories } from '@/lib/blog-detail-data'
@@ -37,7 +36,12 @@ const itemVariants = {
 export default function BlogInsights() {
   const [activeCategory, setActiveCategory] = useState('All')
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.05 })
+  const [forceVisible, setForceVisible] = useState(false)
+  useEffect(() => {
+    const t = setTimeout(() => setForceVisible(true), 600)
+    return () => clearTimeout(t)
+  }, [])
 
   // Filter blog posts based on active category
   const filteredPosts = activeCategory === 'All'
@@ -51,7 +55,7 @@ export default function BlogInsights() {
           className="w-full flex flex-col items-center"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          animate={isInView || forceVisible ? "visible" : "hidden"}
         >
           {/* Subtitle Text */}
           <motion.p
@@ -104,10 +108,11 @@ export default function BlogInsights() {
             </div>
           </motion.div>
 
-          {/* Blog Posts Grid */}
+          {/* Blog Posts Grid - always visible so cards are never hidden by scroll timing */}
           <motion.div
             className="w-full mt-12 md:mt-16"
-            variants={itemVariants}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
           >
             {filteredPosts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
