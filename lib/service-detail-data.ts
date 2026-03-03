@@ -38,7 +38,7 @@ export const SERVICES_DETAIL: ServiceDetailData[] = [
     titlePart2: 'Development',
     tagline: 'Smart, Scalable, and Designed for Growth.',
     iconSrc: '/home/hero/after-solutions.webp',
-    // heroImage: '/services/1.webp',
+    heroImage: '/services/1.webp',
     description: 'We build modern, conversion-focused websites and digital platforms designed to help your business grow. From intuitive UI/UX design to robust frontend and backend development, we create seamless, responsive, and scalable web experiences. Our expertise spans e-commerce platforms, PHP-based systems, custom web apps, and CMS integrations. We also deliver cross-platform solutions that perform flawlessly across devices and integrate AI tools like chatbots and automation to enhance functionality. Whether you need a high-performing website, an optimized online store, or a dynamic digital product, we make sure your web presence works as hard as you do.',
     purpleTags: ['Development & Management', 'E-Commerce Development', 'Frontend Development', 'PHP', 'CMS Integrations'],
     blackTags: ['Digital First', 'Scalable Systems', 'Think Digital', 'User Centric'],
