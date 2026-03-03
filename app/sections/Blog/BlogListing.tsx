@@ -19,7 +19,7 @@ const containerVariants = {
       delayChildren: 0.2,
     },
   },
-}
+} 
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
