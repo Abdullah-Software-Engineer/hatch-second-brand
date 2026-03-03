@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import Container from '../../components/ui/Container'
 import { cn } from '@/lib/utils'
 import { BLOG_DETAIL_LIST, getBlogCategories } from '@/lib/blog-detail-data'
@@ -19,7 +20,7 @@ const containerVariants = {
       delayChildren: 0.2,
     },
   },
-} 
+}
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -115,11 +116,10 @@ export default function BlogInsights() {
             </div>
           </motion.div>
 
-          {/* Blog Posts Grid - always visible so cards are never hidden by scroll timing */}
+          {/* Blog Posts Grid */}
           <motion.div
             className="w-full mt-12 md:mt-16"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
+            variants={itemVariants}
           >
             {filteredPosts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
