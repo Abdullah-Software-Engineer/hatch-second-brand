@@ -81,7 +81,7 @@ function StatCard({
       transition={{ duration: 0.6, delay: 0.5 + index * 0.15 }}
       className="text-center"
     >
-      <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-3">
+      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-3">
         {count}
         {stat.suffix}
       </div>

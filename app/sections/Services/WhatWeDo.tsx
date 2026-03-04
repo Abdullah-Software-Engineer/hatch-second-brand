@@ -22,7 +22,7 @@ export default function WhatWeDo() {
           {/* Header Section */}
           <div className="mb-8 md:mb-12">
             <p className="text-sm md:text-base text-gray-400 mb-2 text-center">(Services)</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 text-center mb-6 pb-5">
+            <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-gray-800 text-center mb-6 pb-5">
               What We Do
             </h2>
             {/* Divider Line */}
@@ -41,7 +41,7 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
                 Web Development
               </h3>
 
@@ -88,7 +88,7 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
                 App & Software Development
               </h3>
 
@@ -138,7 +138,7 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
                 Branding & Positioning
               </h3>
 
@@ -182,7 +182,7 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
                 AI Integration
               </h3>
 
@@ -229,7 +229,7 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
                 Marketing
               </h3>
 
@@ -276,7 +276,7 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
                 Content & Creatives
               </h3>
 
@@ -323,7 +323,7 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
                 Lead Generation
               </h3>
 

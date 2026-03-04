@@ -25,7 +25,7 @@ export default function ContactForm() {
           {/* Left Section - Get In Touch Form */}
           <div className="w-full">
             <p className="text-sm md:text-base text-gray-500 mb-2">(Contact)</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-8 md:mb-10">
+            <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold text-gray-800 mb-8 md:mb-10">
               Get In Touch
             </h2>
 
@@ -102,7 +102,7 @@ export default function ContactForm() {
                 <span className="text-gray-500 text-sm">Map or image</span>
               </div>
               <div className="p-8 md:p-10 lg:p-12 flex flex-col">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-10">
+                <h3 className="text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-8 md:mb-10">
                   Find Us Here
                 </h3>
 

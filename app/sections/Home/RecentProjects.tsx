@@ -48,7 +48,7 @@ export default function RecentProjects() {
       <Container>
         <div className="flex flex-col items-center mb-16 md:mb-24 text-white text-center sticky top-20 z-0">
           <span className="text-sm md:text-base mb-4 tracking-wide opacity-90">(Our Recent Work)</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">Recent Projects</h2>
+          <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold">Recent Projects</h2>
         </div>
       </Container>
 
@@ -121,7 +121,7 @@ function Card({
           {/* Content Side */}
           <div className="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <span className="text-white/60 text-sm md:text-base font-medium mb-2">{project.category}</span>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">{project.title}</h3>
+            <h3 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-white mb-6">{project.title}</h3>
             
             <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
               {project.description}

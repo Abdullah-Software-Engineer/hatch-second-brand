@@ -112,12 +112,12 @@ export default function ServicesMarquee({
         <div className="relative z-30 mt-20">
           <Container>
             <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
-              <h3 className="font-arizona font-normal italic text-[38px] md:text-[50px] text-primary mb-3 relative">
+              <h3 className="font-arizona font-normal italic text-[30px] md:text-[38px] lg:text-[42px] text-primary mb-3 relative">
                 {scriptText}
               </h3>
               <div className="p-4 md:p-0 mb-12 bg-transparent relative">
                 {description ?? (
-                  <p className="text-2xl md:text-3xl lg:text-4xl leading-tight font-medium text-black">
+                  <p className="text-xl md:text-2xl lg:text-[28px] leading-tight font-medium text-black">
                     We are a service design studio delivering tailored solutions through a team of <span className="text-primary font-bold">90+ skilled experts</span>. We simplify complex challenges and turn ideas into scalable, lasting impact.
                   </p>
                 )}

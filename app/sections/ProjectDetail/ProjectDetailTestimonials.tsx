@@ -41,7 +41,7 @@ export default function ProjectDetailTestimonials({
     <section className="bg-white py-20 md:py-32 overflow-hidden">
       <div className="flex flex-col items-center mb-16 md:mb-20 text-center">
         <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">(Testimonials)</span>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">{title}</h2>
+        <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-black mb-6">{title}</h2>
         <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
           {subtitle}
         </p>

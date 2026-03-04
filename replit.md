@@ -38,6 +38,17 @@ public/                 # Static assets (images, fonts)
 - `postcss.config.mjs` uses `tailwindcss` + `autoprefixer` (v3 style)
 - `allowedDevOrigins` set to `*.replit.dev` and `*.pike.replit.dev` for Replit proxy compatibility
 
+## Typography Scale
+
+Responsive heading sizes used across the site:
+
+- **Hero H1 (main pages)**: `text-[30px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px]`
+- **Inner page H1 (service/project detail)**: `text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px]`
+- **Section H2**: `text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px]`
+- **Sub H3 (WhatWeDo items)**: `text-[22px] md:text-[26px] lg:text-[30px]`
+- **Inline hero images**: `w-[48px] h-[36px]` up to `xl:w-[90px] xl:h-[66px]` with proportional rounded corners
+- **Stat numbers**: `text-4xl md:text-5xl lg:text-6xl`
+
 ## Key Features
 
 - **Project detail hero**: Uses `ProjectDetailHero` component with per-project title styling (purple accent text + inline circular icons between title words). Supports `iconSrc` and `iconSrc2` for dual inline icons. Contact Us button removed from project detail pages.

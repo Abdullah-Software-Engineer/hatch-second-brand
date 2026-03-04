@@ -87,8 +87,8 @@ export default function BlogDetailHero(props: BlogDetailHeroProps) {
         <motion.h1
           className={`font-semibold text-[#3C3C3C] leading-tight w-full ${
             minimal
-              ? 'text-[34px] sm:text-[40px] md:text-[52px] lg:text-[48px] mb-10'
-              : 'text-[28px] sm:text-[34px] md:text-[40px] lg:text-[46px] mb-4'
+              ? 'text-[26px] sm:text-[30px] md:text-[36px] lg:text-[42px] mb-10'
+              : 'text-[22px] sm:text-[26px] md:text-[32px] lg:text-[38px] mb-4'
           }`}
           variants={item}
         >

@@ -41,7 +41,7 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-[10px]">
+          <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-black mb-[10px]">
             Next Project
           </h2>
         </motion.div>
@@ -64,7 +64,7 @@ export default function ProjectDetailNextProject({ project }: ProjectDetailNextP
               Project Name
             </motion.span>
             <motion.h3
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+              className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-white mb-6"
               variants={contentMotion}
             >
               {project.title}

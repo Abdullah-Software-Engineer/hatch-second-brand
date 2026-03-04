@@ -39,7 +39,7 @@ export default function LifeAthatch() {
       <div className="relative z-10 pt-24 pb-20">
         <div className="flex flex-col items-center mb-6 md:mb-16 lg:mb-20 text-center">
           <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">(Life at Hatch)</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
+          <h1 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-black mb-6">
             The People Behind the Products <br />
             Where Innovation Lives
           </h1>

@@ -11,10 +11,10 @@ export default function ProjectsHero() {
         <Container>
           <div className="flex flex-col items-center justify-center text-center max-w-[1200px] mx-auto px-4 py-6 sm:py-8 md:py-12 lg:py-20">
             {/* Main Heading */}
-            <h1 className="text-[40px] sm:text-[50px] md:text-[64px] lg:text-[80px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5 md:mb-6 lg:mb-8">
+            <h1 className="text-[30px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5 md:mb-6 lg:mb-8">
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
                 <span className="text-primary">Results</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center ">
+                <div className="relative w-[48px] h-[36px] sm:w-[56px] sm:h-[42px] md:w-[68px] md:h-[50px] lg:w-[80px] lg:h-[58px] xl:w-[90px] xl:h-[66px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center">
                   <Image
                     src="/home/hero/after-solutions.webp"
                     alt="Results"
@@ -27,7 +27,7 @@ export default function ProjectsHero() {
               </span>
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
                 <span>For Themselves</span>
-                <div className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center ">
+                <div className="relative w-[48px] h-[36px] sm:w-[56px] sm:h-[42px] md:w-[68px] md:h-[50px] lg:w-[80px] lg:h-[58px] xl:w-[90px] xl:h-[66px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center">
                   <Image
                     src="/home/hero/after-move.webp"
                     alt="Themselves"

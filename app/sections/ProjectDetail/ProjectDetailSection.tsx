@@ -37,7 +37,7 @@ const itemMotion = {
 function SectionHeading({ title }: { title: string }) {
   return (
     <motion.h2
-      className="text-[38px] font-medium text-[#3C3C3C] mb-4 md:mb-6"
+      className="text-[24px] md:text-[28px] lg:text-[32px] font-medium text-[#3C3C3C] mb-4 md:mb-6"
       variants={sectionMotion}
     >
       {title}

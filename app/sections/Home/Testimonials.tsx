@@ -92,7 +92,7 @@ export default function Testimonials() {
             >
               {STATS.map((stat, index) => (
                 <div key={index} className="flex flex-col gap-2">
-                  <span className="text-5xl md:text-6xl font-bold tracking-tight">
+                  <span className="text-4xl md:text-5xl font-bold tracking-tight">
                     <AnimatedStatValue value={stat.value} />
                   </span>
                   <span className="text-white/80 text-lg md:text-xl font-light">{stat.label}</span>

@@ -164,7 +164,7 @@ function BlogPostCard({ post, index }: { post: (typeof BLOG_DETAIL_LIST)[0]; ind
 
         {/* Content Section */}
         <div className="flex-1 flex flex-col px-6 pb-6">
-          <h3 className="text-[26px] md:text-[30px] font-medium text-[#444444] mb-3">
+          <h3 className="text-[22px] md:text-[26px] font-medium text-[#444444] mb-3">
             {post.title}
           </h3>
 

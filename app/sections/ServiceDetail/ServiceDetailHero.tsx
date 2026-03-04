@@ -54,7 +54,7 @@ export default function ServiceDetailHero({
           initial="hidden"
           animate="visible"
         >
-          <h1 className="text-[36px] sm:text-[48px] md:text-[58px] lg:text-[72px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5">
+          <h1 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5">
             <span className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
               <motion.span variants={item} className="font-bold">
                 {titlePart1}
@@ -62,7 +62,7 @@ export default function ServiceDetailHero({
               {iconSrc && (
                 <motion.span
                   variants={iconMotion}
-                  className="relative w-[56px] h-[42px] sm:w-[70px] sm:h-[52px] md:w-[84px] md:h-[62px] lg:w-[100px] lg:h-[74px] rounded-xl overflow-hidden inline-flex items-center justify-center "
+                  className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-xl overflow-hidden inline-flex items-center justify-center"
                 >
                   <Image
                     src={iconSrc}

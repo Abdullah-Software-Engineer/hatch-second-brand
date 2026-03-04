@@ -25,7 +25,7 @@ export default function OurLocations() {
         <div className="w-full flex flex-col">
           {/* Header Section */}
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 md:mb-6">
+            <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-black mb-4 md:mb-6">
               Our Locations
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">

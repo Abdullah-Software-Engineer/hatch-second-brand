@@ -66,7 +66,7 @@ export default function Services() {
         {/* Header */}
         <div className="flex flex-col items-center mb-12 md:mb-16 text-center">
           <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">(Services)</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black">What We Do</h2>
+          <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-black">What We Do</h2>
         </div>
 
         {/* Tabs Navigation */}

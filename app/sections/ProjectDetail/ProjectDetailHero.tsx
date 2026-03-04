@@ -43,7 +43,7 @@ function InlineIcon({ src }: { src: string }) {
   return (
     <motion.div
       variants={iconMotion}
-      className="relative w-[60px] h-[45px] sm:w-[75px] sm:h-[55px] md:w-[90px] md:h-[65px] lg:w-[110px] lg:h-[80px] rounded-[18px] sm:rounded-[20px] md:rounded-[22px] lg:rounded-[24px] overflow-hidden inline-flex items-center justify-center"
+      className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden inline-flex items-center justify-center"
     >
       <Image
         src={src}
@@ -73,7 +73,7 @@ export default function ProjectDetailHero({
           initial="hidden"
           animate="visible"
         >
-          <h1 className="text-[32px] sm:text-[44px] md:text-[54px] lg:text-[64px] leading-[1.12] font-medium text-black tracking-tight mb-2 sm:mb-3">
+          <h1 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px] leading-[1.12] font-medium text-black tracking-tight mb-2 sm:mb-3">
             <span className="flex flex-wrap justify-center items-center gap-x-2 sm:gap-x-3 gap-y-1">
               <motion.span variants={item} className="text-primary font-bold">
                 {titleAccent}
