@@ -77,6 +77,8 @@ export default function ServicesHero() {
                   />
                 </motion.div>
                 <span>Built to Drive</span>
+              </span>
+              <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
                 <span className="text-primary">Real Growth</span>
                 <motion.div
                   className="relative w-[48px] h-[36px] sm:w-[56px] sm:h-[42px] md:w-[68px] md:h-[50px] lg:w-[80px] lg:h-[58px] xl:w-[90px] xl:h-[66px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center"
