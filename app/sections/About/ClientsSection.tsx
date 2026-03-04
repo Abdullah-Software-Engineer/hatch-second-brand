@@ -42,9 +42,9 @@ export default function ClientsSection() {
           {[...LOGOS, ...LOGOS].map((src, index) => (
             <div
               key={index}
-              className="flex items-center justify-center mx-6 sm:mx-8 lg:mx-10 min-w-[120px] sm:min-w-[140px] md:min-w-[160px]"
+              className="flex items-center justify-center mx-6 sm:mx-8 lg:mx-10 min-w-[180px] sm:min-w-[200px] md:min-w-[240px]"
             >
-              <div className="relative h-10 md:h-12 w-[120px] md:w-[140px]">
+              <div className="relative h-16 md:h-20 w-[180px] md:w-[220px]">
                 <Image
                   src={src}
                   alt="Client logo"
