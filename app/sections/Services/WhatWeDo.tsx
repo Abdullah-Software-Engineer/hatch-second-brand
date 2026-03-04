@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 
 const SERVICE_SLUGS = [
@@ -20,14 +21,20 @@ export default function WhatWeDo() {
       <Container>
         <div className="w-full">
           {/* Header Section */}
-          <div className="mb-8 md:mb-12">
+          <motion.div
+            className="mb-8 md:mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
             <p className="text-sm md:text-base text-gray-400 mb-2 text-center">(Services)</p>
             <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-gray-800 text-center mb-6 pb-5">
               What We Do
             </h2>
             {/* Divider Line */}
             <div className="w-full h-px bg-gray-300"></div>
-          </div>
+          </motion.div>
 
           {/* Content Block */}
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">

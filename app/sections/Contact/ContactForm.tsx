@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 
 export default function ContactForm() {
@@ -22,8 +23,13 @@ export default function ContactForm() {
     <section className="w-full bg-[#EDEDED] py-12 md:py-16 lg:py-20 rounded-tl-[50px] rounded-tr-[50px] mb-[90px]">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-stretch">
-          {/* Left Section - Get In Touch Form */}
-          <div className="w-full">
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
             <p className="text-sm md:text-base text-gray-500 mb-2">(Contact)</p>
             <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold text-gray-800 mb-8 md:mb-10">
               Get In Touch
@@ -92,10 +98,15 @@ export default function ContactForm() {
                 Send now!
               </button>
             </form>
-          </div>
+          </motion.div>
 
-          {/* Right Section - Find Us Here Panel */}
-          <div className="w-full lg:flex">
+          <motion.div
+            className="w-full lg:flex"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          >
             <div className="bg-[#2A2A2A] rounded-2xl overflow-hidden w-full flex flex-col">
               {/* Placeholder for map / image */}
               <div className="w-full aspect-4/3 min-h-[180px] bg-[#1a1a1a] flex items-center justify-center">
@@ -156,7 +167,7 @@ export default function ContactForm() {
               </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </section>

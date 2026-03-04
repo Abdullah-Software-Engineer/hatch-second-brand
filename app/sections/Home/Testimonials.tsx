@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import { cn } from '@/lib/utils'
 
@@ -69,7 +70,13 @@ export default function Testimonials() {
   return (
     <section className="bg-white py-20 md:py-32 overflow-hidden">
       <Container>
-        <div className="flex flex-col items-center mb-0 relative z-0">
+        <motion.div
+          className="flex flex-col items-center mb-0 relative z-0"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="text-gray-500 text-sm md:text-base mb-[10px] tracking-wide">(Why clients love Hatch)</span>
           <div className="relative w-[400px] h-[85px] md:w-[650px] md:h-[140px] mb-8">
             <Image
@@ -79,9 +86,15 @@ export default function Testimonials() {
               className="object-contain"
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch relative z-10 -mt-10 md:-mt-12">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch relative z-10 -mt-10 md:-mt-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
           {/* Left Stats Box */}
           <div className="lg:col-span-5 relative h-full min-h-[400px]">
             <div 
@@ -203,7 +216,7 @@ export default function Testimonials() {
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
       </Container>
     </section>
   )

@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 
 const LOCATIONS = [
@@ -23,22 +24,31 @@ export default function OurLocations() {
     <section className="w-full bg-white py-12 md:py-16 lg:py-20">
       <Container>
         <div className="w-full flex flex-col">
-          {/* Header Section */}
-          <div className="text-center mb-12 md:mb-16">
+          <motion.div
+            className="text-center mb-12 md:mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
             <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-black mb-4 md:mb-6">
               Our Locations
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               Working across regions to support teams worldwide.
             </p>
-          </div>
+          </motion.div>
 
           {/* Location Cards - soft purple gradient */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10">
             {LOCATIONS.map((location, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="relative rounded-2xl overflow-hidden bg-linear-to-b from-[#9754D8] to-[#9754D8] p-8 md:p-10 shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
                 {/* Office Name with Icon */}
                 <div className="flex items-center gap-3 mb-6">
@@ -81,7 +91,7 @@ export default function OurLocations() {
                     </p>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 

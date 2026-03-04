@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 
 const LOGOS = [
@@ -19,7 +20,13 @@ export default function ClientsSection() {
   return (
     <section className="bg-white py-16 md:py-24 overflow-hidden">
       <Container>
-        <div className="flex flex-col items-center mb-16 md:mb-20 text-center">
+        <motion.div
+          className="flex flex-col items-center mb-16 md:mb-20 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">(Clients)</span>
           <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-black mb-6">
             Brands we&apos;ve helped grow
@@ -27,7 +34,7 @@ export default function ClientsSection() {
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
             Driving measurable impact through creative digital solutions.
           </p>
-        </div>
+        </motion.div>
       </Container>
       {/* Running logo marquee - duplicate logos for seamless loop */}
       <div className="w-full overflow-hidden">

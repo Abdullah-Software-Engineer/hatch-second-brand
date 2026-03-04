@@ -49,6 +49,14 @@ Responsive heading sizes used across the site:
 - **Inline hero images**: `w-[48px] h-[36px]` up to `xl:w-[90px] xl:h-[66px]` with proportional rounded corners
 - **Stat numbers**: `text-4xl md:text-5xl lg:text-6xl`
 
+## Animations
+
+Framer Motion entrance animations applied site-wide using a consistent pattern:
+
+- **Hero sections** (Home, About, Services, Blog, Projects, Contact, BlogDetail): `containerVariants` (staggerChildren: 0.12, delayChildren: 0.1) + `itemVariants` (opacity 0→1, y 30→0) + `imageVariants` (scale 0.8→1). Ease: `[0.22, 1, 0.36, 1] as const`.
+- **Scroll sections** (Testimonials, ContactForm, OurLocations, FooterContact, ClientsSection, Home/Services header, WhatWeDo header): `whileInView` with `viewport={{ once: true, margin: '-60px' }}`, opacity/y entrance.
+- **Variant typing**: Use `as const` on easing arrays in variant objects to satisfy Framer Motion TypeScript types.
+
 ## Key Features
 
 - **Project detail hero**: Uses `ProjectDetailHero` component with per-project title styling (purple accent text + inline circular icons between title words). Supports `iconSrc` and `iconSrc2` for dual inline icons. Contact Us button removed from project detail pages.

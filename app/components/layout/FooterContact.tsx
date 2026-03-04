@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import Container from '../../components/ui/Container'
 
 const EMAILS = [
@@ -58,8 +59,13 @@ export default function FooterContact() {
             <div className="mx-[15px] bg-black rounded-[40px] relative pt-24 md:pt-32 pb-0 overflow-hidden mb-[15px]">
             <Container className="w-full">
                 <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-20 mb-20 md:mb-32 w-full">
-                    {/* Left Content */}
-                    <div className="flex-1 max-w-2xl">
+                    <motion.div
+                      className="flex-1 max-w-2xl"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: '-60px' }}
+                      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    >
                         <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-white leading-tight mb-8">
                             Let's bring<br />
                             your idea to<br />
@@ -68,10 +74,15 @@ export default function FooterContact() {
                         <p className="text-gray-400 text-lg md:text-xl max-w-lg leading-relaxed">
                             Let's talk strategy, innovation, and impact to make your next move your best one.
                         </p>
-                    </div>
+                    </motion.div>
 
-                    {/* Right Form */}
-                    <div className="flex-1 max-w-xl w-full pt-4 lg:pt-8">
+                    <motion.div
+                      className="flex-1 max-w-xl w-full pt-4 lg:pt-8"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: '-60px' }}
+                      transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                    >
                         <form className="space-y-8">
                             <div className="space-y-2">
                                 <input 
@@ -100,7 +111,7 @@ export default function FooterContact() {
                                 </button>
                             </div>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </Container>
 

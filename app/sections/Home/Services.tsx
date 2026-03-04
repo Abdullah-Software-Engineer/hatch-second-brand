@@ -64,10 +64,16 @@ export default function Services() {
     <section className="bg-white pt-20 md:pt-32 pb-0">
       <Container>
         {/* Header */}
-        <div className="flex flex-col items-center mb-12 md:mb-16 text-center">
+        <motion.div
+          className="flex flex-col items-center mb-12 md:mb-16 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="text-gray-500 text-sm md:text-base mb-4 tracking-wide">(Services)</span>
           <h2 className="text-[28px] md:text-[34px] lg:text-[38px] xl:text-[42px] font-bold text-black">What We Do</h2>
-        </div>
+        </motion.div>
 
         {/* Tabs Navigation */}
         <div className="flex justify-center mb-16 md:mb-24 w-full">
