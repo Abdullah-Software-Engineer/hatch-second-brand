@@ -273,10 +273,19 @@
     0% { opacity: 0; transform: translateX(16px); }
     100% { opacity: 1; transform: translateX(0); }
   }
+  @keyframes hero-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .animate-hero-float { animation: hero-float 3s ease-in-out infinite; }
+  .animate-hero-float-delayed { animation: hero-float 3s ease-in-out 1.5s infinite; }
+
   .animate-marquee-scroll { animation: marquee-scroll 60s linear infinite; }
   .animate-marquee-scroll-reverse { animation: marquee-scroll-reverse 60s linear infinite; }
 
   @media (prefers-reduced-motion: reduce) {
+    .animate-hero-float,
+    .animate-hero-float-delayed { animation: none; }
     .animate-marquee-scroll,
     .animate-marquee-scroll-reverse { animation-duration: 120s; }
   }

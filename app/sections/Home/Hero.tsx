@@ -61,7 +61,7 @@ export default function Hero() {
                 <span>We Build</span>
                 <span className="text-primary">Digital Solutions</span>
                 <motion.div
-                  className="relative w-[48px] h-[36px] sm:w-[56px] sm:h-[42px] md:w-[68px] md:h-[50px] lg:w-[80px] lg:h-[58px] xl:w-[90px] xl:h-[66px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center"
+                  className="relative w-[48px] h-[36px] sm:w-[56px] sm:h-[42px] md:w-[68px] md:h-[50px] lg:w-[80px] lg:h-[58px] xl:w-[90px] xl:h-[66px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center animate-hero-float"
                   variants={imageVariants}
                 >
                   <Image
@@ -76,7 +76,7 @@ export default function Hero() {
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
                 <span>That Move</span>
                 <motion.div
-                  className="relative w-[48px] h-[36px] sm:w-[56px] sm:h-[42px] md:w-[68px] md:h-[50px] lg:w-[80px] lg:h-[58px] xl:w-[90px] xl:h-[66px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center"
+                  className="relative w-[48px] h-[36px] sm:w-[56px] sm:h-[42px] md:w-[68px] md:h-[50px] lg:w-[80px] lg:h-[58px] xl:w-[90px] xl:h-[66px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center animate-hero-float-delayed"
                   variants={imageVariants}
                 >
                   <Image

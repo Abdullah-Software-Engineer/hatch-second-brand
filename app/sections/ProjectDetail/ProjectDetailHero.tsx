@@ -39,11 +39,11 @@ const iconMotion = {
   },
 }
 
-function InlineIcon({ src }: { src: string }) {
+function InlineIcon({ src, delayed = false }: { src: string; delayed?: boolean }) {
   return (
     <motion.div
       variants={iconMotion}
-      className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden inline-flex items-center justify-center"
+      className={`relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] overflow-hidden inline-flex items-center justify-center ${delayed ? 'animate-hero-float-delayed' : 'animate-hero-float'}`}
     >
       <Image
         src={src}
@@ -82,7 +82,7 @@ export default function ProjectDetailHero({
               <motion.span variants={item} className="font-bold text-black">
                 {titleRest}
               </motion.span>
-              {iconSrc2 && <InlineIcon src={iconSrc2} />}
+              {iconSrc2 && <InlineIcon src={iconSrc2} delayed />}
             </span>
           </h1>
           <motion.p

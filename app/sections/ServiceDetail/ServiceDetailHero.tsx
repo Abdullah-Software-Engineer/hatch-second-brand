@@ -62,7 +62,7 @@ export default function ServiceDetailHero({
               {iconSrc && (
                 <motion.span
                   variants={iconMotion}
-                  className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-xl overflow-hidden inline-flex items-center justify-center"
+                  className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-xl overflow-hidden inline-flex items-center justify-center animate-hero-float"
                 >
                   <Image
                     src={iconSrc}
