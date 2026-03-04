@@ -41,7 +41,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/web.webp" alt="Web Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/1.webp" alt="Web Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -88,7 +88,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/app.webp" alt="App & Software Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/2.webp" alt="App & Software Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -138,7 +138,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/brand.webp" alt="Branding & Positioning" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/3.webp" alt="Branding & Positioning" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -182,7 +182,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/ai.webp" alt="AI Integration" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/4.webp" alt="AI Integration" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -229,7 +229,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/marketing.webp" alt="Marketing" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/5.webp" alt="Marketing" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -276,7 +276,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/content.webp" alt="Content & Creatives" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/6.webp" alt="Content & Creatives" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -323,7 +323,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/lead.webp" alt="Lead Generation" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/7.webp" alt="Lead Generation" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 

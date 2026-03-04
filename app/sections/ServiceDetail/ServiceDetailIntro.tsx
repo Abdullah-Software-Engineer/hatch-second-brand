@@ -25,7 +25,7 @@ export default function ServiceDetailIntro({
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <p className="text-[#1a1a1a] text-lg md:text-xl leading-relaxed">
+          <p className="text-[#1a1a1a] text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
             {description}
           </p>
           <div className="mt-14 md:mt-16 flex justify-center">

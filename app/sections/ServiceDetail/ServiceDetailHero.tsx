@@ -91,7 +91,7 @@ export default function ServiceDetailHero({
 
         {heroImage && (
           <motion.div
-            className={`w-full max-w-[1200px] mx-auto ${heroImage === '/services/app.webp' ? '-mb-8 md:-mb-6' : ''}`}
+            className={`w-full max-w-[1200px] mx-auto ${heroImage === '/services/2.webp' ? '-mb-8 md:-mb-6' : ''}`}
             variants={item}
             initial="hidden"
             animate="visible"
