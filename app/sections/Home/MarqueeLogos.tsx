@@ -23,7 +23,7 @@ export default function MarqueeLogos() {
         {[...LOGOS, ...LOGOS].map((logo, index) => (
           <div
             key={index}
-            className="flex items-center justify-center mx-6 sm:mx-8 lg:mx-10 min-w-[140px] sm:min-w-[180px] lg:min-w-[200px]"
+            className="flex items-center justify-center mx-4 sm:mx-6 lg:mx-8 min-w-[140px] sm:min-w-[180px] lg:min-w-[200px]"
           >
             <div className="relative w-full h-[50px] sm:h-[60px] lg:h-[70px] transition-all duration-300">
               <Image
