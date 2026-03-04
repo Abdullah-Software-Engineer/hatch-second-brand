@@ -41,7 +41,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/1.webp" alt="Web Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/web.webp" alt="Web Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -53,7 +53,7 @@ export default function WhatWeDo() {
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
                 Your website should work as hard as you do. We design conversion-focused websites and online platforms that grow with your business, including e-commerce, frontend, and PHP development.
               </p>
 
@@ -88,7 +88,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/2.webp" alt="App & Software Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/app.webp" alt="App & Software Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -100,7 +100,7 @@ export default function WhatWeDo() {
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
                 We build custom applications and software tailored to your business needs, from cross-platform apps to e-commerce and on-demand solutions, helping you reach more customers efficiently.
               </p>
 
@@ -138,7 +138,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/3.webp" alt="Branding & Positioning" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/brand.webp" alt="Branding & Positioning" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -150,7 +150,7 @@ export default function WhatWeDo() {
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
                 We create professional, cohesive visual identities that make your business stand out, build trust and leave a lasting impression through brand strategy, graphic design and UI/UX solutions.
               </p>
 
@@ -182,7 +182,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/4.webp" alt="AI Integration" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/ai.webp" alt="AI Integration" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -194,7 +194,7 @@ export default function WhatWeDo() {
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
                 Our AI solutions enhance performance, automate workflows, and provide predictive analytics, powering smarter growth for your business.
               </p>
 
@@ -229,7 +229,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/5.webp" alt="Marketing" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/marketing.webp" alt="Marketing" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -241,7 +241,7 @@ export default function WhatWeDo() {
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
                 We connect you with customers where they spend their time, running strategic campaigns that boost engagement, build communities, and drive qualified leads through social media, SEO, PPC, and email marketing.
               </p>
 
@@ -276,7 +276,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/6.webp" alt="Content & Creatives" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/content.webp" alt="Content & Creatives" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -288,7 +288,7 @@ export default function WhatWeDo() {
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
                 We create valuable, relevant content that attracts customers, showcases your expertise, and helps potential clients find your business online through content marketing and video production.
               </p>
 
@@ -323,7 +323,7 @@ export default function WhatWeDo() {
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                <Image src="/services/7.webp" alt="Lead Generation" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+                <Image src="/services/lead.webp" alt="Lead Generation" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
 
@@ -335,7 +335,7 @@ export default function WhatWeDo() {
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
                 We deliver professional lead generation services that connect you with qualified prospects ready to engage with your business.
               </p>
 
