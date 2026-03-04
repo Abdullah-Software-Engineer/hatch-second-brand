@@ -59,7 +59,7 @@ export default function ServicesHero() {
           >
             {/* Main Heading */}
             <motion.h1
-              className="text-[30px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5 md:mb-6 lg:mb-8"
+              className="text-[30px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] leading-[1.1] font-bold text-black tracking-tight mb-4 sm:mb-5 md:mb-6 lg:mb-8"
               variants={itemVariants}
             >
               <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">

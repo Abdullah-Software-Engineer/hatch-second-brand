@@ -54,7 +54,7 @@ export default function ServiceDetailHero({
           initial="hidden"
           animate="visible"
         >
-          <h1 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px] leading-[1.1] font-medium text-black tracking-tight mb-4 sm:mb-5">
+          <h1 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px] leading-[1.1] font-bold text-black tracking-tight mb-4 sm:mb-5">
             <span className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
               <motion.span variants={item} className="font-bold">
                 {titlePart1}

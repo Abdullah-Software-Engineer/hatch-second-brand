@@ -73,7 +73,7 @@ export default function ProjectDetailHero({
           initial="hidden"
           animate="visible"
         >
-          <h1 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px] leading-[1.12] font-medium text-black tracking-tight mb-2 sm:mb-3">
+          <h1 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px] leading-[1.12] font-bold text-black tracking-tight mb-2 sm:mb-3">
             <span className="flex flex-wrap justify-center items-center gap-x-2 sm:gap-x-3 gap-y-1">
               <motion.span variants={item} className="text-primary font-bold">
                 {titleAccent}
