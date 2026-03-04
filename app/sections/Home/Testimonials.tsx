@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import { cn } from '@/lib/utils'
 
@@ -30,11 +30,13 @@ const STATS = [
   { label: 'Projects', value: '1100+' },
 ]
 
-function AnimatedStatValue({ value }: { value: string }) {
+function AnimatedStatValue({ value, isInView }: { value: string; isInView: boolean }) {
   const target = parseInt(value.replace(/\D/g, ''), 10) || 0
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
+    if (!isInView) return
+
     let frameId: number
     let startTime: number | null = null
     const duration = 1200 // ms
@@ -51,13 +53,15 @@ function AnimatedStatValue({ value }: { value: string }) {
 
     frameId = requestAnimationFrame(step)
     return () => cancelAnimationFrame(frameId)
-  }, [target])
+  }, [target, isInView])
 
   return <>{current.toLocaleString()}+</>
 }
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const statsRef = useRef(null)
+  const isStatsInView = useInView(statsRef, { once: true, margin: '-100px' })
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length)
@@ -98,6 +102,7 @@ export default function Testimonials() {
           {/* Left Stats Box */}
           <div className="lg:col-span-5 relative h-full min-h-[400px]">
             <div 
+              ref={statsRef}
               className="w-full h-full rounded-[32px] p-8 md:p-12 flex flex-col justify-center gap-12 text-white shadow-2xl relative overflow-hidden"
               style={{
                 background: 'linear-gradient(135deg, #060B11 0%, #9754D8 100%)'
@@ -106,7 +111,7 @@ export default function Testimonials() {
               {STATS.map((stat, index) => (
                 <div key={index} className="flex flex-col gap-2">
                   <span className="text-4xl md:text-5xl font-bold tracking-tight">
-                    <AnimatedStatValue value={stat.value} />
+                    <AnimatedStatValue value={stat.value} isInView={isStatsInView} />
                   </span>
                   <span className="text-white/80 text-lg md:text-xl font-light">{stat.label}</span>
                 </div>
