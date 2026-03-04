@@ -55,7 +55,7 @@ export default function ServiceDetailHero({
           animate="visible"
         >
           <h1 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px] leading-[1.1] font-bold text-black tracking-tight mb-4 sm:mb-5">
-            <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
+            <span className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
               <motion.span variants={item} className="font-bold">
                 {titlePart1}
               </motion.span>
@@ -74,14 +74,12 @@ export default function ServiceDetailHero({
                   />
                 </motion.span>
               )}
-            </span>
-            {titlePart2 && (
-              <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-2 mt-1 md:mt-2">
+              {titlePart2 && (
                 <motion.span variants={item} className="text-primary font-bold">
                   {titlePart2}
                 </motion.span>
-              </span>
-            )}
+              )}
+            </span>
           </h1>
           <motion.p
             variants={item}
