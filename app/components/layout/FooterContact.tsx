@@ -20,15 +20,15 @@ const EMAILS = [
 const FOOTER_LINKS = {
   navigation: [
     { label: 'About', href: '/about' },
-    { label: 'Work', href: '/work' },
+    { label: 'Work', href: '/projects' },
     { label: 'Services', href: '/services' },
     { label: 'Blog', href: '/blog' },
   ],
   projects: [
-    { label: 'Project 1', href: '/project-1' },
-    { label: 'Project 1', href: '/project-1' },
-    { label: 'Project 1 Project 1', href: '/project-1' },
-    { label: 'Project 1 Project 1', href: '/project-1' },
+    { label: 'Bookworm', href: '/projects/bookworm' },
+    { label: 'US Ecom Automation', href: '/projects/us-ecom-automation' },
+    { label: 'Pidgin Toes', href: '/projects/pidgin-toes' },
+    { label: 'View All', href: '/projects' },
   ],
   social: [
     { label: 'Instagram', href: 'https://instagram.com' },

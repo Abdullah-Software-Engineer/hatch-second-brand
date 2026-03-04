@@ -5,36 +5,23 @@ import Link from 'next/link'
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
 import Container from '../../components/ui/Container'
 import { cn } from '@/lib/utils'
+import { PROJECTS_DETAIL } from '@/lib/project-detail-data'
 
-const PROJECTS = [
-  {
-    slug: "green",
-    title: "Green",
-    category: "Web Design",
-    description: "We help startups launch, grow, and scale through clean, conversion-focused design.",
-    tags: ["Web design", "UI/UX design", "Web development"],
-    image: "/home/projects/project-1.webp",
+// Map project detail data to the format needed for the component
+// Filter to show specific projects on home page: green, bookworm, aintanet, us-ecom-automation, pidgin-toes
+const PROJECTS_TO_SHOW = ['green', 'bookworm', 'aintanet', 'us-ecom-automation', 'pidgin-toes']
+
+const PROJECTS = PROJECTS_DETAIL
+  .filter((project) => PROJECTS_TO_SHOW.includes(project.slug))
+  .map((project) => ({
+    slug: project.slug,
+    title: project.titleAccent,
+    category: project.titleRest || project.categories.split(',')[0] || 'Project',
+    description: project.sections.find(s => s.type === 'overview')?.intro || project.tagline,
+    tags: project.sections.find(s => s.type === 'overview')?.tags || project.categories.split(',').map(c => c.trim()),
+    image: project.heroMediaSrc || '/home/projects/project-1.webp',
     color: "#000000"
-  },
-  {
-    slug: "bookworm",
-    title: "Bookworm",
-    category: "App Design",
-    description: "Bookworm is a dynamic platform designed for book enthusiasts, offering the ability to borrow, rent, or buy books. It is a generative AI-based book recommendation system offering personalized book suggestions, ensuring users find the most relevant titles.",
-    tags: ["App design", "UI/UX design", "App development"],
-    image: "/home/projects/project-1.webp",
-    color: "#000000"
-  },
-  {
-    slug: "aintanet",
-    title: "Aintanet",
-    category: "Pitch Deck & Development",
-    description: "Aintanet is a next-generation blockchain protocol built to power the digital economy through privacy-complete architecture and dense-load scalability.",
-    tags: ["Pitch Deck", "Development"],
-    image: "/home/projects/project-2.webp",
-    color: "#000000"
-  }
-]
+  }))
 
 export default function RecentProjects() {
   const containerRef = useRef<HTMLDivElement>(null)
