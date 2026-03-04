@@ -48,17 +48,35 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
+              <motion.h3 
+                className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              >
                 Web Development
-              </h3>
+              </motion.h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
+              <motion.p 
+                className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 Your website should work as hard as you do. We design conversion-focused websites and online platforms that grow with your business, including e-commerce, frontend, and PHP development.
-              </p>
+              </motion.p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
+              <motion.div 
+                className="flex flex-wrap gap-2 mb-5 md:mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Frontend
                 </span>
@@ -68,15 +86,22 @@ export default function WhatWeDo() {
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   SaaS Platforms
                 </span>
-              </div>
+              </motion.div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[0]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
-                Learn More
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Link href={`/services/${SERVICE_SLUGS[0]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+                  Learn More
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              </motion.div>
             </div>
           </div>
 
@@ -95,17 +120,35 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
+              <motion.h3 
+                className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              >
                 App & Software Development
-              </h3>
+              </motion.h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
+              <motion.p 
+                className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 We build custom applications and software tailored to your business needs, from cross-platform apps to e-commerce and on-demand solutions, helping you reach more customers efficiently.
-              </p>
+              </motion.p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
+              <motion.div 
+                className="flex flex-wrap gap-2 mb-5 md:mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Mobile Apps
                 </span>
@@ -118,15 +161,22 @@ export default function WhatWeDo() {
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Flutter
                 </span>
-              </div>
+              </motion.div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[1]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
-                Learn More
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Link href={`/services/${SERVICE_SLUGS[1]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+                  Learn More
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              </motion.div>
             </div>
           </div>
 
@@ -145,32 +195,57 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
+              <motion.h3 
+                className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              >
                 Branding & Positioning
-              </h3>
+              </motion.h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
+              <motion.p 
+                className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 We create professional, cohesive visual identities that make your business stand out, build trust and leave a lasting impression through brand strategy, graphic design and UI/UX solutions.
-              </p>
+              </motion.p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
+              <motion.div 
+                className="flex flex-wrap gap-2 mb-5 md:mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Brand Strategy
                 </span>
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Visual Identity
                 </span>
-              </div>
+              </motion.div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[2]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
-                Learn More
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Link href={`/services/${SERVICE_SLUGS[2]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+                  Learn More
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              </motion.div>
             </div>
           </div>
 
@@ -189,17 +264,35 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
+              <motion.h3 
+                className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              >
                 AI Integration
-              </h3>
+              </motion.h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
+              <motion.p 
+                className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 Our AI solutions enhance performance, automate workflows, and provide predictive analytics, powering smarter growth for your business.
-              </p>
+              </motion.p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
+              <motion.div 
+                className="flex flex-wrap gap-2 mb-5 md:mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Chatbots
                 </span>
@@ -209,15 +302,22 @@ export default function WhatWeDo() {
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   RAG Systems
                 </span>
-              </div>
+              </motion.div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[3]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
-                Learn More
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Link href={`/services/${SERVICE_SLUGS[3]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+                  Learn More
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              </motion.div>
             </div>
           </div>
 
@@ -236,17 +336,35 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
+              <motion.h3 
+                className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              >
                 Marketing
-              </h3>
+              </motion.h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
+              <motion.p 
+                className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 We connect you with customers where they spend their time, running strategic campaigns that boost engagement, build communities, and drive qualified leads through social media, SEO, PPC, and email marketing.
-              </p>
+              </motion.p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
+              <motion.div 
+                className="flex flex-wrap gap-2 mb-5 md:mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Social Media
                 </span>
@@ -256,15 +374,22 @@ export default function WhatWeDo() {
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   SEO
                 </span>
-              </div>
+              </motion.div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[4]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
-                Learn More
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Link href={`/services/${SERVICE_SLUGS[4]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+                  Learn More
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              </motion.div>
             </div>
           </div>
 
@@ -283,17 +408,35 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
+              <motion.h3 
+                className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              >
                 Content & Creatives
-              </h3>
+              </motion.h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
+              <motion.p 
+                className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 We create valuable, relevant content that attracts customers, showcases your expertise, and helps potential clients find your business online through content marketing and video production.
-              </p>
+              </motion.p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
+              <motion.div 
+                className="flex flex-wrap gap-2 mb-5 md:mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Content Strategy
                 </span>
@@ -303,15 +446,22 @@ export default function WhatWeDo() {
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Photo & video
                 </span>
-              </div>
+              </motion.div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[5]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
-                Learn More
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Link href={`/services/${SERVICE_SLUGS[5]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+                  Learn More
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              </motion.div>
             </div>
           </div>
 
@@ -330,17 +480,35 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
+              <motion.h3 
+                className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              >
                 Lead Generation
-              </h3>
+              </motion.h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
+              <motion.p 
+                className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
                 We deliver professional lead generation services that connect you with qualified prospects ready to engage with your business.
-              </p>
+              </motion.p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
+              <motion.div 
+                className="flex flex-wrap gap-2 mb-5 md:mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              >
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   CRM Setup
                 </span>
@@ -350,15 +518,22 @@ export default function WhatWeDo() {
                 <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Funnel Strategy
                 </span>
-              </div>
+              </motion.div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[6]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
-                Learn More
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Link href={`/services/${SERVICE_SLUGS[6]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+                  Learn More
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              </motion.div>
             </div>
           </div>
         </div>
