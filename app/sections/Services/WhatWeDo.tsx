@@ -37,7 +37,7 @@ export default function WhatWeDo() {
           </motion.div>
 
           {/* Content Block */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
@@ -48,17 +48,17 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
                 Web Development
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
                 Your website should work as hard as you do. We design conversion-focused websites and online platforms that grow with your business, including e-commerce, frontend, and PHP development.
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-3 mb-8 md:mb-10">
+              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
                 <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
                   Frontend
                 </span>
@@ -84,7 +84,7 @@ export default function WhatWeDo() {
           <div className="w-full h-px bg-gray-300 my-12 md:my-16"></div>
 
           {/* Second Content Block */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
@@ -95,17 +95,17 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
                 App & Software Development
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
                 We build custom applications and software tailored to your business needs, from cross-platform apps to e-commerce and on-demand solutions, helping you reach more customers efficiently.
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-3 mb-8 md:mb-10">
+              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
                 <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
                   Mobile Apps
                 </span>
@@ -134,7 +134,7 @@ export default function WhatWeDo() {
           <div className="w-full h-px bg-gray-300 my-12 md:my-16"></div>
 
           {/* Third Content Block */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
@@ -145,17 +145,17 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
                 Branding & Positioning
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
                 We create professional, cohesive visual identities that make your business stand out, build trust and leave a lasting impression through brand strategy, graphic design and UI/UX solutions.
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-3 mb-8 md:mb-10">
+              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
                 <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
                   Brand Strategy
                 </span>
@@ -178,7 +178,7 @@ export default function WhatWeDo() {
           <div className="w-full h-px bg-gray-300 my-12 md:my-16"></div>
 
           {/* Fourth Content Block */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
@@ -189,17 +189,17 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
                 AI Integration
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
                 Our AI solutions enhance performance, automate workflows, and provide predictive analytics, powering smarter growth for your business.
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-3 mb-8 md:mb-10">
+              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
                 <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
                   Chatbots
                 </span>
@@ -225,7 +225,7 @@ export default function WhatWeDo() {
           <div className="w-full h-px bg-gray-300 my-12 md:my-16"></div>
 
           {/* Fifth Content Block */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
@@ -236,17 +236,17 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
                 Marketing
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
                 We connect you with customers where they spend their time, running strategic campaigns that boost engagement, build communities, and drive qualified leads through social media, SEO, PPC, and email marketing.
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-3 mb-8 md:mb-10">
+              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
                 <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
                   Social Media
                 </span>
@@ -272,7 +272,7 @@ export default function WhatWeDo() {
           <div className="w-full h-px bg-gray-300 my-12 md:my-16"></div>
 
           {/* Sixth Content Block */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
@@ -283,17 +283,17 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
                 Content & Creatives
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
                 We create valuable, relevant content that attracts customers, showcases your expertise, and helps potential clients find your business online through content marketing and video production.
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-3 mb-8 md:mb-10">
+              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
                 <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
                   Content Strategy
                 </span>
@@ -319,7 +319,7 @@ export default function WhatWeDo() {
           <div className="w-full h-px bg-gray-300 my-12 md:my-16"></div>
 
           {/* Seventh Content Block */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
               <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
@@ -330,17 +330,17 @@ export default function WhatWeDo() {
             {/* Right Side - Content */}
             <div className="flex-1 flex flex-col">
               {/* Title */}
-              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-normal text-gray-800 mb-4 md:mb-6">
+              <h3 className="text-[22px] md:text-[26px] lg:text-[30px] font-semibold text-[#444444] mb-3 md:mb-4">
                 Lead Generation
               </h3>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-700 leading-normal tracking-tight mb-4 md:mb-5">
                 We deliver professional lead generation services that connect you with qualified prospects ready to engage with your business.
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-3 mb-8 md:mb-10">
+              <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
                 <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
                   CRM Setup
                 </span>
