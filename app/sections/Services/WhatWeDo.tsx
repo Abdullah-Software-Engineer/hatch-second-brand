@@ -40,7 +40,7 @@ export default function WhatWeDo() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
+              <div className="relative w-full h-[270px] bg-gray-300 rounded-lg overflow-hidden">
                 <Image src="/services/web.webp" alt="Web Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
@@ -59,19 +59,19 @@ export default function WhatWeDo() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Frontend
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Backend
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   SaaS Platforms
                 </span>
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[0]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[0]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -87,7 +87,7 @@ export default function WhatWeDo() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
+              <div className="relative w-full h-[270px] bg-gray-300 rounded-lg overflow-hidden">
                 <Image src="/services/app.webp" alt="App & Software Development" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
@@ -106,22 +106,22 @@ export default function WhatWeDo() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Mobile Apps
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Web Apps
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   React
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Flutter
                 </span>
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[1]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[1]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -137,7 +137,7 @@ export default function WhatWeDo() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
+              <div className="relative w-full h-[270px] bg-gray-300 rounded-lg overflow-hidden">
                 <Image src="/services/brand.webp" alt="Branding & Positioning" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
@@ -156,16 +156,16 @@ export default function WhatWeDo() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Brand Strategy
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Visual Identity
                 </span>
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[2]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[2]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -181,7 +181,7 @@ export default function WhatWeDo() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
+              <div className="relative w-full h-[270px] bg-gray-300 rounded-lg overflow-hidden">
                 <Image src="/services/ai.webp" alt="AI Integration" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
@@ -200,19 +200,19 @@ export default function WhatWeDo() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Chatbots
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Automation
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   RAG Systems
                 </span>
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[3]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[3]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -228,7 +228,7 @@ export default function WhatWeDo() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
+              <div className="relative w-full h-[270px] bg-gray-300 rounded-lg overflow-hidden">
                 <Image src="/services/marketing.webp" alt="Marketing" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
@@ -247,19 +247,19 @@ export default function WhatWeDo() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Social Media
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Paid Ads
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   SEO
                 </span>
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[4]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[4]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -275,7 +275,7 @@ export default function WhatWeDo() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
+              <div className="relative w-full h-[270px] bg-gray-300 rounded-lg overflow-hidden">
                 <Image src="/services/content.webp" alt="Content & Creatives" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
@@ -294,19 +294,19 @@ export default function WhatWeDo() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Content Strategy
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Motion & Animation
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Photo & video
                 </span>
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[5]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[5]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -322,7 +322,7 @@ export default function WhatWeDo() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Side - Image Placeholder */}
             <div className="w-full lg:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
+              <div className="relative w-full h-[270px] bg-gray-300 rounded-lg overflow-hidden">
                 <Image src="/services/lead.webp" alt="Lead Generation" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
             </div>
@@ -341,19 +341,19 @@ export default function WhatWeDo() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5 md:mb-6">
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   CRM Setup
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Conversion Optimization
                 </span>
-                <span className="bg-[#2A2A2A] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-medium">
+                <span className="bg-[#2A2A2A] text-white px-4 py-2 rounded-full text-xs md:text-sm font-medium">
                   Funnel Strategy
                 </span>
               </div>
 
               {/* Learn More Button */}
-              <Link href={`/services/${SERVICE_SLUGS[6]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-3.5 text-[16px] sm:text-[18px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
+              <Link href={`/services/${SERVICE_SLUGS[6]}`} className="group flex items-center justify-center gap-2 bg-primary text-white rounded-full px-6 py-2.5 text-[14px] sm:text-[16px] font-medium shadow-[0_14px_30px_rgba(0,0,0,0.16)] hover:shadow-[0_18px_40px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] transition-transform transition-shadow duration-300 w-full sm:w-[30%] self-start">
                 Learn More
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
