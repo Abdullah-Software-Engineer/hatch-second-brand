@@ -54,7 +54,7 @@ export default function LifeAthatch() {
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, delay: 0.4 }}
-        className="relative z-10 w-full pb-12"
+        className="relative z-10 w-full pb-[160px]"
       >
         <div className="overflow-hidden">
           <div className="flex w-max animate-marquee-scroll gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-end">
