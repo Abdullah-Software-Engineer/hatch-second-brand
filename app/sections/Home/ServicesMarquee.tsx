@@ -109,25 +109,25 @@ export default function ServicesMarquee({
 
       {/* Main Content (only when variant="full") */}
       {!isMarqueeOnly && (
-        <div className="relative z-30 mt-20">
+        <div className="relative z-30 mt-32 md:mt-40 lg:mt-48">
           <Container>
             <div className="flex flex-col items-center text-center max-w-[900px] mx-auto">
               <h3 className="font-arizona font-normal italic text-[30px] md:text-[38px] lg:text-[42px] text-primary mb-3 relative">
                 {scriptText}
               </h3>
-              <div className="p-4 md:p-0 mb-12 bg-transparent relative">
+              <div className="p-4 md:p-0 mb-4 md:mb-6 bg-transparent relative">
                 {description ?? (
                   <p className="text-xl md:text-2xl lg:text-[28px] leading-tight font-medium text-black">
                     We are a service design studio delivering tailored solutions through a team of <span className="text-primary font-bold">90+ skilled experts</span>. We simplify complex challenges and turn ideas into scalable, lasting impact.
                   </p>
                 )}
               </div>
-              <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-[800px]">
+              <div className="flex flex-wrap justify-center gap-2 md:gap-3 max-w-[800px]">
                 {tags.slice(0, 4).map((tag, index) => (
                   <TagPill key={index} label={tag.label} />
                 ))}
               </div>
-              <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-3 md:mt-4 max-w-[800px]">
+              <div className="flex flex-wrap justify-center gap-2 md:gap-3 mt-3 md:mt-4 max-w-[800px]">
                 {tags.slice(4).map((tag, index) => (
                   <TagPill key={index + 4} label={tag.label} />
                 ))}
