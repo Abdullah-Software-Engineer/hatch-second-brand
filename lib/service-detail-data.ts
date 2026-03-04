@@ -4,8 +4,10 @@ export interface ServiceDetailData {
   slug: string
   titlePart1: string
   titlePart2: string
+  titlePart3?: string
   tagline: string
   iconSrc?: string
+  iconSrc2?: string
   /** Path to hero/creative image below heading (e.g. /services/1.webp) */
   heroImage?: string
   description: string
@@ -65,9 +67,12 @@ export const SERVICES_DETAIL: ServiceDetailData[] = [
   {
     slug: 'app-software-development',
     titlePart1: 'App &',
-    titlePart2: 'Software Development',
+    titlePart2: 'Software',
+    titlePart3: 'Development',
     tagline: 'Smart, scalable, and seamless.',
-    heroImage: '/services/2.webp',
+    iconSrc: '/home/hero/after-solutions.webp',
+    iconSrc2: '/home/hero/after-move.webp',
+    heroImage: '/services/3.webp',
     description: 'We design and develop custom software solutions that perform across every platform. Whether it\'s cross-platform mobile apps, e-commerce systems, or on-demand solutions, our team builds scalable, secure, and seamless experiences that turn users into loyal customers.',
     purpleTags: ['On-Demand Solutions', 'Cross Platform Apps', 'E-Commerce Development'],
     blackTags: ['AI-Powered', 'Future Built', 'Think Digital', 'User Centric', 'Scalable Systems', 'Product Led', 'Growth Ready', 'Digital First'],
@@ -93,9 +98,11 @@ export const SERVICES_DETAIL: ServiceDetailData[] = [
   {
     slug: 'branding-positioning',
     titlePart1: 'Branding',
-    titlePart2: '& Positioning',
+    titlePart2: '&',
+    titlePart3: 'Positioning',
     tagline: 'Design that defines your brand and makes it unforgettable.',
-    heroImage: '/services/3.webp',
+    iconSrc: '/home/hero/after-move.webp',
+    heroImage: '/services/2.webp',
     description: 'We help businesses stand out with meaningful, cohesive brand identities. From brand strategy and visual guidelines to graphic and UI/UX design, our process ensures every element reflects your purpose, connects with your audience, and builds long-term brand recognition.',
     purpleTags: ['UI/UX Design Services', 'Brand Strategy & Visual Guidelines', 'Graphic & Visual Design'],
     blackTags: ['AI-Powered', 'Future Built', 'Think Digital', 'User Centric', 'Scalable Systems', 'Product Led', 'Growth Ready', 'Digital First'],
@@ -124,7 +131,8 @@ export const SERVICES_DETAIL: ServiceDetailData[] = [
     titlePart1: 'AI',
     titlePart2: 'Integration',
     tagline: 'Improve decision-making with AI-powered solutions.',
-    heroImage: '/services/4.webp',
+    iconSrc: '/home/hero/after-move.webp',
+    heroImage: '/services/7.webp',
     description: 'From AI chatbot development and NLP automation tools to predictive analytics and workflow optimization, we help businesses integrate intelligence into every step of their operations, driving faster insights, smoother workflows, and smarter growth.',
     purpleTags: ['AI Chatbot Development', 'NLP & Automation Tools', 'Predictive Analytics', 'Workflow Optimization'],
     blackTags: ['AI-Powered', 'Future Built', 'Think Digital', 'User Centric', 'Scalable Systems', 'Product Led', 'Growth Ready', 'Digital First'],
@@ -152,7 +160,8 @@ export const SERVICES_DETAIL: ServiceDetailData[] = [
     titlePart1: 'Marketing',
     titlePart2: '',
     tagline: 'Where strategy meets storytelling.',
-    heroImage: '/services/5.webp',
+    iconSrc: '/home/hero/after-move.webp',
+    heroImage: '/services/4.webp',
     description: 'We connect you with your audience through targeted digital marketing that drives engagement and sales. Our expertise includes social media marketing, SEO & conversion rate optimization, PPC advertising, and email marketing, all designed to boost visibility, generate leads, and build long-term brand loyalty.',
     purpleTags: ['Social Media Marketing', 'SEO & Conversion Optimization', 'PPC Advertising', 'Email Marketing'],
     blackTags: ['AI-Powered', 'Future Built', 'Think Digital', 'User Centric', 'Scalable Systems', 'Product Led', 'Growth Ready', 'Digital First'],
@@ -178,9 +187,11 @@ export const SERVICES_DETAIL: ServiceDetailData[] = [
   {
     slug: 'content-creatives',
     titlePart1: 'Content',
-    titlePart2: '& Creatives',
+    titlePart2: '&',
+    titlePart3: 'Creatives',
     tagline: 'Content that connects, converts, and continues to deliver.',
-    heroImage: '/services/6.webp',
+    iconSrc: '/home/hero/after-move.webp',
+    heroImage: '/services/5.webp',
     description: 'We plan, create, and produce content that supports real business goals. From content strategy to photography, video production, editing, and animation, we handle the full creative process. Every asset is made to stay on-brand, feel relevant, and work across platforms. No guesswork. Just thoughtful content that connects and lasts.',
     purpleTags: ['Video Production', 'Video Editing', 'Animation', 'Content Strategy', 'Content Marketing', 'Photography'],
     blackTags: ['AI-Powered', 'Future Built', 'Think Digital', 'User Centric', 'Scalable Systems', 'Product Led', 'Growth Ready', 'Digital First'],
@@ -209,7 +220,8 @@ export const SERVICES_DETAIL: ServiceDetailData[] = [
     titlePart1: 'Lead',
     titlePart2: 'Generation',
     tagline: 'Leads that drive real growth.',
-    heroImage: '/services/7.webp',
+    iconSrc: '/home/hero/after-move.webp',
+    heroImage: '/services/6.webp',
     description: 'We specialize in B2B and B2C lead generation that delivers results. Through outbound call center services, targeted campaigns, and lead nurturing strategies, we connect you with qualified prospects who are ready to convert. Our goal is simple: consistent, high-quality leads that grow your business.',
     purpleTags: ['Outbound Call Center Services', 'Targeted Campaigns', 'Lead Nurturing'],
     blackTags: ['AI-Powered', 'Future Built', 'Think Digital', 'User Centric', 'Scalable Systems', 'Product Led', 'Growth Ready', 'Digital First'],

@@ -6,8 +6,10 @@ import { motion } from 'framer-motion'
 export interface ServiceDetailHeroProps {
   titlePart1: string
   titlePart2: string
+  titlePart3?: string
   tagline: string
   iconSrc?: string
+  iconSrc2?: string
   /** Path to creative image shown below the heading (e.g. /services/1.webp) */
   heroImage?: string
 }
@@ -41,8 +43,10 @@ const iconMotion = {
 export default function ServiceDetailHero({
   titlePart1,
   titlePart2,
+  titlePart3,
   tagline,
   iconSrc,
+  iconSrc2,
   heroImage,
 }: ServiceDetailHeroProps) {
   return (
@@ -55,31 +59,110 @@ export default function ServiceDetailHero({
           animate="visible"
         >
           <h1 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[44px] xl:text-[50px] leading-[1.1] font-bold text-black tracking-tight mb-4 sm:mb-5">
-            <span className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
-              <motion.span variants={item} className="font-bold">
-                {titlePart1}
-              </motion.span>
-              {iconSrc && (
-                <motion.span
-                  variants={iconMotion}
-                  className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-xl overflow-hidden inline-flex items-center justify-center animate-hero-float"
-                >
-                  <Image
-                    src={iconSrc}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="(max-width: 768px) 70px, 100px"
-                  />
+            {titlePart3 ? (
+              titlePart2 === '&' ? (
+                // Branding case: single line with Branding (purple) + image + & (black) + Positioning (purple)
+                <span className="flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
+                  <motion.span variants={item} className="text-primary font-bold">
+                    {titlePart1}
+                  </motion.span>
+                  {iconSrc && (
+                    <motion.span
+                      variants={iconMotion}
+                      className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center animate-hero-float"
+                    >
+                      <Image
+                        src={iconSrc}
+                        alt=""
+                        fill
+                        className="object-cover"
+                        priority
+                        sizes="(max-width: 768px) 70px, 100px"
+                      />
+                    </motion.span>
+                  )}
+                  <motion.span variants={item} className="font-bold">
+                    {titlePart2}
+                  </motion.span>
+                  <motion.span variants={item} className="text-primary font-bold">
+                    {titlePart3}
+                  </motion.span>
+                </span>
+              ) : (
+                // App & Software case: two lines
+                <>
+                  <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
+                    <motion.span variants={item} className="text-primary font-bold">
+                      {titlePart1}
+                    </motion.span>
+                    {iconSrc && (
+                      <motion.span
+                        variants={iconMotion}
+                        className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center"
+                      >
+                        <Image
+                          src={iconSrc}
+                          alt=""
+                          fill
+                          className="object-cover"
+                          priority
+                          sizes="(max-width: 768px) 70px, 100px"
+                        />
+                      </motion.span>
+                    )}
+                    <motion.span variants={item} className="text-primary font-bold">
+                      {titlePart2}
+                    </motion.span>
+                  </span>
+                  <span className="block flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-1 md:mt-2">
+                    <motion.span variants={item} className="font-bold">
+                      {titlePart3}
+                    </motion.span>
+                    {iconSrc2 && (
+                      <motion.span
+                        variants={iconMotion}
+                        className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center"
+                      >
+                        <Image
+                          src={iconSrc2}
+                          alt=""
+                          fill
+                          className="object-cover"
+                          priority
+                          sizes="(max-width: 768px) 70px, 100px"
+                        />
+                      </motion.span>
+                    )}
+                  </span>
+                </>
+              )
+            ) : (
+              <span className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
+                <motion.span variants={item} className={iconSrc && titlePart2 ? 'text-primary font-bold' : (titlePart2 === '' && iconSrc ? 'text-primary font-bold' : 'font-bold')}>
+                  {titlePart1}
                 </motion.span>
-              )}
-              {titlePart2 && (
-                <motion.span variants={item} className="text-primary font-bold">
-                  {titlePart2}
-                </motion.span>
-              )}
-            </span>
+                {iconSrc && (
+                  <motion.span
+                    variants={iconMotion}
+                    className="relative w-[44px] h-[33px] sm:w-[52px] sm:h-[39px] md:w-[64px] md:h-[48px] lg:w-[76px] lg:h-[56px] xl:w-[86px] xl:h-[64px] rounded-[14px] sm:rounded-[16px] md:rounded-[18px] lg:rounded-[20px] xl:rounded-[22px] overflow-hidden inline-flex items-center justify-center animate-hero-float"
+                  >
+                    <Image
+                      src={iconSrc}
+                      alt=""
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 768px) 70px, 100px"
+                    />
+                  </motion.span>
+                )}
+                {titlePart2 && (
+                  <motion.span variants={item} className={iconSrc ? 'font-bold' : 'text-primary font-bold'}>
+                    {titlePart2}
+                  </motion.span>
+                )}
+              </span>
+            )}
           </h1>
           <motion.p
             variants={item}
@@ -91,7 +174,7 @@ export default function ServiceDetailHero({
 
         {heroImage && (
           <motion.div
-            className={`w-full max-w-[1200px] mx-auto ${heroImage === '/services/2.webp' ? '-mb-8 md:-mb-6' : ''}`}
+            className={`w-full max-w-[1200px] mx-auto ${heroImage === '/services/3.webp' ? '-mb-8 md:-mb-6' : ''}`}
             variants={item}
             initial="hidden"
             animate="visible"
